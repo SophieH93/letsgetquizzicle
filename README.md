@@ -57,3 +57,41 @@ I created my wireframes on [MockFlow](https://www.mockflow.com/) for Desktop, Ta
 * W3C Markup Validation
 * WSC CSS Validaion
 * Dirty Markup Formatter
+
+
+# Testing
+
+# Bugs
+
+
+# Deployment
+I deployed the websit using GitHub's pages. The steps are as follows:
+
+1. Open GitHub in the browser.
+2. Sign into my account.
+3. Select my repositories.
+4. Navigate to quizgame.
+5. On the top right select settings.
+6. Scroll down to the GitHub Pages area.
+7. From the Source dropdown menu click on Master Branch.
+8. Refresh the page and scroll back down to the GitHub Pages area to view the link to your live website.
+ 
+ ### Running the website Locally:
+
+To clone the quizgame from GitHub:
+
+1. Navigate to SophieH93/quizgame.
+2. Click the green Clone or Download button.
+3. Copy the url in the dropdown box.
+4. Using your favourite IDE open up your preferred terminal.
+5. Navigate to your desired file location.
+6. Copy the following code and input it into your terminal to clone quizz game.
+Cred
+
+# Credits
+
+
+
+
+**This websit is for educational purposes only.**
+
