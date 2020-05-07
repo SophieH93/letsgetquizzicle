@@ -1,15 +1,16 @@
-const stringMinutes = 15;
-let time = startingMinutes = 60;
 
-const countDownEl = document.getElementById("count");
+//Countdown Timer
+var counter = 10;
 
-setInterval(updateCountDown, 1000);
+        setInterval(function(){
+            counter--;
 
-function updateCountDown(){
-    const minutes =  Math.floor(time / 60);
-    let seconds = time % 60;
+            if(counter >= 0){
+                id = document.getElementById("count");
+                id.innerHTML = counter;
+            }
+            if(counter === 0){
+                id.innerHTML = "Times Up!";
+            }
+          }, 1000);
 
-    countDownEl.innerHTML = `${minutes} - ${seconds}`;
-    time--;
-
-}
