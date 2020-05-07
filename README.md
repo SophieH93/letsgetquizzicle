@@ -22,7 +22,38 @@ The questions will have 4 possible answers.
 
 
 # Design Choice  
+
+
+
+
 **Font:** Comic Neue   
 **Colors:** 
 
 # Features of the Website
+
+
+
+# Wireframes
+I created my wireframes on [MockFlow](https://www.mockflow.com/) for Desktop, Tablet and Mobie. Please view my Wireframes folder to see more.
+
+
+
+# Technologies used
+## Languages
+* HTML
+* CSS
+* Javascript
+
+## Frameworks
+* jQuery
+* Bootstrap
+* Font Awesome
+
+## Tools
+* GitHub
+* GitPod
+* Git
+* JSON
+* W3C Markup Validation
+* WSC CSS Validaion
+* Dirty Markup Formatter
