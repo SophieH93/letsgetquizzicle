@@ -17,15 +17,24 @@ a fun way for players to test their knowledge and see who is the ultimate Marvel
 * As a suer, I would like a game that involves a challenge and a reward for completion.
 
 
-# Design Choice  
+# Design Choice: 
 
-
-
-
+**Landing Page:**
+    Full background image of Marvel characters
+    
 **Font:** Comic Neue   
+
 **Colors:** 
 
 # Features of the Website
+
+
+* An easy level and medium level of difficulty.
+* Images and info from Marvel API.
+* Countdown timer.
+* porgress bar.
+* Scorboard showing top 5 players.
+* Point system.
 
 
 
