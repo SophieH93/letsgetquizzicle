@@ -1,13 +1,9 @@
- TRIVIA GAME   
+ # MARVEL TRIVIA GAME   
 
-For my project I will create a trivia game using Javascript.  
-I will create a quizz game based on Marvel.   
-I will have a highscore, progress bar, number of questions remaining, username 
-The questions will have 4 possible answers.   
+This project is an interactive frontend Marvel themed Trivia Game suitable for people of all ages who are fans of the Marvel franchise. The game is
+a fun way for players to test their knowledge and see who is the ultimate Marvel fan.
 
-
-
-# Ux
+# UX
 
 ## User Goals:
 * For the game to be responsive on mobile, tablet & desktop.
