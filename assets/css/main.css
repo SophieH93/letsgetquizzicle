@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+body {
+    font-family: 'Comic Neue', cursive;
+    background: url("../images/marvel.jpg") center fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh; 
+}
+
+#main {    
+    background-color: rgba(0, 0, 0, 0.4);
+    margin-top: 9rem;
+    color: #f5f2fa;
+    text-align: center;
+    padding-bottom: 2rem;
+    
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+p {
+    font-size: 1.5rem;
+}
+h3 {
+    color: #de1402;
+}
+
+.button {
+    margin: 1rem;
+}
+
+.btn {
+    width: 30%;
+}
