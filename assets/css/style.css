@@ -28,11 +28,9 @@ p {
 }
 
 .button {
-    text-align: center;
-    padding: 5px;
-   
+    margin: 1rem;
 }
 
 .btn {
-    width: 10%;
+    width: 30%;
 }
