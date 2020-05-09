@@ -7,7 +7,12 @@ a fun way for players to test their knowledge and see who is the ultimate Marvel
 
 ## User Goals:
 * For the game to be responsive on mobile, tablet & desktop.
-* Visual interaction to draw the client in.
+* Visual interaction to draw the player in.
+* Different choice of difficulty levels to suit a wider ranger of players.
+* Countdown timer to make the game more exciting as not only will the player have the
+  challenge of answering the correct question but also be restricted in time.
+* Point system to reward the player with the correct answer to the question.
+* Scoreboard at the end of the game to show the top 5 players.
 
 ## User Story:
 * As a user, I would like to play a game with different difficulty levels.
@@ -20,7 +25,11 @@ a fun way for players to test their knowledge and see who is the ultimate Marvel
 # Design Choice: 
 
 **Landing Page:**
-    Full background image of Marvel characters
+    Full background image of the Marvel characters to emphasize the theme of the game.   
+    If i decide to use the background image I need to find the correct color font that will
+    display over the image. Including the transparent the container for the text helps the text stand out.
+
+**Ready Page**
     
 **Font:** Comic Neue   
 
@@ -28,15 +37,17 @@ a fun way for players to test their knowledge and see who is the ultimate Marvel
 
 # Features of the Website
 
+**landing Page-** Consists of a breif introduction to the game with the buttons 
+where the player will choose what level they would like to play *easy* or *medium*.
 
-* An easy level and medium level of difficulty.
-* Images and info from Marvel API.
-* Countdown timer.
-* porgress bar.
-* Scorboard showing top 5 players.
-* Point system.
+**Ready Page-** Once the user chooses the level they are brought to the *Ready to Play* page that describes the rules of the game.   
+It contains two buttons *play* and *scoreboard*.  
 
+**Game Page-** This page consists of the questions along with a *progress bar* so the player knows how much longer in the game they have.   
+A *Countdown Timer*, if the player does not select an answer before the time runs out they will be brought to the next question and lose a point.   
+A *Point System*, when the player selects the correct answer they will win a point.   
 
+**Game Over**- This page will display the players total number of points.  It will have a form where the player can add/save their username, and two buttons, one for the scoreboard the other to go back to the home page.
 
 # Wireframes
 I created my wireframes on [MockFlow](https://www.mockflow.com/) for Desktop, Tablet and Mobie. Please view my Wireframes folder to see more.
