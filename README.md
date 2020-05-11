@@ -4,8 +4,23 @@ This project is an interactive frontend Marvel themed Trivia Game suitable for p
 a fun way for players to test their knowledge and see who is the ultimate Marvel fan.
 
 # UX
+The goal of this project is to provide users with a fun, easy to use trivia game based on their favourite franchise. 
+As the game is suitable for people of all ages, the webiste needs to be visually appealing to encourage user interaction.
 
-## User Goals:
+## Strategy
+
+Target Audience - The target ausience for this project can be anyone between the age of 10-30.
+
+Primary Audience-Marvel fans who want to see how much they know about the franchise and share this information with their friends.
+
+The primary site goals are to offer a fun experience to users while teaching them some facts about the Marvel franchise.
+
+The primary user goals are to learn more about the Marvel franchise while testing their knowledge.
+
+
+## Scope
+
+### User Goals:
 * For the game to be responsive on mobile, tablet & desktop.
 * Visual interaction to draw the player in.
 * Different choice of difficulty levels to suit a wider ranger of players.
@@ -14,12 +29,22 @@ a fun way for players to test their knowledge and see who is the ultimate Marvel
 * Point system to reward the player with the correct answer to the question.
 * Scoreboard at the end of the game to show the top 5 players.
 
-## User Story:
+### User Story:
 * As a user, I would like to play a game with different difficulty levels.
 * As a user. I would like a game that's easy to navigate through.
 * As a user, I would enjoy a game that is visually appealing.
 * As a user, I would like a game that does not take too long to complete.
 * As a suer, I would like a game that involves a challenge and a reward for completion.
+* As a user, I would like to be able to play the quizz again and be provided with different questions.
+
+
+## Structure
+
+## Skeleton 
+I created my wireframes on [MockFlow](https://www.mockflow.com/) for Desktop, Tablet and Mobie. Please view my Wireframes folder to see more.
+
+## Surface
+
 
 
 # Design Choice: 
@@ -48,9 +73,6 @@ A *Countdown Timer*, if the player does not select an answer before the time run
 A *Point System*, when the player selects the correct answer they will win a point.   
 
 **Game Over**- This page will display the players total number of points.  It will have a form where the player can add/save their username, and two buttons, one for the scoreboard the other to go back to the home page.
-
-# Wireframes
-I created my wireframes on [MockFlow](https://www.mockflow.com/) for Desktop, Tablet and Mobie. Please view my Wireframes folder to see more.
 
 
 
