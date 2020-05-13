@@ -45,6 +45,10 @@ h3 {
     background-color: pink;
 }
 
+.choice-container:hover  {
+    transform: translate(-0.1rem);
+    transition: transform 150ms;
+}
 .choice-prefix {
     padding: 1.5rem 2.5rem;
     background-color: blue;
