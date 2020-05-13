@@ -1,7 +1,6 @@
 const question = document.getElementById("question");
 
 const choices = Array.from(document.getElementsByClassName("choice-text"));
-console.log(choices);
 
 //variables
 let currentQuestion = {};
@@ -47,7 +46,6 @@ startGame = () => {
     questionCounter = 0;
     score = 0;
     availableQuestions = [...questions];
-    console.log(availableQuestions);
     getNewQuestion();
 };
 
@@ -81,9 +79,16 @@ choices.forEach(choice => {
         acceptingAnswers = false;
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset["number"];
-        console.log(selectedAnswer);
-        getNewQuestion();
-    })
-})
 
+        const classToApply = selectedAnswer == currentQuestion.answer ? 'correct': 'incorrect';
+        
+        selectedChoice.parentElement.classList.add(classToApply);
+
+        //this will add a delay between questions
+         setTimeout(() => {
+            selectedChoice.parentElement.classList.remove(classToApply);
+            getNewQuestion();
+            }, 1000);
+        });
+});
 startGame();
