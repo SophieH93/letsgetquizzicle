@@ -14,25 +14,29 @@
 <!--Landing page-->
 <section class="container">
     <h1>Trivia Game</h1>
-     <div class="dropdown">
-    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
-      Levels
-    </button>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Easy</a>
-      <a class="dropdown-item" href="#">Medium</a>
-      <a class="dropdown-item" href="#">Mix</a>
-    </div>
-  </div>
+        <p>Test you Knowledge</p>
+        <p>Answer the questions before the time runs out.</p>
+        <p>Choose the correct answer and win a point</p>
+        <p>Don't forget to check the scoreboard at the end of the game to see
+        if you made it into the top 5!</p>
+
+        <a class="btn " href="">Play Game</a>
 </section>
 
 <!--Get ready to play-->
 <section class="container">
     <h1>Get Ready to Play</h1>
-    <p>Answer the questions before the time runs out.</p>
-    <p>Choose the correct answer and win a point</p>
-
-    <a class="btn " href="">Play Game</a>
+        <h2>Pick a Level </h2>
+         <div class="dropdown">
+            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+            Levels
+            </button>
+            <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Easy</a>
+            <a class="dropdown-item" href="#">Medium</a>
+            <a class="dropdown-item" href="#">Mix</a>
+    </div>
+  </div>
 </section>
   
 <!--the game--> 
@@ -41,25 +45,26 @@
     <h2 id="question">Answer this question</h2>
     <div class="choice-container">
         <p class="choice-prefix">A</p>
-        <p class="choice-text">1</p>
+        <p class="choice-text" data-number="1">1</p>
     </div>
     <div class="choice-container">
         <p class="choice-prefix">B</p>
-        <p class="choice-text">2</p>
+        <p class="choice-text" data-number="2">2</p>
     </div>
     <div class="choice-container">
         <p class="choice-prefix">C</p>
-        <p class="choice-text">3</p>
+        <p class="choice-text" data-number="3">3</p>
     </div>
     <div class="choice-container">
         <p class="choice-prefix">D</p>
-        <p class="choice-text">4</p>
+        <p class="choice-text" data-number="4">4</p>
     </div>
 </div>
 
 <section class="container" id="endgame">
     <div class="row">
         <div class="col-md-12">
+        <h1>Game Over</h1>
         <form>
             <input type="username" placeholder="username">
         </form>
@@ -74,11 +79,8 @@
 <section>
 
 <section id="scoreboard">
-    <h2>High Scores</h2>
+    <h1>High Scores</h1>
         <p>Congratulations if you made it into the top 5!</p>
-        <a class="btn " href="">Go Home</a> 
-
-
 </section>
 
 <footer>
@@ -88,7 +90,6 @@
 </footer>
  
 <script src="assets/js/game.js"></script>
-<script src="assets/js/easyquiz.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>  
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> 
