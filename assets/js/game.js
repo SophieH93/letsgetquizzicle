@@ -42,7 +42,7 @@ let questions = [
 //constants
 const correct_bonus = 10;
 const max_questions = 3;
-const subtract_value = 1; 
+const subtract_value = -5; 
 
 startGame = () => {
     questionCounter = 0;
@@ -85,21 +85,12 @@ choices.forEach(choice => {
 
         const classToApply = selectedAnswer == currentQuestion.answer ? 'correct': 'incorrect';
         
-        if (classToApply === "correct"){
+        if (classToApply === "correct") {
             incrementScore(correct_bonus);
+         }  else {
+             incrementScore(subtract_value);
+             console.log(subtract_value)
             }
-            else
-            {
-            incrementScore(subtract_value);
-            console.log("test");
-            }
-
- //       if (classToApply === "correct") {
-   //     incrementScore(correct_bonus);
-    //}
-      //  else {
-        //incrementScore(subtract_value);  //  Minus value like  -10
-//}
 
         selectedChoice.parentElement.classList.add(classToApply);
 
@@ -111,11 +102,10 @@ choices.forEach(choice => {
         });
 });
 
-let incrementScore = (num) => {
-    return (score += num);
+incrementScore = num => {
+  score += num;
+  scoreText.innerText = score;
 };
 
-console.log(incrementScore(10)); 
-console.log(incrementScore(-5));  
 
 startGame();
