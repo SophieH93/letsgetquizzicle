@@ -8,9 +8,61 @@
     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
     <link href="assets/css/main.css" rel="stylesheet">
     <title>Trivia Game</title>
-</head>   
+</head>    
 <body>  
 
+<!--Landing page-->
+<section class="container">
+    <h1>Trivia Game</h1>
+     <div class="dropdown">
+    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+      Levels
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Easy</a>
+      <a class="dropdown-item" href="#">Medium</a>
+      <a class="dropdown-item" href="#">Mix</a>
+    </div>
+  </div>
+</section>
+
+<!--Get ready to play-->
+<section class="container">
+    <h1>Get Ready to Play</h1>
+    <p>Answer the questions before the time runs out.</p>
+ <p>Choose the correct answer and win a point</p>
+
+    <a class="btn " href="">Play</a>
+    <a class="btn " href="">High Scores</a>
+</section>
+  
+<!--the game-->
+<div class="container">     
+    <div id="game">
+    <h2 id="question">Answer this question</h2>
+    <div class="choice-container">
+        <p class="choice-prefix">A</p>
+        <p class="choice-text">1</p>
+    </div>
+    <div class="choice-container">
+        <p class="choice-prefix">B</p>
+        <p class="choice-text">2</p>
+    </div>
+    <div class="choice-container">
+        <p class="choice-prefix">C</p>
+        <p class="choice-text">3</p>
+    </div>
+    <div class="choice-container">
+        <p class="choice-prefix">D</p>
+        <p class="choice-text">4</p>
+    </div>
+</div>
+
+<section>
+    <div id="endgame"></div>
+<section>
+
+<!--
 <section class="container" id="main"> 
     <div class="row">
         <div class="col-md-12">
@@ -40,13 +92,15 @@
             </div>
         </div>
 </section>   
-    
+    -->
 <footer>
     <div class="copyright">
         © Sophie Hickey 2020
     </div>
 </footer>
  
+<script src="assets/js/game.js"></script>
+<script src="assets/js/easyquiz.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>  
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> 
