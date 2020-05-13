@@ -6,6 +6,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh; 
+    text-align: center;
 }
 
 #main {    
@@ -34,4 +35,22 @@ h3 {
 
 .btn {
     width: 30%;
+}
+
+.choice-container {
+    width: 100%;
+    margin-bottom: 0.4rem;
+    font-size: 1.8rem;
+    display: flex;
+    background-color: pink;
+}
+
+.choice-prefix {
+    padding: 1.5rem 2.5rem;
+    background-color: blue;
+    color: white;
+}
+
+.choice-text {
+    padding: 1.5rem;
 }
