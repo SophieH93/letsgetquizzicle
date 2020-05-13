@@ -68,10 +68,7 @@ h3 {
     background-color: red;
 }
 
-#hud {
-  display: flex;
-  justify-content: space-between;
-}
+
 .hud-prefix {
   text-align: center;
   font-size: 2rem;

@@ -42,7 +42,7 @@ let questions = [
 //constants
 const correct_bonus = 10;
 const max_questions = 3;
-const substract_value = 1 
+const subtract_value = 1; 
 
 startGame = () => {
     questionCounter = 0;
@@ -72,7 +72,6 @@ getNewQuestion = () => {
 
     // splice will remove the answer we just picked so we are not choosing it again
     availableQuestions.splice(questionIndex, 1);
-
     acceptingAnswers = true;
     };
 
@@ -86,13 +85,22 @@ choices.forEach(choice => {
 
         const classToApply = selectedAnswer == currentQuestion.answer ? 'correct': 'incorrect';
         
+        if (classToApply === "correct"){
+            incrementScore(correct_bonus);
+            }
+            else
+            {
+            incrementScore(subtract_value);
+            console.log("test");
+            }
 
-        if (classToApply === "correct") {
-        incrementScore(correct_bonus);
-    };
-        if (classToApply === 'incorrect') {
-        incrementScore(substract_value);  //  Minus value like -2, -10
-};
+ //       if (classToApply === "correct") {
+   //     incrementScore(correct_bonus);
+    //}
+      //  else {
+        //incrementScore(subtract_value);  //  Minus value like  -10
+//}
+
         selectedChoice.parentElement.classList.add(classToApply);
 
         //this will add a delay between questions
@@ -103,11 +111,11 @@ choices.forEach(choice => {
         });
 });
 
-
 let incrementScore = (num) => {
     return (score += num);
 };
-console.log(incrementScore(5));  // Add value 5
-console.log(incrementScore(-20));  
+
+console.log(incrementScore(10)); 
+console.log(incrementScore(-5));  
 
 startGame();
