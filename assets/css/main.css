@@ -57,4 +57,13 @@ h3 {
 
 .choice-text {
     padding: 1.5rem;
+    width: 100%;
+}
+
+.correct {
+    background-color: green;
+}
+
+.incorrect {
+    background-color: red;
 }
