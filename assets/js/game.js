@@ -61,9 +61,8 @@ getNewQuestion = () => {
     }
 
     questionCounter++;
-    progressText.innerText = `Question${questionCounter}/${max_questions}`;
+    progressText.innerText = `Question ${questionCounter}/${max_questions}`;
     //update progress bar
-    console.log(questionCounter / max_questions);
     progressbarfull.style.width = `${(questionCounter / max_questions) * 100}%`;
 
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
@@ -111,6 +110,12 @@ incrementScore = num => {
   score += num;
   scoreText.innerText = score;
 };
+
+
+
+
+
+
 
 
 startGame();

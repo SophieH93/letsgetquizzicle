@@ -84,7 +84,7 @@ h3 {
     border: 0.3rem solid blue;
 }
 
-.progressbarfull{
+#progressbarfull{
     height: 3.4rem;
     background-color: blue;
     width: 0%;
