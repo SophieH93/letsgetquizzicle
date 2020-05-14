@@ -100,7 +100,12 @@ A *Point System*, when the player selects the correct answer they will win a poi
 # Testing
 
 # Bugs
+1. I wanted to create a score that added points when the player selected the correct the answer and minus a point if the players 
+selected the wrong answer. I was able to increment the score but encountered a issue when I tried to minus a point. DevTolls console
+was showing that my function was correct.  
+The Fix: With the help of a fellow student, the bug was eventually adding a cosole.log into the else statement. 
 
+2. The progress bar was not filling 
 
 # Deployment
 I deployed the websit using GitHub's pages. The steps are as follows:
