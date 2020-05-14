@@ -77,3 +77,15 @@ h3 {
 .hud-main-text {
   text-align: center;
 }
+
+#progressBar {
+    width: 20rem;
+    height: 4rem;
+    border: 0.3rem solid blue;
+}
+
+.progressbarfull{
+    height: 3.4rem;
+    background-color: blue;
+    width: 0%;
+}
