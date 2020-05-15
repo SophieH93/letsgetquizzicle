@@ -5,10 +5,12 @@ const mostRecentScore = localStorage.getItem("mostRecentScore");
 
 
 const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+
+const max_high_scores =5;
+
 finalscore.innerText = mostRecentScore;
 
 username.addEventListener('keyup', () => {
-    console.log(username.value);
     saveScoreBtn.disabled = !username.value;
     // If no username inputted btn will stay disabled, when username inputted btn becomes visable
 })
@@ -18,10 +20,14 @@ savingHighScore = e => {
     e.preventDefault();
 
     const score = {
-        score: mostRecentScore,
+        score: Math.floor(Math.random() * 100),
         name: username.value
     };
-    console.log(score);
+    
     highScores.push(score);
-    console.log(highScores); 
+    highScores.sort((a,b) =>  b.score - a.score) //sort high score
+    highScores.splice(5);
+
+    localStorage.setItem('highScores', JSON.stringify(highScores));
+    window.location.assign("/");
 }
