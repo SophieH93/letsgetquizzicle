@@ -4,8 +4,6 @@ const progressText = document.getElementById("progressText");
 const scoreText = document.getElementById("score");
 const progressbarfull = document.getElementById("progressbarfull");
 
-
-
 //variables
 let currentQuestion = {};
 let acceptingAnswers = false;
@@ -13,34 +11,20 @@ let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 
-let questions = [
+let questions = [];
 
-  {
-    question: "Inside which HTML element do we put the JavaScript??",
-    choice1: "<script>",
-    choice2: "<javascript>",
-    choice3: "<js>",
-    choice4: "<scripting>",
-    answer: 1
-  },
-  {
-    question:
-      "What is the correct syntax for referring to an external script called 'xxx.js'?",
-    choice1: "<script href='xxx.js'>",
-    choice2: "<script name='xxx.js'>",
-    choice3: "<script src='xxx.js'>",
-    choice4: "<script file='xxx.js'>",
-    answer: 3
-  },
-  {
-    question: " How do you write 'Hello World' in an alert box?",
-    choice1: "msgBox('Hello World');",
-    choice2: "alertBox('Hello World');",
-    choice3: "msg('Hello World');",
-    choice4: "alert('Hello World');",
-    answer: 4
-  }
-];
+fetch("questions.json")
+  .then(res => {
+    return res.json();
+  })
+  .then(loadedQuestions => {
+    console.log(loadedQuestions);
+    questions = loadedQuestions;
+    startGame();
+  }).catch(err => {
+    console.log(err);
+  });
+
 
 //constants
 const correct_bonus = 10;
@@ -56,6 +40,7 @@ startGame = () => {
 
 getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter >= max_questions) {
+        localStorage.setItem("mostRecentScore", score);
         return window.location.assign("#endgame")
     //When game over will go to the end game html
     }
@@ -94,7 +79,7 @@ choices.forEach(choice => {
          }  else {
              incrementScore(subtract_value);
              console.log(subtract_value)
-            }
+            };
 
         selectedChoice.parentElement.classList.add(classToApply);
 
@@ -112,21 +97,7 @@ incrementScore = num => {
 };
 
 //Countdown Timer
-/* var counter = 10;
-
-        setInterval(function(){
-            counter--;
-
-            if (counter >= 0){
-                id = document.getElementById("count");
-                id.innerHTML = counter;
-            }
-            if (counter === 0) {
-                id.innerHTML = "Times Up!";
-            }
-          }, 1000);
-*/
-
+/*
 
 //Questions array
 var counter = 10;             //Time counter
@@ -162,6 +133,5 @@ function goToNextQuestion() {
     questionsCount++;
     counter = 10;
 }
+*/
 
-
-startGame();
