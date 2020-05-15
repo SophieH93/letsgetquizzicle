@@ -94,6 +94,38 @@ h3 {
     background-color: rgb(219, 217, 217);
 }
 
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    margin-bottom: 1rem;
+    width: 20rem;
+    padding: 1.5rem;
+}
+
+#saveScoreBtn {
+    width: 100%;
+}
 .btn {
     border: 1px solid blue;
+    
+}
+
+#highScoresList {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 4rem;
+}
+
+.high-score {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.high-score:hover {
+    transform: scale(1.025);
 }
