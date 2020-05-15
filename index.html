@@ -91,29 +91,39 @@
         <p class="choice-text" data-number="4">4</p>
     </div> 
 </div>
-
-<section class="container" id="endgame">
-    <div class="row">
-        <div class="col">
+ 
+<section class="container-fluid" id="endgame">
+    <div class="row"> 
+        <div class="col-12">
         <h1>Game Over</h1>
         </div>
-        <div class="col">
+
+        <div class="col-12">
             <h2 id="finalscore">0</h2>
         </div>
-        <form>
-            <input type="username" name="username" id="username" placeholder="username">
-        <button type="submit" class="btn" id="saveScore" onclick="saveingScores">Save</button>
-        </form>
 
+        <div class="col-12">
+        <form>
+            <div class="form-row">            
+            <input type="username" name="username" id="username" class="form-control text-input" placeholder="username">
+            
+            <div class="form-group col-12">
+            <button type="submit" class="btn" id="saveScoreBtn" disabled onclick="savingHighScore(event)">Save</button>     
+            </div>
+            </div>            
+        </form>
         </div> 
-        <div class="col-md-12">
+
+        <div class="col-12">
             <a class="btn " href="#scoreboard">scoreboard</a>
         </div>
-        <div class="col-md-12">
+        <div class="col-12">  
             <a class="btn " href="">Go Home</a> 
         </div>     
     </div>
-<section>
+   
+ </section>
+ 
 
 <section id="scoreboard">
     <h1>High Scores</h1>
@@ -127,6 +137,7 @@
 </footer>
  
 <script src="assets/js/game.js"></script>
+<script src="assets/js/end.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>  
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> 
