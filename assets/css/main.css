@@ -89,3 +89,11 @@ h3 {
     background-color: blue;
     width: 0%;
 }
+
+#endgame {
+    background-color: rgb(219, 217, 217);
+}
+
+.btn {
+    border: 1px solid blue;
+}
