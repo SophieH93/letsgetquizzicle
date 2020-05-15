@@ -57,11 +57,14 @@
             </div>
           </div>
         </div>
-            <div class="col">
+           <!-- <div class="col">
                 <div id="count">timer
             </div>
-            </div>
-
+            </div>-->
+    <div>
+    <h1 id="count"></h1>
+    <button onclick="goToNextQuestion()">Next</button>
+</div>
           <div class="col">
             <div class ="hud-item">
               <p class="hud-prefix">Score</p>
@@ -86,16 +89,22 @@
     <div class="choice-container">
         <p class="choice-prefix">D</p>
         <p class="choice-text" data-number="4">4</p>
-    </div>
+    </div> 
 </div>
 
 <section class="container" id="endgame">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col">
         <h1>Game Over</h1>
+        </div>
+        <div class="col">
+            <h2 id="finalscore">0</h2>
+        </div>
         <form>
-            <input type="username" placeholder="username">
+            <input type="username" name="username" id="username" placeholder="username">
+        <button type="submit" class="btn" id="saveScore" onclick="saveingScores">Save</button>
         </form>
+
         </div> 
         <div class="col-md-12">
             <a class="btn " href="#scoreboard">scoreboard</a>

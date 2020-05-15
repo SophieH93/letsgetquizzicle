@@ -111,11 +111,57 @@ incrementScore = num => {
   scoreText.innerText = score;
 };
 
+//Countdown Timer
+/* var counter = 10;
+
+        setInterval(function(){
+            counter--;
+
+            if (counter >= 0){
+                id = document.getElementById("count");
+                id.innerHTML = counter;
+            }
+            if (counter === 0) {
+                id.innerHTML = "Times Up!";
+            }
+          }, 1000);
+*/
 
 
+//Questions array
+var counter = 10;             //Time counter
+var questionsCount = 0;       //Questions counter
 
 
+questionDivId =  document.getElementById('question');
 
+setInterval(function () {
+    counter--;
+
+    if (counter >= 0) {
+        id = document.getElementById('count');
+        id.innerHTML = counter;
+    }
+    if (counter === 0) {
+        id.innerHTML = 'Times Up!';
+        counter = 10;
+        questionsCount++;
+    } 
+    
+    //To check if all questions are completed or not
+    if (questionsCount === questions.length){
+        questionDivId.innerHTML = "Well Played! Game is over";
+        id.innerHTML = "";
+    } else{
+        questionDivId.innerHTML = questions[questionsCount];
+    }   
+}, 1000);
+
+//To go to the next question
+function goToNextQuestion() {
+    questionsCount++;
+    counter = 10;
+}
 
 
 startGame();
