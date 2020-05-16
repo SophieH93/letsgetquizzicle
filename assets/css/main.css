@@ -9,57 +9,41 @@ body {
     text-align: center;
 }
 
-#landingPage {
-    background-color: pink;
-    padding-bottom: 3rem;
-    
-
-}
-
-#ReadyToPlay {
-    background-color: #eff;
-    padding-bottom: 3rem;
-    display: none;
-}
-
-#game {
-    background-color: pink;
-    padding-bottom: 3rem;
-    display: none;
-}
-
-#endgame {
-    background-color: #eff;
-    padding-bottom: 3rem;
-    display: none;
-}
-
-#scoreBoard {
-      background-color: pink;
-    padding-bottom: 3rem;
-    display: none;
-}
-
 h1 {
-    font-size: 4rem;
+    font-size: 5rem;
+}
+
+h2 {
+   font-size: 2.5rem; 
+   margin: 2rem;
 }
 
 p {
     font-size: 1.5rem;
 }
-h3 {
-    color: #de1402;
+
+/*page 1 */
+#landingPage {
+    background-color: pink;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
-.button {
-    margin: 1rem;
+/*page 2 */
+#ReadyToPlay {
+    background-color: #eff;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: none;
+}
+ /*page 3 */
+#game {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: none;
 }
 
-.btn {
-    width: 30%;
-}
-
-.choice-container {
+ .choice-container {
     width: 100%;
     margin-bottom: 0.4rem;
     font-size: 1.8rem;
@@ -90,7 +74,6 @@ h3 {
     background-color: red;
 }
 
-
 .hud-prefix {
   text-align: center;
   font-size: 2rem;
@@ -112,7 +95,29 @@ h3 {
     width: 0%;
 }
 
+ /*page 4 */
+#endgame {
+    background-color: #eff;
+    padding-bottom: 3rem;
+    display: none;
+}
 
+/*page 5 */
+#scoreBoard {
+    background-color: pink;
+    padding-bottom: 3rem;
+    display: none;
+}
+
+
+.btn {
+    font-size: 1.5rem;
+    font-weight: 500;
+    border: solid blue;
+}
+
+
+/*
 
 form {
     width: 100%;
@@ -149,3 +154,5 @@ input {
 .high-score:hover {
     transform: scale(1.025);
 }
+*/
+
