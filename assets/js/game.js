@@ -13,19 +13,31 @@ let availableQuestions = [];
 
 let questions = [];
 
-fetch("questions.json")
+fetch("https://opentdb.com/api.php?amount=10&category=14&difficulty=easy&type=multiple")
   .then(res => {
     return res.json();
   })
   .then(loadedQuestions => {
-    console.log(loadedQuestions);
-    questions = loadedQuestions;
-    startGame();
-  }).catch(err => {
-    console.log(err);
+    console.log(loadedQuestions.results);
+    questions = loadedQuestions.results.map(loadedQuestion => {
+        const formattedQuestion = {
+            question: loadedQuestion.question
+        };
+
+        const answerChoices = [...loadedQuestion.incorrect_answers];
+        formattedQuestion.answer = Math.floor(Math.random() * 3) +1;
+        answerChoices.splice(formattedQuestion.answer -1, 0, loadedQuestion.correct_answer);
+        
+        answerChoices.forEach((choice, index) => {
+            formattedQuestion['choice' + (index +1)] = choice;
+        });
+        return formattedQuestion;
+    });
+  startGame()
+  })
+  .catch(err => {
+      console.log(err);
   });
-
-
 //constants
 const correct_bonus = 10;
 const max_questions = 3;
@@ -41,7 +53,7 @@ startGame = () => {
 getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter >= max_questions) {
         localStorage.setItem("mostRecentScore", score);
-        return window.location.assign("#endgame")
+        return window.location.assign("#endgame");
     //When game over will go to the end game html
     }
 
@@ -95,43 +107,3 @@ incrementScore = num => {
   score += num;
   scoreText.innerText = score;
 };
-
-//Countdown Timer
-/*
-
-//Questions array
-var counter = 10;             //Time counter
-var questionsCount = 0;       //Questions counter
-
-
-questionDivId =  document.getElementById('question');
-
-setInterval(function () {
-    counter--;
-
-    if (counter >= 0) {
-        id = document.getElementById('count');
-        id.innerHTML = counter;
-    }
-    if (counter === 0) {
-        id.innerHTML = 'Times Up!';
-        counter = 10;
-        questionsCount++;
-    } 
-    
-    //To check if all questions are completed or not
-    if (questionsCount === questions.length){
-        questionDivId.innerHTML = "Well Played! Game is over";
-        id.innerHTML = "";
-    } else{
-        questionDivId.innerHTML = questions[questionsCount];
-    }   
-}, 1000);
-
-//To go to the next question
-function goToNextQuestion() {
-    questionsCount++;
-    counter = 10;
-}
-*/
-
