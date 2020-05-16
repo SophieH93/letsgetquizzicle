@@ -9,13 +9,35 @@ body {
     text-align: center;
 }
 
-#main {    
-    background-color: rgba(0, 0, 0, 0.4);
-    margin-top: 9rem;
-    color: #f5f2fa;
-    text-align: center;
-    padding-bottom: 2rem;
+#landingPage {
+    background-color: pink;
+    padding-bottom: 3rem;
     
+
+}
+
+#ReadyToPlay {
+    background-color: #eff;
+    padding-bottom: 3rem;
+    display: none;
+}
+
+#game {
+    background-color: pink;
+    padding-bottom: 3rem;
+    display: none;
+}
+
+#endgame {
+    background-color: #eff;
+    padding-bottom: 3rem;
+    display: none;
+}
+
+#scoreBoard {
+      background-color: pink;
+    padding-bottom: 3rem;
+    display: none;
 }
 
 h1 {
@@ -90,9 +112,7 @@ h3 {
     width: 0%;
 }
 
-#endgame {
-    background-color: rgb(219, 217, 217);
-}
+
 
 form {
     width: 100%;
