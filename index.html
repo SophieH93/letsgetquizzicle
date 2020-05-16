@@ -11,22 +11,21 @@
 </head>    
 <body>  
 
-<!--Landing page-->
-<section class="container">
+<!--Landing page--> 
+<section class="container-fluid" id="landingPage">
     <h1>Trivia Game</h1>
         <p>Test you Knowledge</p>
         <p>Answer the questions before the time runs out.</p>
         <p>Choose the correct answer and win a point</p>
         <p>Don't forget to check the scoreboard at the end of the game to see
         if you made it into the top 5!</p>
-
-        <a class="btn " href="">Play Game</a>
+        <a class="btn" onclick="playGame">Play Game</a>
 </section>
 
 <!--Get ready to play-->
-<section class="container">
+<section class="container" id="ReadyToPlay">
     <h1>Get Ready to Play</h1>
-        <h2>Pick a Level </h2>
+        <h2>Pick a Level </h2>   
          <div class="dropdown">
             <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
             Levels
@@ -40,7 +39,7 @@
 </section>
   
  
-<!--the game--> 
+<!--the game-->  
 <div class="container" id="game">     
     <div class="row">
         <div class="col">        
@@ -67,25 +66,26 @@
           </div>
     </div>
 
-    <h2 id="question">Answer this question</h2>
+    <h2 id="question"></h2>
     <div class="choice-container">
         <p class="choice-prefix">A</p>
-        <p class="choice-text" data-number="1">1</p>
+        <p class="choice-text" data-number="1"></p>
     </div>
     <div class="choice-container">
         <p class="choice-prefix">B</p>
-        <p class="choice-text" data-number="2">2</p>
+        <p class="choice-text" data-number="2"></p>
     </div>
     <div class="choice-container">
         <p class="choice-prefix">C</p>
-        <p class="choice-text" data-number="3">3</p>
+        <p class="choice-text" data-number="3"></p>
     </div>
     <div class="choice-container">
         <p class="choice-prefix">D</p>
-        <p class="choice-text" data-number="4">4</p>
+        <p class="choice-text" data-number="4"></p>
     </div> 
 </div>
  
+ <!--End Game-->
 <section class="container-fluid" id="endgame">
     <div class="row"> 
         <div class="col-12">
@@ -111,10 +111,9 @@
     </div>   
  </section>    
  
-
-<section class="container-fluid">
-    <div class="row" id="highscore">
-                
+ 
+<section class="container-fluid" id="scoreBoard">
+    <div class="row" id="highscore">                
             <div class="col-12">
                 <h1>High Scores</h1>
             </div>
