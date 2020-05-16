@@ -19,11 +19,11 @@
         <p>Choose the correct answer and win a point</p>
         <p>Don't forget to check the scoreboard at the end of the game to see
         if you made it into the top 5!</p>
-        <a class="btn" onclick="playGame">Play Game</a>
+        <a class="btn" id="play" >Play Game</a>
 </section>
 
 <!--Get ready to play-->
-<section class="container" id="ReadyToPlay">
+<section class="container-fluid" id="ReadyToPlay">
     <h1>Get Ready to Play</h1>
         <h2>Pick a Level </h2>   
          <div class="dropdown">
@@ -31,7 +31,7 @@
             Levels
             </button>
             <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Easy</a>
+            <a class="dropdown-item" id="easy" href="#">Easy</a>
             <a class="dropdown-item" href="#">Medium</a>
             <a class="dropdown-item" href="#">Mix</a>
     </div>
@@ -40,7 +40,7 @@
   
  
 <!--the game-->  
-<div class="container" id="game">     
+<div class="container-fluid" id="game">     
     <div class="row">
         <div class="col">        
           <div id="hud-item">
@@ -130,7 +130,21 @@
         © Sophie Hickey 2020
     </div>
 </footer>
- 
+ <script>
+    document.getElementById("play").onclick = function() { 
+  
+            document.getElementById("landingPage").style.display = "none"; 
+            document.getElementById("ReadyToPlay").style.display = "block"; 
+
+        } 
+
+    document.getElementById("easy").onclick = function() { 
+
+            document.getElementById("ReadyToPlay").style.display = "none"; 
+            document.getElementById("game").style.display = "block"; 
+
+    }
+ </script>
 <script src="assets/js/game.js"></script>
 <script src="assets/js/end.js"></script>
 <script src="assets/js/highscore.js"></script> 
