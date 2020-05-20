@@ -3,15 +3,65 @@ const choices = Array.from(document.getElementsByClassName("choice-text"));
 const progressText = document.getElementById("progressText");
 const scoreText = document.getElementById("score");
 const progressbarfull = document.getElementById("progressbarfull");
+const baseURL = "https://opentdb.com/api.php?amount=10&type=multiple";
+const totalCategories = "https://opentdb.com/api_category.php";
+
+
 
 //variables
 let currentQuestion = {};
 let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
-let availableQuestions = [];
+let availableQuestions = []; 
 
-let questions = [];
+let questions = []; 
+let base_URL = "https://opentdb.com/";
+
+// Fetches category list from API
+function getData(gameTrigger) {
+    if (gameTrigger) {
+        dataUrl = (`${base_URL}api.php?amount=${quant}&category=${id}&difficulty=$`);
+    } else {
+        dataUrl = (`${base_URL}api_category.php`);
+    }
+}
+
+//Gets the categories and pass to DOM
+function categories() {
+    getData(false);
+    fetch(dataUrl)
+        .then(response => response.json())
+        .then(category => {
+            let categoryList = category.trivia_categories;
+            categoryList.forEach(category => {
+
+                let categoryOption = document.createElement("option");
+                let categoryName = document.createElement("p");
+                let name = document.createTextNode(category.name);
+
+                categoryName.appendChild(name);
+                categoryOption.appendChild(categoryName);
+                categoryOption.id = category.id;
+                categoryOption.classList.add("category");
+                document.getElementById("categoryList").appendChild(categoryOption);
+            });
+        })
+        .catch(() => console.error());
+}
+
+categories();
+
+
+/*
+const generateURL = (numberOfQuestions,catID, difficulty='') =>  {
+	let myCustomURL = `https://opentdb.com/api.php?amount=${numberOfQuestions}&category=${catID}&type=boolean&difficulty=${difficulty}`;
+	fetch(myCustomURL).then(res => res.json()).then(results => console.log(results));
+}
+generateURL(15, 23, "medium")
+
+*/
+
 
 fetch("https://opentdb.com/api.php?amount=10&category=14&difficulty=easy&type=multiple")
   .then(res => {
@@ -33,11 +83,15 @@ fetch("https://opentdb.com/api.php?amount=10&category=14&difficulty=easy&type=mu
         });
         return formattedQuestion;
     });
-  startGame()
+    startGame()
   })
   .catch(err => {
       console.log(err);
   });
+
+  
+
+
 //constants
 const correct_bonus = 10;
 const max_questions = 10;
@@ -107,3 +161,38 @@ incrementScore = num => {
   score += num;
   scoreText.innerText = score;
 };
+
+
+/*Countdown Timer
+
+//Questions array
+var counter = 10;             //Time counter
+var questionsCount = 0;       //Questions counter
+
+questionDivId =  document.getElementById('questions');
+setInterval(function () {
+    counter--;
+    if (counter >= 0) {
+        id = document.getElementById('count');
+        id.innerHTML = counter;
+    }
+    if (counter === 0) {
+        id.innerHTML = 'Times Up!';
+        counter = 10;
+        questionsCount++;
+    } 
+    
+    //To check if all questions are completed or not
+    if (questionsCount === questions.length){
+        questionDivId.innerHTML = "Well Played! Game is over";
+        id.innerHTML = "";
+    } else{
+        questionDivId.innerHTML = questions[questionsCount];
+    }   
+}, 1000);
+
+//To go to the next question
+function goToNextQuestion() {
+    questionsCount++;
+    counter = 10;
+} */
