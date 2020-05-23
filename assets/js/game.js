@@ -1,10 +1,13 @@
 const question = document.getElementById("question");
+
 const choices = Array.from(document.getElementsByClassName("choice-text"));
 const progressText = document.getElementById("progressText");
 const scoreText = document.getElementById("score");
 const progressbarfull = document.getElementById("progressbarfull");
-const baseURL = "https://opentdb.com/api.php?amount=10&type=multiple";
-const totalCategories = "https://opentdb.com/api_category.php";
+
+const game = document.getElementById("theGame");
+const diffChoice = document.getElementById("difficultySelect");
+const catId = document.getElementById("submitCat");
 
 
 
