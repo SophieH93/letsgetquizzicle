@@ -1,16 +1,18 @@
+const diffChoice = document.getElementById("difficultySelect");
+const quantChoice = document.getElementById("questionSelect");
+const catId = document.getElementById("submitCat");
+const game = document.getElementById("theGame");
 const question = document.getElementById("question");
+const start = document.getElementById("ReadyToPlay");
+
+const catChoice = document.getElementById("categoryList");
+
 
 const choices = Array.from(document.getElementsByClassName("choice-text"));
 const progressText = document.getElementById("progressText");
 const scoreText = document.getElementById("score");
 const progressbarfull = document.getElementById("progressbarfull");
 
-const game = document.getElementById("theGame");
-const diffChoice = document.getElementById("difficultySelect");
-const catChoice = document.getElementById("categoryList");
-const catId = document.getElementById("submitCat");
-const quantChoice = document.getElementById("questionSelect");
-const start = document.getElementById("ReadyToPlay");
 
 //variables
 let currentQuestion = {};
@@ -25,7 +27,7 @@ let base_URL = "https://opentdb.com/";
 // Fetches category list from API
 function getData(gameTrigger) {
     if (gameTrigger) {
-        dataUrl = (`${base_URL}api.php?amount=${quant}&category=${id}&difficulty=$`);
+        dataUrl = (`${base_URL}api.php?amount=${quant}&category=${id}&difficulty=${diff}&type=multiple`);
     } else {
         dataUrl = (`${base_URL}api_category.php`);
     }
@@ -50,6 +52,7 @@ function categories() {
                 categoryOption.classList.add("category");
                 document.getElementById("categoryList").appendChild(categoryOption);
             });
+            start.classList.remove("hide");
         })
         .catch(() => console.error());
 }
@@ -57,52 +60,34 @@ function categories() {
 categories();
 
 
-catId.addEventListener('click', () => {
-    id = catChoice.options[catChoice.selectedIndex].id;
-    diff = diffChoice.options[diffChoice.selectedIndex].id;
-    quant = quantChoice.options[quantChoice.selectedIndex].id;
-    start.classList.add("hide");
-    getQuiz();
-}); 
 
+function getQuiz() {
+    getData(true);
+        fetch(dataUrl)
+        .then(data => data.json())
+        .then(loadedQuestions => {
+           /*  console.log(loadedQuestions.results);  */
+            questions = loadedQuestions.results.map(loadedQuestion => {
+                const formattedQuestion = {
+                    question: loadedQuestion.question
+                };
 
-
-/*
-const generateURL = (numberOfQuestions,catID, difficulty='') =>  {
-	let myCustomURL = `https://opentdb.com/api.php?amount=${numberOfQuestions}&category=${catID}&type=boolean&difficulty=${difficulty}`;
-	fetch(myCustomURL).then(res => res.json()).then(results => console.log(results));
-}
-generateURL(15, 23, "medium")
-
-*/
-
-
-fetch("https://opentdb.com/api.php?amount=10&category=14&difficulty=easy&type=multiple")
-  .then(res => {
-    return res.json();
-  })
-  .then(loadedQuestions => {
-    console.log(loadedQuestions.results);
-    questions = loadedQuestions.results.map(loadedQuestion => {
-        const formattedQuestion = {
-            question: loadedQuestion.question
-        };
-
-        const answerChoices = [...loadedQuestion.incorrect_answers];
-        formattedQuestion.answer = Math.floor(Math.random() * 3) +1;
-        answerChoices.splice(formattedQuestion.answer -1, 0, loadedQuestion.correct_answer);
+                
+            formattedQuestion.answer = Math.floor(Math.random() * 3) +1;
+            const answerChoices = [...loadedQuestion.incorrect_answers];
+            answerChoices.splice(formattedQuestion.answer -1, 0, loadedQuestion.correct_answer);
         
-        answerChoices.forEach((choice, index) => {
-            formattedQuestion['choice' + (index +1)] = choice;
+            answerChoices.forEach((choice, index) => {
+                formattedQuestion['choice' + (index +1)] = choice;
+            });
+            return formattedQuestion;
         });
-        return formattedQuestion;
-    });
-    startGame()
+        startGame()
   })
   .catch(err => {
       console.log(err);
   });
-
+}
   
 
 
@@ -176,6 +161,14 @@ incrementScore = num => {
   scoreText.innerText = score;
 };
 
+
+catId.addEventListener('click', () => {
+    id = catChoice.options[catChoice.selectedIndex].id;
+    diff = diffChoice.options[diffChoice.selectedIndex].id;
+    quant = quantChoice.options[quantChoice.selectedIndex].id;
+    start.classList.add("hide");
+    getQuiz();
+}); 
 
 /*Countdown Timer
 
