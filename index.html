@@ -11,31 +11,50 @@
 </head>    
 <body>  
 
-<!--Landing page--> 
-<section class="container-fluid" id="landingPage">
+<!--Landing page-->  
+<header class="container-fluid" id="landingPage">
     <h1>Trivia Game</h1>
         <p>Test you Knowledge</p>
         <p>Answer the questions before the time runs out.</p>
         <p>Choose the correct answer and win a point</p>
         <p>Don't forget to check the scoreboard at the end of the game to see
         if you made it into the top 5!</p>
-        <a class="btn" id="play" >Play Game</a>
-</section>
+</header>
 
 <!--Get ready to play-->
-<section class="container-fluid" id="ReadyToPlay">
-    <h1>Get Ready to Play</h1>
-        <h2>Pick a Level </h2>   
-         <div class="dropdown">
-            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
-            Levels
-            </button>
-            <div class="dropdown-menu">
-            <a class="dropdown-item" id="easy" href="#">Easy</a>
-            <a class="dropdown-item" href="#">Medium</a>
-            <a class="dropdown-item" href="#">Mix</a>
+<section class="container-fluid hide" id="ReadyToPlay">
+
+<!--Select Category-->
+ <div class="row select-area">
+      <div class="col-sm-12 col-md-4 choices">
+        <h3>Select a topic</h3>
+        <select id="categoryList" class="custom-select">
+        </select>
+      </div>
+
+    <div class="col-sm-12 col-md-4 choices">
+        <h3>Select Difficulty</h3>
+        <select id="difficultySelect" class="custom-select">
+          <option id="easy">Easy</option>
+          <option id="medium">Medium</option>
+          <option id="hard">Hard</option>
+        </select>
     </div>
-  </div>
+
+    <div class="col-sm-12 col-md-4 choices">
+        <h3>How Many Questions?</h3>
+        <select id="questionSelect" class="custom-select">
+          <option id="10">10</option>
+          <option id="15">15</option>
+          <option id="20">20</option>
+          <option id="25">25</option>
+        </select>
+      </div>
+    </div>
+
+<div class="col-12">
+<a class="btn submit" id="catSubmit" >Play Game</a>
+</div>
 </section>
   
  
@@ -128,9 +147,9 @@
 <footer>
     <div class="copyright">
         © Sophie Hickey 2020
-    </div>
+    </div> 
 </footer>
- <script>
+<!-- <script>
     document.getElementById("play").onclick = function() { 
   
             document.getElementById("landingPage").style.display = "none"; 
@@ -144,7 +163,7 @@
             document.getElementById("game").style.display = "block"; 
 
     }
- </script>
+ </script> -->
 <script src="assets/js/game.js"></script>
 <script src="assets/js/end.js"></script>
 <script src="assets/js/highscore.js"></script> 
