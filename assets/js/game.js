@@ -7,9 +7,10 @@ const progressbarfull = document.getElementById("progressbarfull");
 
 const game = document.getElementById("theGame");
 const diffChoice = document.getElementById("difficultySelect");
+const catChoice = document.getElementById("categoryList");
 const catId = document.getElementById("submitCat");
-
-
+const quantChoice = document.getElementById("questionSelect");
+const start = document.getElementById("ReadyToPlay");
 
 //variables
 let currentQuestion = {};
@@ -54,6 +55,16 @@ function categories() {
 }
 
 categories();
+
+
+catId.addEventListener('click', () => {
+    id = catChoice.options[catChoice.selectedIndex].id;
+    diff = diffChoice.options[diffChoice.selectedIndex].id;
+    quant = quantChoice.options[quantChoice.selectedIndex].id;
+    start.classList.add("hide");
+    getQuiz();
+}); 
+
 
 
 /*
