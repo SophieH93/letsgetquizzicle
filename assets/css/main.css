@@ -71,66 +71,74 @@ p {
     box-shadow: 0 0 5px #2196f3, 0 0 8px #fa00d9, 0 0 9px #7c21f3;
 }
 
+/* the game */
 
-
-
- /*page 3 */
 #theGame {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    margin-bottom: 3rem;
 }
 
- .choice-container {
-    width: 100%;
-    margin-bottom: 0.4rem;
-    font-size: 1.8rem;
-    display: flex;
-    background-color: pink;
+#progressBar {
+    width: 20rem;
+    height: 4rem;
+    border: 0.3rem solid  #0A0A84;
 }
 
-.choice-container:hover  {
-    transform: translate(-0.1rem);
-    transition: transform 150ms;
-}
-.choice-prefix {
-    padding: 1.5rem 2.5rem;
-    background-color: blue;
-    color: white;
+#progressbarfull{
+    height: 3.4rem;     
+    width: 0%;
+    background-color: #0A0A84;
 }
 
-.choice-text {
-    padding: 1.5rem;
-    width: 100%;
-}
-
-.correct {
-    background-color: green;
-}
-
-.incorrect {
-    background-color: red;
-}
-
-.hud-prefix {
+  .hud-prefix {
   text-align: center;
   font-size: 2rem;
+  font-weight: 400;
 }
 
 .hud-main-text {
   text-align: center;
 }
 
-#progressBar {
-    width: 20rem;
-    height: 4rem;
-    border: 0.3rem solid blue;
+/*The Questions */
+ .choice-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 0.4rem;
+    font-size: 2rem;    
+    background-color: #B6B6FD;
+    border: 1px solid #0A0A84; 
 }
 
-#progressbarfull{
-    height: 3.4rem;
-    background-color: blue;
-    width: 0%;
+.choice-container:hover  {
+    transform: translate(-0.1rem);
+    transition: transform 150ms;
+    box-shadow: 0 0 3px #FF0000;
 }
+
+
+.choice-prefix {
+    padding: 1.5rem 2.5rem;
+    text-shadow: 0 0 3px #FF0000;
+    font-size: 2rem;
+    
+}
+
+.choice-text {
+    padding: 2rem;
+    width: 100%;  
+}
+
+
+.correct {
+    background-color: #B5E78C; 
+}
+
+.incorrect {
+    background-color: #FF5454;
+}
+
+
 
  /*page 4 */
 #endgame {
@@ -198,4 +206,11 @@ input {
     .submit {
         width: 100%;
     }
+}
+
+
+
+/* large devices */
+@media only screen and (max-width : 1024px) {
+
 }
