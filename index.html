@@ -102,17 +102,19 @@
     </div> 
 </section>
  
- <!--End Game-->
-<section class="container-fluid" id="endgame">
-    <div class="row"> 
-        <div class="col-12">
+ 
+<!--End Game--> 
+
+<section class="container hide" id="gameOver">
+<div class="row"> 
+        <div class="col-12">  
             <h1 id="finalscore"></h1>
         </div>
         <div class="col-12">
         <form>
             <div class="form-row">            
                 <input type="username" name="username" id="username" class="form-control text-input" placeholder="username"> 
-                            <div class="form-group col-12">
+            <div class="form-group col-12">
            
                 <button type="submit" class="btn" id="saveScoreBtn"  onclick="savingHighScore(event)" disabled>Save</button>     
             </div>
@@ -120,16 +122,18 @@
         </form>
         </div> 
         <div class="col-12">
-            <a class="btn " href="#game">Play Again</a>
+            <a class="btn secondary"  href="#">Scoreboard</a>
         </div>
         <div class="col-12">  
-            <a class="btn " href="/">Go Home</a> 
+            <a class="btn secondary" href="#">Go Home</a> 
         </div>      
     </div>   
- </section>    
+ </section>
  
+ <section>
+
  
-<section class="container-fluid" id="scoreBoard">
+<section class="container-fluid" >
     <div class="row" id="highscore">                
             <div class="col-12">
                 <h1>High Scores</h1>
