@@ -94,13 +94,14 @@ function getQuiz() {
 //constants
 const correct_bonus = 10;
 const max_questions = 10;
-const subtract_value = -5; 
+const subtract_value = -2; 
 
 startGame = () => {
     questionCounter = 0;
     score = 0;
     availableQuestions = [...questions];
     getNewQuestion();
+    game.classList.remove("hide");
 };
 
 getNewQuestion = () => {
