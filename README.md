@@ -1,21 +1,19 @@
- # MARVEL TRIVIA GAME   
+ # TRIVIA GAME   
 
-This project is an interactive frontend Marvel themed Trivia Game suitable for people of all ages who are fans of the Marvel franchise. The game is
-a fun way for players to test their knowledge and see who is the ultimate Marvel fan.
+This project is an interactive frontend Trivia Game suitable for people of all ages from the Opan Trivia API. The game is
+a fun way for players to test their knowledge and learn something new.
 
 # UX
-The goal of this project is to provide users with a fun, easy to use trivia game based on their favourite franchise. 
-As the game is suitable for people of all ages, the webiste needs to be visually appealing to encourage user interaction.
+The goal of this project is to provide users with a fun, easy to use trivia game based on their favourite categories. 
+As the game is suitable for people of all ages, the webiste needs to be visually appealing to encourage user interaction and suitable for the different age groups.
 
 ## Strategy
 
-Target Audience - The target ausience for this project can be anyone between the age of 10-30.
+Target Audience - The target ausience for this project can be anyone between the age of 10-40.
 
-Primary Audience-Marvel fans who want to see how much they know about the franchise and share this information with their friends.
+Primary Audience-Peiple who want to see how much they know about a particular topic and share this information with their friends.
 
-The primary site goals are to offer a fun experience to users while teaching them some facts about the Marvel franchise.
-
-The primary user goals are to learn more about the Marvel franchise while testing their knowledge.
+The primary site goals are to offer a fun experience to users while teaching them some facts about different categories.
 
 
 ## Scope
@@ -23,7 +21,7 @@ The primary user goals are to learn more about the Marvel franchise while testin
 ### User Goals:
 * For the game to be responsive on mobile, tablet & desktop.
 * Visual interaction to draw the player in.
-* Different choice of difficulty levels to suit a wider ranger of players.
+* Different choice of categories and difficulty levels to suit a wider ranger of players.
 * Countdown timer to make the game more exciting as not only will the player have the
   challenge of answering the correct question but also be restricted in time.
 * Point system to reward the player with the correct answer to the question.
@@ -31,6 +29,7 @@ The primary user goals are to learn more about the Marvel franchise while testin
 
 ### User Story:
 * As a user, I would like to play a game with different difficulty levels.
+* As a user, I would like to play a game where I can chose th category.
 * As a user. I would like a game that's easy to navigate through.
 * As a user, I would enjoy a game that is visually appealing.
 * As a user, I would like a game that does not take too long to complete.
@@ -50,20 +49,23 @@ I created my wireframes on [MockFlow](https://www.mockflow.com/) for Desktop, Ta
 # Design Choice: 
 
 **Landing Page:**
-    Full background image of the Marvel characters to emphasize the theme of the game.   
-    If i decide to use the background image I need to find the correct color font that will
-    display over the image. Including the transparent the container for the text helps the text stand out.
 
 **Ready Page**
     
-**Font:** Comic Neue   
+**Font:** Anton 
 
-**Colors:** 
+**Colors:**    
+Background Color - #F0F0FB   
+Font Color - #2A2AA0   
+Text shadow with color #FF0000 is used for the headings.   
+Border, Submit, Select color - #0A0A84   
+Submit hover has a box shadow with the colors - #2196f3,  #fa00d9, #7c21f3
+
 
 # Features of the Website
 
 **landing Page-** Consists of a breif introduction to the game with the buttons 
-where the player will choose what level they would like to play *easy* or *medium*.
+where the player will choose what level they would like to play *easy* or *medium*, the category they would like to choose and the number of questions..
 
 **Ready Page-** Once the user chooses the level they are brought to the *Ready to Play* page that describes the rules of the game.   
 It contains two buttons *play* and *scoreboard*.  
@@ -78,24 +80,24 @@ A *Point System*, when the player selects the correct answer they will win a poi
 
 # Technologies used
 ## Languages
-* HTML
-* CSS
-* Javascript
+* [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+* [Javascript](https://www.javascript.com/)
 
 ## Frameworks
-* jQuery
-* Bootstrap
-* Font Awesome
+* [jQuery](https://jquery.com/)
+* [Bootstrap](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
+* [Google Fonts](https://fonts.google.com/)
+* [Open Trivia DB](https://opentdb.com/)
 
 ## Tools
-* GitHub
-* GitPod
-* Git
-* JSON
-* W3C Markup Validation
-* WSC CSS Validaion
-* Dirty Markup Formatter
-
+* [GitHub](https://github.com/)
+* [GitPod](https://www.gitpod.io/)
+* [Git](https://git-scm.com/about)
+* [W3C Markup Validation](https://validator.w3.org/)
+* [WSC CSS Validaion](https://jigsaw.w3.org/css-validator/)
+* [Dirty Markup Formatter](https://www.10bestdesign.com/dirtymarkup/)
+* [W3School](https://www.w3schools.com/)
 
 # Testing
 
@@ -132,9 +134,9 @@ To clone the quizgame from GitHub:
 Cred
 
 # Credits
-
-
-
+* **Simen Daehlin** my mentor.
+* **Stack Overview**
+* [Youtube](PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx) video by James Quick called **Build a Quiz App**
 
 **This websit is for educational purposes only.**
 
