@@ -71,10 +71,10 @@
            <!-- <div class="col">
                 <div id="count">timer
             </div>
-            </div>-->
+            </div>
     <div>
     <h1 id="count"></h1>
-</div>
+</div>-->
           <div class="col">
             <div class ="hud-item">
               <p class="hud-prefix">Score</p>
@@ -121,13 +121,13 @@
                 <button type="submit" class="btn" id="saveScoreBtn"  onclick="savingHighScore(event)" disabled>Save</button>     
             </div>
             </div>            
-        </form>
+        </form> 
         </div> 
         <div class="col-12">
-            <a class="btn secondary"  href="#">Scoreboard</a>
+            <a class="btn secondary"  href="#scoreBoard">Scoreboard</a>
         </div>
         <div class="col-12">  
-            <a class="btn secondary" href="/">Go Home</a> 
+            <a class="btn secondary"  href="/">Go Home</a> 
         </div>      
     </div>   
  </section>
@@ -135,7 +135,7 @@
 
 
  
-<section class="container-fluid" >
+<section class="container-fluid " id="scoreBoard" >
     <div class="row" id="highscore">                
             <div class="col-12">
                 <h1>High Scores</h1>
@@ -153,21 +153,7 @@
         © Sophie Hickey 2020
     </div> 
 </footer>
-<!-- <script>
-    document.getElementById("play").onclick = function() { 
-  
-            document.getElementById("landingPage").style.display = "none"; 
-            document.getElementById("ReadyToPlay").style.display = "block"; 
 
-        } 
-
-    document.getElementById("easy").onclick = function() { 
-
-            document.getElementById("ReadyToPlay").style.display = "none"; 
-            document.getElementById("game").style.display = "block"; 
-
-    }
- </script> -->
 <script src="assets/js/game.js"></script>
 <script src="assets/js/end.js"></script>
 <script src="assets/js/highscore.js"></script> 
