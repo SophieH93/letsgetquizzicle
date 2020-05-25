@@ -196,7 +196,7 @@ input {
 /* Extra Small Devices, Phones */
 
 @media only screen and (max-width: 480px) {
-	.submit {
+	.submit, .secondary {
 		width: 100%;
 	}
 }
