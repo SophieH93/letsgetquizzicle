@@ -1,227 +1,206 @@
-
-
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-
-body { 
-    text-align: center;
-    background-color: #F0F0FB;
-    color: #2A2AA0;
-    margin-top: 5rem;   
+body {
+	text-align: center;
+	background-color: #F0F0FB;
+	color: #2A2AA0;
+	margin-top: 5rem;
 }
 
 h1 {
-    font-size: 5rem;
-    font-family: 'Anton', sans-serif;
-    text-shadow: 0 0 3px #FF0000;
+	font-size: 5rem;
+	font-family: 'Anton', sans-serif;
+	text-shadow: 0 0 3px #FF0000;
 }
 
 .h2 {
-   margin: 2rem;
-   font-weight: 500;   
+	margin: 2rem;
+	font-weight: 500;
 }
-
 
 p {
-    margin-top: 2rem;
-    font-size: 1.5rem;
+	margin-top: 2rem;
+	font-size: 1.5rem;
 }
-
 
 .hide {
-    display: none;
+	display: none;
 }
 
-
-
 /*page 2 */
+
 #ReadyToPlay {
-    margin-top: 5rem;      
-     margin-bottom: 5rem;   
+	margin-top: 5rem;
+	margin-bottom: 5rem;
 }
 
 .choices {
-    padding-bottom: 3rem;
-    text-shadow: 0 0 2px #FF0000;
+	padding-bottom: 3rem;
+	text-shadow: 0 0 2px #FF0000;
 }
 
 .choices:hover {
-    transform: translate(-0.1rem);
-    transition: transform 150ms;
+	transform: translate(-0.1rem);
+	transition: transform 150ms;
 }
 
-
 .custom-select {
-    color: #0A0A84;
-    border-color: #0A0A84;    
+	color: #0A0A84;
+	border-color: #0A0A84;
 }
 
 .custom-select:hover {
-    border: 2px solid #02024C;
-    color: #02024C; 
+	border: 2px solid #02024C;
+	color: #02024C;
 }
 
 .btn {
-    background-color: #B6B6FD;
-    border: 1px solid #02024C;
-    color: #0A0A84;
-    width: 30%;
-    font-size: 1.5rem;
+	background-color: #B6B6FD;
+	border: 1px solid #02024C;
+	color: #0A0A84;
+	width: 30%;
+	font-size: 1.5rem;
 }
 
-.btn:hover {   
-    box-shadow: 0 0 5px #2196f3, 0 0 8px #fa00d9, 0 0 9px #7c21f3;
+.btn:hover {
+	box-shadow: 0 0 5px #2196f3, 0 0 8px #fa00d9, 0 0 9px #7c21f3;
 }
 
 /* the game */
 
 #theGame {
-    margin-bottom: 3rem;
+	margin-bottom: 3rem;
 }
 
 #progressBar {
-    width: 20rem;
-    height: 4rem;
-    border: 0.3rem solid  #0A0A84;
+	width: 20rem;
+	height: 4rem;
+	border: 0.3rem solid #0A0A84;
 }
 
-#progressbarfull{
-    height: 3.4rem;     
-    width: 0%;
-    background-color: #0A0A84;
+#progressbarfull {
+	height: 3.4rem;
+	width: 0%;
+	background-color: #0A0A84;
 }
 
-  .hud-prefix {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 400;
+.hud-prefix {
+	text-align: center;
+	font-size: 2rem;
+	font-weight: 400;
 }
 
 .hud-main-text {
-  text-align: center;
+	text-align: center;
 }
 
 /*The Questions */
- .choice-container {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    margin-bottom: 0.4rem;
-    font-size: 2rem;    
-    background-color: #B6B6FD;
-    border: 1px solid #0A0A84; 
+
+.choice-container {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	margin-bottom: 0.4rem;
+	font-size: 2rem;
+	background-color: #B6B6FD;
+	border: 1px solid #0A0A84;
 }
 
-.choice-container:hover  {
-    transform: translate(-0.1rem);
-    transition: transform 150ms;
-    box-shadow: 0 0 3px #FF0000;
+.choice-container:hover {
+	transform: translate(-0.1rem);
+	transition: transform 150ms;
+	box-shadow: 0 0 3px #FF0000;
 }
-
 
 .choice-prefix {
-    padding: 1.5rem 2.5rem;
-    text-shadow: 0 0 3px #FF0000;
-    font-size: 2rem;
-    
+	padding: 1.5rem 2.5rem;
+	text-shadow: 0 0 3px #FF0000;
+	font-size: 2rem;
 }
 
 .choice-text {
-    padding: 2rem;
-    width: 100%;  
+	padding: 2rem;
+	width: 100%;
 }
 
-
 .correct {
-    background-color: #B5E78C; 
+	background-color: #B5E78C;
 }
 
 .incorrect {
-    background-color: #FF5454;
+	background-color: #FF5454;
 }
-
-
 
 /*End Game */
 
 form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-        
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 #username {
-    font-size: 1.5rem;
-    border: 1px solid #0A0A84;              
+	font-size: 1.5rem;
+	border: 1px solid #0A0A84;
 }
 
-#username:hover { 
-    border: 2px solid #02024C;
-    color: #02024C; 
+#username:hover {
+	border: 2px solid #02024C;
+	color: #02024C;
 }
-
 
 input {
-    margin-bottom: 1.5rem;
-    color: #02024C;
-    
+	margin-bottom: 1.5rem;
+	color: #02024C;
 }
 
 #saveScoreBtn {
-    width: 100%;
+	width: 100%;
 }
 
 .secondary {
-    margin-bottom: 1.5rem;
-    width: 34%;
-    border: 1px solid #02024C;
+	margin-bottom: 1.5rem;
+	width: 34%;
+	border: 1px solid #02024C;
 }
-
 
 .btn[disabled]:hover {
-  cursor: not-allowed;
-  box-shadow: none;
-  transform: none;
+	cursor: not-allowed;
+	box-shadow: none;
+	transform: none;
 }
-
 
 /*page 5 */
+
 #scoreBoard {
-    background-color: pink;
-    padding-bottom: 3rem;
-    display: none;
+	background-color: pink;
+	padding-bottom: 3rem;
+	display: none;
 }
 
-
-
-
 #highScoresList {
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 4rem;
+	list-style: none;
+	padding-left: 0;
+	margin-bottom: 4rem;
 }
 
 .high-score {
-  font-size: 2.8rem;
-  margin-bottom: 0.5rem;
+	font-size: 2.8rem;
+	margin-bottom: 0.5rem;
 }
 
 .high-score:hover {
-    transform: scale(1.025);
+	transform: scale(1.025);
 }
 
+/* Extra Small Devices, Phones */
 
-/* Extra Small Devices, Phones */ 
 @media only screen and (max-width: 480px) {
-    .submit {
-        width: 100%;
-    }
+	.submit {
+		width: 100%;
+	}
 }
-
-
 
 /* large devices */
-@media only screen and (max-width : 1024px) {
 
-}
+@media only screen and (max-width: 1024px) {}
