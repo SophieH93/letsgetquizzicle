@@ -1,4 +1,4 @@
- # TRIVIA GAME   
+ # Let's Get Quizzicle  
 
 This project is an interactive frontend Trivia Game suitable for people of all ages from the Opan Trivia API. The game is
 a fun way for players to test their knowledge and learn something new.
