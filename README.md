@@ -40,7 +40,9 @@ The primary site goals are to offer a fun experience to users while teaching the
 ## Structure
 
 ## Skeleton 
-I created my wireframes on [MockFlow](https://www.mockflow.com/) for Desktop, Tablet and Mobie. Please view my Wireframes folder to see more.
+I created my wireframes on [MockFlow](https://www.mockflow.com/) for Desktop, Tablet and Mobie. Please view my Wireframes [folder](https://github.com/SophieH93/quizgame/tree/master/wireframes) to see more.
+
+
 
 ## Surface
 
@@ -48,9 +50,6 @@ I created my wireframes on [MockFlow](https://www.mockflow.com/) for Desktop, Ta
 
 # Design Choice: 
 
-**Landing Page:**
-
-**Ready Page**
     
 **Font:** Anton 
 
@@ -64,19 +63,17 @@ Submit hover has a box shadow with the colors - #2196f3,  #fa00d9, #7c21f3
 
 # Features of the Website
 
-**landing Page-** Consists of a breif introduction to the game with the buttons 
-where the player will choose what level they would like to play *easy* or *medium*, the category they would like to choose and the number of questions..
-
-**Ready Page-** Once the user chooses the level they are brought to the *Ready to Play* page that describes the rules of the game.   
-It contains two buttons *play* and *scoreboard*.  
+**landing Page-** Consists of a breif introduction to the game with 3 different select options for the player to choose from such as *Categories*, *Difficulty Level* and *Number of Questions*.
 
 **Game Page-** This page consists of the questions along with a *progress bar* so the player knows how much longer in the game they have.   
 A *Countdown Timer*, if the player does not select an answer before the time runs out they will be brought to the next question and lose a point.   
 A *Point System*, when the player selects the correct answer they will win a point.   
 
-**Game Over**- This page will display the players total number of points.  It will have a form where the player can add/save their username, and two buttons, one for the scoreboard the other to go back to the home page.
+**Game Over**- This page will display the players total number of points.
+It will have a form where the player can add/save their username, and two buttons, one for the scoreboard the other to go back to the home page.   
 
-
+**Scoreboard**
+This page consists of the top 5 players
 
 # Technologies used
 ## Languages
@@ -101,13 +98,19 @@ A *Point System*, when the player selects the correct answer they will win a poi
 
 # Testing
 
-# Bugs
-1. I wanted to create a score that added points when the player selected the correct the answer and minus a point if the players 
-selected the wrong answer. I was able to increment the score but encountered a issue when I tried to minus a point. DevTolls console
-was showing that my function was correct.  
-The Fix: With the help of a fellow student, the bug was eventually adding a cosole.log into the else statement. 
+I used [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) to test the styling and layout and responsiveness of the website on the different devices-Mobile, Tablet and Desktop.
+I also used this to test my Javscript and fix any error that arised.
 
-2. The progress bar was not filling 
+[WSC CSS Validaion](https://jigsaw.w3.org/css-validator/) was used to validate my HTML & CSS code.
+
+The website was tested on mulltiple devices such as dekstop, ipdad and multiple phone types e.g Iphone, Huawei and Samsung.
+
+
+# Bugs
+1. I wanted to create a score system that added points when the player selected the correct answer and minus a point if the players 
+selected the wrong answer. I was able to increment the score but encountered a issue when I tried to minus a point. DevTols console
+was showing that my function was correct.  
+The Fix: With the help of a fellow student, the bug was eventually resolved by adding a cosole.log into the else statement. 
 
 # Deployment
 I deployed the websit using GitHub's pages. The steps are as follows:
