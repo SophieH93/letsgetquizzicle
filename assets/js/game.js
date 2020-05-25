@@ -7,11 +7,12 @@ const start = document.getElementById("ReadyToPlay");
 
 const catChoice = document.getElementById("categoryList");
 
-
 const choices = Array.from(document.getElementsByClassName("choice-text"));
 const progressText = document.getElementById("progressText");
 const scoreText = document.getElementById("score");
 const progressbarfull = document.getElementById("progressbarfull");
+const end = document.getElementById("gameOver");
+
 
 
 //variables
@@ -107,7 +108,8 @@ startGame = () => {
 getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter >= max_questions) {
         localStorage.setItem("mostRecentScore", score);
-        return window.location.assign("#endgame");
+        game.classList.add("hide");
+        end.classList.remove("hide");
     //When game over will go to the end game html
     }
 
