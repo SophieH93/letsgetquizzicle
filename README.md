@@ -103,7 +103,10 @@ I also used this to test my Javscript and fix any error that arised.
 
 [WSC CSS Validaion](https://jigsaw.w3.org/css-validator/) was used to validate my HTML & CSS code.
 
-The website was tested on mulltiple devices such as dekstop, ipdad and multiple phone types e.g Iphone, Huawei and Samsung.
+Devices Landscape-
+Currently responsive on Moto G4, Galexy S5, Pixel 2, Pixel 2XL, iPhone, 5/SE, iPhone 6/7/8, iPhone 6/7/8 Plus, iPhone X,
+
+
 
 
 # Bugs
