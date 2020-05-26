@@ -1,15 +1,15 @@
-const diffChoice = document.querySelector( "difficultySelect" );
-const quantChoice = document.getElementById( "questionSelect" );
-const catId = document.getElementById( "submitCat" );
-const game = document.getElementById( "theGame" );
-const question = document.getElementById( "question" );
-const start = document.getElementById( "ReadyToPlay" );
-const catChoice = document.getElementById( "categoryList" );
-const choices = Array.from( document.getElementsByClassName( "choice-text" ) );
-const progressText = document.getElementById( "progressText" );
-const scoreText = document.getElementById( "score" );
-const progressbarfull = document.getElementById( "progressbarfull" );
-const end = document.getElementById( "gameOver" );
+const diffChoice = document.querySelector( "#difficultySelect" );
+const quantChoice = document.querySelector( "#questionSelect" );
+const catId = document.querySelector( "#submitCat" );
+const game = document.querySelector( "#theGame" );
+const question = document.querySelector( "#question" );
+const start = document.querySelector( "#ReadyToPlay" );
+const catChoice = document.querySelector( "#categoryList" );
+const choices = Array.from( document.getElementsByClassName( ".choice-text" ) );
+const progressText = document.querySelector( "#progressText" );
+const scoreText = document.querySelector( "#score" );
+const progressbarfull = document.querySelector( "#progressbarfull" );
+const end = document.querySelector( "#gameOver" );
 
 let currentQuestion = {};
 let acceptingAnswers = false;
@@ -49,7 +49,7 @@ const categories = () => {
 }
 categories();
 
-const getQuiz = ()=>{
+const getQuiz = () =>{
 	getData( true );
 	fetch( dataUrl ).then( data => data.json() ).then( loadedQuestions => {
 		questions = loadedQuestions.results.map( loadedQuestion => {
