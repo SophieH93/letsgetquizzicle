@@ -1,4 +1,4 @@
-const diffChoice = document.getElementById( "difficultySelect" );
+const diffChoice = document.querySelector( "difficultySelect" );
 const quantChoice = document.getElementById( "questionSelect" );
 const catId = document.getElementById( "submitCat" );
 const game = document.getElementById( "theGame" );
@@ -18,9 +18,11 @@ let questionCounter = 0;
 let availableQuestions = [];
 let questions = [];
 let baseUrl = "https://opentdb.com/";
+let dataUrl;
+let quant;
 
 // Fetches category list from API
-function getData( gameTrigger ) {
+const getData = gameTrigger => {
 	if ( gameTrigger ) {
 		dataUrl = ( `${baseUrl}api.php?amount=${quant}&category=${id}&difficulty=${diff}&type=multiple` );
 	} else {
@@ -28,7 +30,7 @@ function getData( gameTrigger ) {
 	}
 }
 //Gets the categories and pass to DOM
-function categories() {
+const categories = () => {
 	getData( false );
 	fetch( dataUrl ).then( response => response.json() ).then( category => {
 		let categoryList = category.trivia_categories;
@@ -47,7 +49,7 @@ function categories() {
 }
 categories();
 
-function getQuiz() {
+const getQuiz = ()=>{
 	getData( true );
 	fetch( dataUrl ).then( data => data.json() ).then( loadedQuestions => {
 		questions = loadedQuestions.results.map( loadedQuestion => {
@@ -71,6 +73,7 @@ function getQuiz() {
 const correct_bonus = 10;
 const max_questions = 10;
 const subtract_value = -2;
+
 startGame = () => {
 	questionCounter = 0;
 	score = 0;
@@ -86,15 +89,15 @@ getNewQuestion = () => {
 		//When game over will go to the end game html
 	}
 	questionCounter++;
-	progressText.innerText = `Question ${questionCounter}/${max_questions}`;
+	progressText.innerHTML= `Question ${questionCounter}/${max_questions}`;
 	//update progress bar
 	progressbarfull.style.width = `${(questionCounter / max_questions) * 100}%`;
 	const questionIndex = Math.floor( Math.random() * availableQuestions.length );
 	currentQuestion = availableQuestions[ questionIndex ];
-	question.innerText = currentQuestion.question;
+	question.innerHTML = currentQuestion.question;
 	choices.forEach( choice => {
 		const number = choice.dataset[ 'number' ];
-		choice.innerText = currentQuestion[ 'choice' + number ];
+		choice.innerHTML = currentQuestion[ 'choice' + number ];
 	} );
 	// splice will remove the answer we just picked so we are not choosing it again
 	availableQuestions.splice( questionIndex, 1 );
