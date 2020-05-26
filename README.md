@@ -115,6 +115,12 @@ selected the wrong answer. I was able to increment the score but encountered a i
 was showing that my function was correct.  
 The Fix: With the help of a fellow student, the bug was eventually resolved by adding a cosole.log into the else statement. 
 
+2. When fetching the questions from the API there was a bug in the questions that had different symbols between the text e.g &%#
+that I needed to remove.   
+The Fix: I replaced the 'innerText' with innerHTML whicih then retrieves and sets the content in HTML format. 
+
+
+
 # Deployment
 I deployed the websit using GitHub's pages. The steps are as follows:
 
