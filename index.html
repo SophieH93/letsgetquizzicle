@@ -15,7 +15,7 @@
 <header class="container-fluid" id="mainText">
 
     <h1>Let's Get Quizzicle</h1>
-        <p>Answer the questions before the time runs out.<br>
+        <p class="hide" id="welcome"> Answer the questions before the time runs out.<br>
         Choose the correct answer and win a point<br>
         Don't forget to check the scoreboard at the end of the game to see
         if you made it into the top 5!</p>
@@ -124,7 +124,7 @@
         </form> 
         </div> 
         <div class="col-12">
-            <a class="btn secondary"  href="#scoreBoard">Scoreboard</a>
+            <a class="btn secondary" id="scoreBoardBtn" href="#">Scoreboard</a>
         </div>
         <div class="col-12">  
             <a class="btn secondary"  href="/">Go Home</a> 
@@ -135,7 +135,7 @@
 
 
  
-<section class="container-fluid " id="scoreBoard" >
+<section class="container-fluid hide" id="scoreBoard" >
     <div class="row" id="highscore">                
             <div class="col-12">
                 <h1>High Scores</h1>
