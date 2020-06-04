@@ -10,6 +10,9 @@ const progressText = document.querySelector( "#progressText" );
 const scoreText = document.querySelector( "#score" );
 const progressbarfull = document.querySelector( "#progressbarfull" );
 const end = document.querySelector( "#gameOver" );
+const scoreBoardBtn = document.querySelector( "#scoreBoardBtn" );
+const scoreBoardPg = document.querySelector( "#scoreBoard" );
+const welcome = document.querySelector( "#welcome" );
 
 let currentQuestion = {};
 let acceptingAnswers = false;
@@ -20,6 +23,12 @@ let questions = [];
 let baseUrl = "https://opentdb.com/";
 let dataUrl;
 let quant;
+
+
+
+
+
+
 
 // Fetches category list from API
 const getData = gameTrigger => {
@@ -43,7 +52,8 @@ const categories = () => {
 			categoryOption.id = category.id;
 			categoryOption.classList.add( "category" );
 			document.getElementById( "categoryList" ).appendChild( categoryOption );
-		} );
+        } );
+        welcome.classList.remove("hide");
 		start.classList.remove( "hide" );
 	} ).catch( () => console.error() );
 }
@@ -63,7 +73,8 @@ const getQuiz = () =>{
 				formattedQuestion[ 'choice' + ( index + 1 ) ] = choice;
 			} );
 			return formattedQuestion;
-		} );
+        } );
+         welcome.classList.add("hide")
 		startGame()
 	} ).catch( err => {
 		console.log( err );
@@ -135,6 +146,20 @@ catId.addEventListener( 'click', () => {
 	start.classList.add( "hide" );
 	getQuiz();
 } );
+
+
+/*When scoreboard btn is clicked */
+scoreBoardBtn.addEventListener( 'click', () => {
+    game.classList.add( "hide" );
+    scoreBoardPg.classList.remove( "hide" );
+	
+} );
+
+
+
+
+
+
 /*Countdown Timer
 
 //Questions array
