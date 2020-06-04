@@ -1,18 +1,22 @@
-const diffChoice = document.querySelector( "#difficultySelect" );
-const quantChoice = document.querySelector( "#questionSelect" );
-const catId = document.querySelector( "#submitCat" );
-const game = document.querySelector( "#theGame" );
-const question = document.querySelector( "#question" );
-const start = document.querySelector( "#ReadyToPlay" );
-const catChoice = document.querySelector( "#categoryList" );
-const choices = Array.from( document.getElementsByClassName( "choice-text" ) );
-const progressText = document.querySelector( "#progressText" );
-const scoreText = document.querySelector( "#score" );
-const progressbarfull = document.querySelector( "#progressbarfull" );
-const end = document.querySelector( "#gameOver" );
-const scoreBoardBtn = document.querySelector( "#scoreBoardBtn" );
-const scoreBoardPg = document.querySelector( "#scoreBoard" );
+const start = document.querySelector("#ReadyToPlay");
+const quizCategorySelect = document.querySelector("#categorySelect");
+const difficultySelect = document.querySelector("#difficultySelect");
+const questionAmountSelect = document.querySelector("#quantChoice");
+const submitQuizOptions = document.querySelector("#submitOptions");
+const gamePage = document.querySelector("#theGame");
+const progressText = document.querySelector("#progressText");
+const progressbarfull = document.querySelector("#progressbarfull");
+const playersScore = document.querySelector("#score");
+const triviaQuestions = document.querySelector("#question");
+const answerChoices = Array.from( document.getElementsByClassName("choice-text"));
+const QuizEndPg = document.querySelector("#gameOver");
+const scoreBoardBtn = document.querySelector("#scoreBoardBtn");
+const scoreBoardPg = document.querySelector("#scoreBoard");
 const welcome = document.querySelector( "#welcome" );
+
+const correct_bonus = 10;
+const max_questions = 10;
+const subtract_value = -2;
 
 let currentQuestion = {};
 let acceptingAnswers = false;
@@ -24,13 +28,20 @@ let baseUrl = "https://opentdb.com/";
 let dataUrl;
 let quant;
 
+/*When scoreboard btn is clicked hide the endGame page and show the scoreboard page */
+scoreBoardBtn.addEventListener( 'click', () => {
+    QuizEndPg.classList.add( "hide" );
+    scoreBoardPg.classList.remove( "hide" );
+	
+} );
+
+/**
+ * 
+ * @param {boolen}
+ */
 
 
-
-
-
-
-// Fetches category list from API
+// Fetches API from Open Trivia 
 const getData = gameTrigger => {
 	if ( gameTrigger ) {
 		dataUrl = ( `${baseUrl}api.php?amount=${quant}&category=${id}&difficulty=${diff}&type=multiple` );
@@ -42,8 +53,8 @@ const getData = gameTrigger => {
 const categories = () => {
 	getData( false );
 	fetch( dataUrl ).then( response => response.json() ).then( category => {
-		let categoryList = category.trivia_categories;
-		categoryList.forEach( category => {
+		let categorySelect = category.trivia_categories;
+		categorySelect.forEach( category => {
 			let categoryOption = document.createElement( "option" );
 			let categoryName = document.createElement( "p" );
 			let name = document.createTextNode( category.name );
@@ -51,7 +62,7 @@ const categories = () => {
 			categoryOption.appendChild( categoryName );
 			categoryOption.id = category.id;
 			categoryOption.classList.add( "category" );
-			document.getElementById( "categoryList" ).appendChild( categoryOption );
+			document.getElementById( "categorySelect" ).appendChild( categoryOption );
         } );
         welcome.classList.remove("hide");
 		start.classList.remove( "hide" );
@@ -80,23 +91,22 @@ const getQuiz = () =>{
 		console.log( err );
 	} );
 }
-//constants
-const correct_bonus = 10;
-const max_questions = 10;
-const subtract_value = -2;
+
+
 
 startGame = () => {
 	questionCounter = 0;
 	score = 0;
 	availableQuestions = [ ...questions ];
 	getNewQuestion();
-	game.classList.remove( "hide" );
+    gamePage.classList.remove( "hide" );
+    QuizEndPg.classList.remove( "hide" );
 };
 getNewQuestion = () => {
 	if ( availableQuestions.length === 0 || questionCounter >= max_questions ) {
 		localStorage.setItem( "mostRecentScore", score );
-		game.classList.add( "hide" );
-		end.classList.remove( "hide" );
+		gamePage.classList.add( "hide" );
+		QuizEndPg.classList.remove( "hide" );
 		//When game over will go to the end game html
 	}
 	questionCounter++;
@@ -106,7 +116,7 @@ getNewQuestion = () => {
 	const questionIndex = Math.floor( Math.random() * availableQuestions.length );
 	currentQuestion = availableQuestions[ questionIndex ];
 	question.innerHTML = currentQuestion.question;
-	choices.forEach( choice => {
+	answerChoices.forEach( choice => {
 		const number = choice.dataset[ 'number' ];
 		choice.innerHTML = currentQuestion[ 'choice' + number ];
 	} );
@@ -114,7 +124,7 @@ getNewQuestion = () => {
 	availableQuestions.splice( questionIndex, 1 );
 	acceptingAnswers = true;
 };
-choices.forEach( choice => {
+answerChoices.forEach( choice => {
 	choice.addEventListener( "click", e => {
 		if ( !acceptingAnswers ) return;
 		acceptingAnswers = false;
@@ -137,33 +147,28 @@ choices.forEach( choice => {
 } );
 incrementScore = num => {
 	score += num;
-	scoreText.innerText = score;
+	playersScore.innerText = score;
 };
-catId.addEventListener( 'click', () => {
-	id = catChoice.options[ catChoice.selectedIndex ].id;
-	diff = diffChoice.options[ diffChoice.selectedIndex ].id;
-	quant = quantChoice.options[ quantChoice.selectedIndex ].id;
+
+
+submitQuizOptions.addEventListener( 'click', () => {
+	id = quizCategorySelect.options[ quizCategorySelect.selectedIndex ].id;
+	diff = difficultySelect.options[ difficultySelect.selectedIndex ].id;
+	quant = questionAmountSelect.options[ questionAmountSelect.selectedIndex ].id;
 	start.classList.add( "hide" );
 	getQuiz();
 } );
 
 
-/*When scoreboard btn is clicked */
-scoreBoardBtn.addEventListener( 'click', () => {
-    game.classList.add( "hide" );
-    scoreBoardPg.classList.remove( "hide" );
-	
-} );
 
 
 
 
 
 
-/*Countdown Timer
-
+/*
 //Questions array
-var counter = 10;             //Time counter
+var counter = 60;             //Time counter
 var questionsCount = 0;       //Questions counter
 
 questionDivId =  document.getElementById('questions');
