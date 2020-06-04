@@ -20,14 +20,14 @@
         Don't forget to check the scoreboard at the end of the game to see
         if you made it into the top 5!</p>
 </header>
-
+ 
 <!--Get ready to play--> 
 <section class="container hide" id="ReadyToPlay">
  <div class="row select-area">
       <div class="col-xs-12 col-sm-12 col-md-4 choices">
         <h2>Select a topic</h2>
-        <select id="categoryList" class="custom-select">
-        </select>
+        <select id="categorySelect" class="custom-select">
+        </select> 
       </div>
 
     <div class="col-xs-12 col-sm-12 col-md-4 choices">
@@ -41,7 +41,7 @@
 
     <div class="col-xs-12 col-sm-12 col-md-4 choices">
         <h2>How Many Questions?</h2>
-        <select id="questionSelect" class="custom-select">
+        <select id="quantChoice" class="custom-select">
           <option id="10">10</option>
           <option id="15">15</option>
           <option id="20">20</option>
@@ -51,7 +51,7 @@
     </div>
 
 <div class="col-12">
-<a class="btn submit" href="#" id="submitCat" >Play Game</a>
+<a class="btn submit" href="#" id="submitOptions" >Play Game</a>
 </div>
 </section>
   
@@ -82,22 +82,24 @@
     </div>
 
     <h2 id="question"></h2>
-    <div class="choice-container">
+        <div class="row">
+    <div class="col-sm-12 col-md-6 choice-container">
         <p class="choice-prefix">A</p>
         <p class="choice-text" data-number="1"></p>
     </div>
-    <div class="choice-container">
+    <div class="col-sm-12 col-md-6 choice-container">
         <p class="choice-prefix">B</p>
         <p class="choice-text" data-number="2"></p>
     </div>
-    <div class="choice-container">
+    <div class="col-sm-12 col-md-6 choice-container">
         <p class="choice-prefix">C</p>
         <p class="choice-text" data-number="3"></p>
     </div>
-    <div class="choice-container">
+    <div class="col-sm-12 col-md-6 choice-container">
         <p class="choice-prefix">D</p>
         <p class="choice-text" data-number="4"></p>
     </div> 
+        </div>
 </section>
  
  
