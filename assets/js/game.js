@@ -37,13 +37,10 @@ let baseUrl = "https://opentdb.com/";
 let dataUrl;
 let quant;
 
-
-
 /**
  * 
  * @param {boolen}
  */
-
 
 // Fetches API from Open Trivia 
 const getData = gameTrigger => {
@@ -107,6 +104,7 @@ startGame = () => {
     gamePage.classList.remove( "hide" );
     
 };
+
 getNewQuestion = () => {
 	if ( availableQuestions.length === 0 || questionCounter >= max_questions ) {
 		localStorage.setItem( "mostRecentScore", score );
@@ -129,6 +127,7 @@ getNewQuestion = () => {
 	availableQuestions.splice( questionIndex, 1 );
 	acceptingAnswers = true;
 };
+
 answerChoices.forEach( choice => {
 	choice.addEventListener( "click", e => {
 		if ( !acceptingAnswers ) return;
@@ -138,10 +137,17 @@ answerChoices.forEach( choice => {
 		const classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
 		if ( classToApply === "correct" ) {
 			incrementScore( correct_bonus );
+            
 		} else {
 			incrementScore( subtract_value );
-			console.log( subtract_value )
-		};
+			console.log( subtract_value );
+           swal.fire({
+                title: "Wrong Answer!",
+                text: `Sorry the correct answer was number ${currentQuestion.answer}!`,
+                icon: 'error',
+           })
+        };
+		
 		selectedChoice.parentElement.classList.add( classToApply );
 		//this will add a delay between questions
 		setTimeout( () => {
@@ -204,6 +210,17 @@ window.location.assign('/');
 
 
 
+/**
+ * Shows/hides the loading wheel
+ * @param {Boolean} loading - True shows loading wheel 
+ */
+function loadingWheel(loading) {
+    if (loading) {
+        load.classList.remove("hide");
+    } else {
+        load.classList.add("hide");
+    }
+}
 /*
 //Questions array
 var counter = 60;             //Time counter
