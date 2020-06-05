@@ -145,7 +145,9 @@ answerChoices.forEach( choice => {
                 title: "Wrong Answer!",
                 text: `Sorry the correct answer was number ${currentQuestion.answer}!`,
                 icon: 'error',
-           })
+                showConfirmButton: false,
+                timer: 1000
+           });
         };
 		
 		selectedChoice.parentElement.classList.add( classToApply );
