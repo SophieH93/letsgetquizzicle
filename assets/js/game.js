@@ -14,9 +14,18 @@ const scoreBoardBtn = document.querySelector("#scoreBoardBtn");
 const scoreBoardPg = document.querySelector("#scoreBoard");
 const welcome = document.querySelector( "#welcome" );
 
+const username = document.querySelector("#username");
+const saveScoreBtn = document.querySelector("#saveScoreBtn");
+const finalscore = document.querySelector("#finalscore");
+const mostRecentScore = localStorage.getItem("mostRecentScore");
+const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+const highScoresList = document.querySelector("#highScoresList");
+
+
 const correct_bonus = 10;
 const max_questions = 10;
 const subtract_value = -2;
+const max_high_scores = 5;
 
 let currentQuestion = {};
 let acceptingAnswers = false;
@@ -28,12 +37,7 @@ let baseUrl = "https://opentdb.com/";
 let dataUrl;
 let quant;
 
-/*When scoreboard btn is clicked hide the endGame page and show the scoreboard page */
-scoreBoardBtn.addEventListener( 'click', () => {
-    QuizEndPg.classList.add( "hide" );
-    scoreBoardPg.classList.remove( "hide" );
-	
-} );
+
 
 /**
  * 
@@ -65,7 +69,8 @@ const categories = () => {
 			document.getElementById( "categorySelect" ).appendChild( categoryOption );
         } );
         welcome.classList.remove("hide");
-		start.classList.remove( "hide" );
+        start.classList.remove( "hide" );
+        
 	} ).catch( () => console.error() );
 }
 categories();
@@ -100,7 +105,7 @@ startGame = () => {
 	availableQuestions = [ ...questions ];
 	getNewQuestion();
     gamePage.classList.remove( "hide" );
-    QuizEndPg.classList.remove( "hide" );
+    
 };
 getNewQuestion = () => {
 	if ( availableQuestions.length === 0 || questionCounter >= max_questions ) {
@@ -159,10 +164,43 @@ submitQuizOptions.addEventListener( 'click', () => {
 	getQuiz();
 } );
 
+/*When scoreboard btn is clicked hide the endGame page and show the scoreboard page */
+scoreBoardBtn.addEventListener( 'click', () => {
+    QuizEndPg.classList.add( "hide" );
+    scoreBoardPg.classList.remove( "hide" );
+	
+} );
 
+/* High Scores */
+highScoresList.innerHTML =
+highScores.map(score => {
+   return `<li class="high-score">${score.name}- ${score.score}</li>`;
+}).join("");
 
+finalscore.innerText = mostRecentScore;
 
+username.addEventListener('keyup', () => {
+    saveScoreBtn.disabled = !username.value;
+    // If no username inputted btn will stay disabled, when username inputted btn becomes visable
+})
 
+savingHighScore = e => {
+    console.log("clicked the save button");
+    e.preventDefault();
+    
+const score = {
+    score: Math.floor(Math.random() * 100),
+    name: username.value
+};
+
+highScores.push(score);
+highScores.sort((a, b) => b.score - a.score)
+highScores.splice(5);
+
+localStorage.setItem('highScores', JSON.stringify(highScores));
+window.location.assign('/');
+
+};
 
 
 
