@@ -20,7 +20,7 @@ const finalscore = document.querySelector("#finalscore");
 const mostRecentScore = localStorage.getItem("mostRecentScore");
 const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 const highScoresList = document.querySelector("#highScoresList");
-const mainText = document.querySelector( "#mainText" );
+const logoText = document.querySelector( "#logo" );
 
 
 /*When scoreboard btn is clicked hide the endGame page and show the scoreboard page */
@@ -32,7 +32,6 @@ scoreBoardBtn.addEventListener( 'click', () => {
 
 
 const correct_bonus = 10;
-const max_questions = 10;
 const subtract_value = -2;
 const max_high_scores = 5;
 
@@ -77,15 +76,14 @@ const categories = () => {
 			document.getElementById( "categorySelect" ).appendChild( categoryOption );
         } );
         
-        mainText.classList.remove("hide");
+        logoText.classList.remove("hide");
         start.classList.remove( "hide" );
         
 	} ).catch( () => console.error() );
 }
 categories();
 
-const getQuiz = () =>{
-    
+const getQuiz = () =>{    
 	getData( true );
 	fetch( dataUrl ).then( data => data.json() ).then( loadedQuestions => {
 		questions = loadedQuestions.results.map( loadedQuestion => {
@@ -100,7 +98,7 @@ const getQuiz = () =>{
 			} );
 			return formattedQuestion;
         } );
-         mainText.classList.add("hide")
+         logoText.classList.add("hide")
         startGame()
        
 	} ).catch( err => {
@@ -112,7 +110,7 @@ const getQuiz = () =>{
 startGame = () => {
 	questionCounter = 0;
 	score = 0;
-	availableQuestions = [ ...questions ];
+	availableQuestions = [...questions];
 	getNewQuestion();
     gamePage.classList.remove( "hide" );
     
@@ -120,16 +118,16 @@ startGame = () => {
 
 getNewQuestion = () => {
     
-	if ( availableQuestions.length === 0 || questionCounter >= max_questions ) {
+	if ( availableQuestions.length === 0) { 
 		localStorage.setItem( "mostRecentScore", score );
 		gamePage.classList.add( "hide" );
 		QuizEndPg.classList.remove( "hide" );
 		//When game over will go to the end game html
-	}
+	} else {
 	questionCounter++;
-	progressText.innerHTML= `Question ${questionCounter}/${max_questions}`;
+	progressText.innerHTML= `Question ${questionCounter}/${quant}`;
 	//update progress bar
-	progressbarfull.style.width = `${(questionCounter / max_questions) * 100}%`;
+	progressbarfull.style.width = `${(questionCounter / quant) * 100}%`;
 	const questionIndex = Math.floor( Math.random() * availableQuestions.length );
 	currentQuestion = availableQuestions[ questionIndex ];
 	question.innerHTML = currentQuestion.question;
@@ -140,7 +138,7 @@ getNewQuestion = () => {
 	// splice will remove the answer we just picked so we are not choosing it again
 	availableQuestions.splice( questionIndex, 1 );
 	acceptingAnswers = true;
-};
+}};
 
 answerChoices.forEach( choice => {
 	choice.addEventListener( "click", e => {
