@@ -1,170 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
-    <link href="assets/css/main.css" rel="stylesheet">
-    <title>Trivia Game</title>
-</head>    
-<body>  
-
-<!--Landing page-->  
-<header class="container-fluid" id="logo">
-    <div class="row">
-        <div class="col-12">
-            <h1> Let's Get Quizzicle</h1>    
-        </div>
-    </div>
-</header>
- 
-<!--Get ready to play--> 
-<section class="container hide" id="ReadyToPlay">
- <div class="row select-area">
-    <div class="col-12 intro">
-     <p> Answer the questions before the time runs out.<br>
-        Choose the correct answer and win a point<br>
-        Don't forget to check the scoreboard at the end of the game to see
-        if you made it into the top 5!</p>
-    </div>
-      <div class="col-xs-12 col-sm-12 col-md-4 choices">
-        <h2>Select a topic</h2>
-        <select id="categorySelect" class="custom-select">
-        </select> 
-      </div>
-
-    <div class="col-xs-12 col-sm-12 col-md-4 choices">
-        <h2>Select Difficulty</h2>
-        <select id="difficultySelect" class="custom-select">
-          <option value="easy">Easy</option>
-          <option value="medium">Medium</option>
-          <option value="hard">Hard</option>
-        </select>
-    </div>
-
-    <div class="col-xs-12 col-sm-12 col-md-4 choices">
-        <h2>How Many Questions?</h2>
-        <select id="quantChoice" class="custom-select">
-          <option id="10">10</option>
-          <option id="15">15</option>
-          <option id="20">20</option>
-          <option id="25">25</option>
-        </select>
-      </div>
-    </div>
-
-<div class="col-12">
-<a class="btn submit" href="#" id="submitOptions" >Play Game</a>
-</div>
-</section>
-  
- 
-<!--the game-->  
-<section class="container hide" id="theGame">     
-    <div class="row">
-        <div class="col">        
-          <div id="hud-item">
-            <p id="progressText" class="hud-prefix"></p>
-            <div id="progressBar">
-                <div id="progressbarfull">
-                </div>
-            </div>
-          </div>
-        </div>
-           <div class="col">
-                <div id="count">timer
-            </div>
-            </div>
-            
-          <div class="col">
-            <div class ="hud-item">
-              <p class="hud-prefix">Score</p>
-              <h1 class="hud-main-text" id="score">0</h1>
-             </div>
-          </div>
-    </div>
-
-    <h2 id="question"></h2>
-        <div class="row">
-    <div class="col-sm-12 col-md-6 choice-container">
-        <p class="choice-prefix">1</p>
-        <p class="choice-text" data-number="1"></p>
-    </div>
-    <div class="col-sm-12 col-md-6 choice-container">
-        <p class="choice-prefix">2</p>
-        <p class="choice-text" data-number="2"></p>
-    </div>
-    <div class="col-sm-12 col-md-6 choice-container">
-        <p class="choice-prefix">3</p>
-        <p class="choice-text" data-number="3"></p>
-    </div>
-    <div class="col-sm-12 col-md-6 choice-container">
-        <p class="choice-prefix">4</p>
-        <p class="choice-text" data-number="4"></p>
-    </div> 
-        </div>
-
-        <div class="col-12">
-            <a class="btn secondary" href="/" >quit</a>
-        </div>
-</section>
- 
- 
-<!--End Game--> 
-
-<section class="container hide" id="gameOver">
-<div class="row"> 
-        <div class="col-12">  
-        <h1>Game Over</h1>
-            <p>Enter a username to save your score and see if you made it to the Scoreboard </p>
-            <h1 id="finalscore"></h1> 
-        </div>
-        <div class="col-12">
-        <form>
-            <div class="form-row">            
-                <input type="username" name="username" id="username" class="form-control text-input" placeholder="username"> 
-            <div class="form-group col-12">
-           
-                <button type="submit" class="btn" id="saveScoreBtn"  onclick="savingHighScore(event)" disabled>Save</button>     
-            </div>
-            </div>            
-        </form> 
-        </div> 
-        <div class="col-12">
-            <a class="btn secondary" id="scoreBoardBtn" >Scoreboard</a>
-        </div>
-        <div class="col-12">  
-            <a class="btn secondary"  href="/">Go Home</a> 
-        </div>      
-    </div>   
- </section>
- 
-<section  class="container-fluid hide" id="scoreBoard" >
-        <div class="row" id="highscore">                
-            <div class="col-12">
-                <h1>High Scores</h1>
-            </div>
-            <div class="col-12">
-            <ul id="highScoresList"></ul>
-            </div>
-            <div class="col-12">
-            <a class="btn" href="/">Go Home</a> </div>
-        </div> 
-</section>
-
-<footer>
-    <div class="copyright">
-        © Sophie Hickey 2020
-    </div> 
-</footer>
-
-<script src="assets/js/game.js"></script>
-
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>  
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> 
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="ie=edge" http-equiv="X-UA-Compatible">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+	<link href="assets/css/main.css" rel="stylesheet">
+	<title>Trivia Game</title>
+</head>
+<body>
+	<!--Landing page-->
+	<header class="container-fluid" id="logo">
+		<div class="row">
+			<div class="col-12">
+				<h1>Let's Get Quizzicle</h1>
+			</div>
+		</div>
+	</header>
+    <!--Get ready to play-->
+	<section class="container hide" id="ReadyToPlay">
+		<div class="row select-area">
+			<div class="col-12 intro">
+				<p>Answer the questions before the time runs out.<br>
+				Choose the correct answer and win a point<br>
+				Don't forget to check the scoreboard at the end of the game to see if you made it into the top 5!</p>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-4 choices">
+				<h2>Select a topic</h2><select class="custom-select" id="categorySelect">
+				</select>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-4 choices">
+				<h2>Select Difficulty</h2><select class="custom-select" id="difficultySelect">
+					<option value="easy">
+						Easy
+					</option>
+					<option value="medium">
+						Medium
+					</option>
+					<option value="hard">
+						Hard
+					</option>
+				</select>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-4 choices">
+				<h2>How Many Questions?</h2><select class="custom-select" id="quantChoice">
+					<option id="10">
+						10
+					</option>
+					<option id="15">
+						15
+					</option>
+					<option id="20">
+						20
+					</option>
+					<option id="25">
+						25
+					</option>
+				</select>
+			</div>
+		</div>
+		<div class="col-12">
+			<a class="btn submit" href="#" id="submitOptions">Play Game</a>
+		</div>
+	</section>
+    <!--the game-->
+	<section class="container hide" id="theGame">
+		<div class="row">
+			<div class="col">
+				<div id="hud-item">
+					<p class="hud-prefix" id="progressText"></p>
+					<div id="progressBar">
+						<div id="progressbarfull"></div>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div id="count">
+					timer
+				</div>
+			</div>
+			<div class="col">
+				<div class="hud-item">
+					<p class="hud-prefix">Score</p>
+					<h2 class="hud-main-text" id="score">0</h2>
+				</div>
+			</div>
+		</div>
+		<h2 id="question"></h2>
+		<div class="row">
+			<div class="col-sm-12 col-md-6 choice-container">
+				<p class="choice-number">1</p>
+				<p class="choice-text" data-number="1"></p>
+			</div>
+			<div class="col-sm-12 col-md-6 choice-container">
+				<p class="choice-number">2</p>
+				<p class="choice-text" data-number="2"></p>
+			</div>
+			<div class="col-sm-12 col-md-6 choice-container">
+				<p class="choice-number">3</p>
+				<p class="choice-text" data-number="3"></p>
+			</div>
+			<div class="col-sm-12 col-md-6 choice-container">
+				<p class="choice-number">4</p>
+				<p class="choice-text" data-number="4"></p>
+			</div>
+		</div>
+		<div class="col-12">
+			<a class="btn secondary" href="/">quit</a>
+		</div>
+	</section>
+    <!--End Game-->
+	<section class="container hide" id="gameOver">
+		<div class="row">
+			<div class="col-12">
+				<h1>Game Over</h1>
+				<p>Enter a username to save your score and see if you made it to the Scoreboard</p>
+				<h1 id="finalscore"></h1>
+			</div>
+			<div class="col-12">
+				<form>
+					<div class="form-row">
+						<input class="form-control text-input" id="username" name="username" placeholder="username" type="username">
+						<div class="form-group col-12">
+							<button class="btn" disabled id="saveScoreBtn" onclick="savingHighScore(event)" type="submit">Save</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="col-12">
+				<a class="btn secondary" id="scoreBoardBtn">Scoreboard</a>
+			</div>
+			<div class="col-12">
+				<a class="btn secondary" href="/">Go Home</a>
+			</div>
+		</div>
+	</section>
+	<section class="container-fluid hide" id="scoreBoard">
+		<div class="row" id="highscore">
+			<div class="col-12">
+				<h1>High Scores</h1>
+			</div>
+			<div class="col-12">
+				<ul id="highScoresList"></ul>
+			</div>
+			<div class="col-12">
+				<a class="btn" href="/">Go Home</a>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="copyright">
+			© Sophie Hickey 2020
+		</div>
+	</footer>
+	<script src="assets/js/game.js"></script> 	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script> 
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> 
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 </body>
 </html>
