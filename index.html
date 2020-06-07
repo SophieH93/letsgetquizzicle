@@ -13,17 +13,22 @@
 
 <!--Landing page-->  
 <header class="container-fluid" id="mainText">
-
-    <h1>Let's Get Quizzicle</h1>
-        <p class="hide" id="welcome"> Answer the questions before the time runs out.<br>
-        Choose the correct answer and win a point<br>
-        Don't forget to check the scoreboard at the end of the game to see
-        if you made it into the top 5!</p>
+    <div class="row">
+        <div class="col-12">
+            <h1> Let's Get Quizzicle</h1>    
+        </div>
+    </div>
 </header>
  
 <!--Get ready to play--> 
 <section class="container hide" id="ReadyToPlay">
  <div class="row select-area">
+    <div class="col-12 intro">
+     <p> Answer the questions before the time runs out.<br>
+        Choose the correct answer and win a point<br>
+        Don't forget to check the scoreboard at the end of the game to see
+        if you made it into the top 5!</p>
+    </div>
       <div class="col-xs-12 col-sm-12 col-md-4 choices">
         <h2>Select a topic</h2>
         <select id="categorySelect" class="custom-select">
@@ -84,21 +89,25 @@
     <h2 id="question"></h2>
         <div class="row">
     <div class="col-sm-12 col-md-6 choice-container">
-        <p class="choice-prefix">A</p>
+        <p class="choice-prefix">1</p>
         <p class="choice-text" data-number="1"></p>
     </div>
     <div class="col-sm-12 col-md-6 choice-container">
-        <p class="choice-prefix">B</p>
+        <p class="choice-prefix">2</p>
         <p class="choice-text" data-number="2"></p>
     </div>
     <div class="col-sm-12 col-md-6 choice-container">
-        <p class="choice-prefix">C</p>
+        <p class="choice-prefix">3</p>
         <p class="choice-text" data-number="3"></p>
     </div>
     <div class="col-sm-12 col-md-6 choice-container">
-        <p class="choice-prefix">D</p>
+        <p class="choice-prefix">4</p>
         <p class="choice-text" data-number="4"></p>
     </div> 
+        </div>
+
+        <div class="col-12">
+            <a class="btn secondary" href="/" >quit</a>
         </div>
 </section>
  
@@ -132,11 +141,8 @@
     </div>   
  </section>
  
-
-
- 
-<section class="container-fluid hide" id="scoreBoard" >
-    <div class="row" id="highscore">                
+<section  class="container-fluid hide" id="scoreBoard" >
+        <div class="row" id="highscore">                
             <div class="col-12">
                 <h1>High Scores</h1>
             </div>
