@@ -11,8 +11,8 @@ const triviaQuestions = document.querySelector("#question");
 const answerChoices = Array.from( document.getElementsByClassName("choice-text"));
 const QuizEndPg = document.querySelector("#gameOver");
 const scoreBoardBtn = document.querySelector("#scoreBoardBtn");
-const scoreBoardPg = document.querySelector("#scoreBoard");
-const welcome = document.querySelector( "#welcome" );
+const scoreBoardPg  = document.querySelector("#scoreBoard");
+/*const welcome = document.querySelector( "#welcome" ); */
 
 const username = document.querySelector("#username");
 const saveScoreBtn = document.querySelector("#saveScoreBtn");
@@ -20,6 +20,15 @@ const finalscore = document.querySelector("#finalscore");
 const mostRecentScore = localStorage.getItem("mostRecentScore");
 const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 const highScoresList = document.querySelector("#highScoresList");
+const mainText = document.querySelector( "#mainText" );
+
+
+/*When scoreboard btn is clicked hide the endGame page and show the scoreboard page */
+scoreBoardBtn.addEventListener( 'click', () => {
+    QuizEndPg.classList.add( "hide" );
+    scoreBoardPg.classList.remove( "hide" );
+	
+} );
 
 
 const correct_bonus = 10;
@@ -37,6 +46,7 @@ let baseUrl = "https://opentdb.com/";
 let dataUrl;
 let quant;
 
+
 /**
  * 
  * @param {boolen}
@@ -52,6 +62,7 @@ const getData = gameTrigger => {
 }
 //Gets the categories and pass to DOM
 const categories = () => {
+   
 	getData( false );
 	fetch( dataUrl ).then( response => response.json() ).then( category => {
 		let categorySelect = category.trivia_categories;
@@ -65,7 +76,8 @@ const categories = () => {
 			categoryOption.classList.add( "category" );
 			document.getElementById( "categorySelect" ).appendChild( categoryOption );
         } );
-        welcome.classList.remove("hide");
+        
+        mainText.classList.remove("hide");
         start.classList.remove( "hide" );
         
 	} ).catch( () => console.error() );
@@ -73,6 +85,7 @@ const categories = () => {
 categories();
 
 const getQuiz = () =>{
+    
 	getData( true );
 	fetch( dataUrl ).then( data => data.json() ).then( loadedQuestions => {
 		questions = loadedQuestions.results.map( loadedQuestion => {
@@ -87,13 +100,13 @@ const getQuiz = () =>{
 			} );
 			return formattedQuestion;
         } );
-         welcome.classList.add("hide")
-		startGame()
+         mainText.classList.add("hide")
+        startGame()
+       
 	} ).catch( err => {
 		console.log( err );
 	} );
 }
-
 
 
 startGame = () => {
@@ -106,6 +119,7 @@ startGame = () => {
 };
 
 getNewQuestion = () => {
+    
 	if ( availableQuestions.length === 0 || questionCounter >= max_questions ) {
 		localStorage.setItem( "mostRecentScore", score );
 		gamePage.classList.add( "hide" );
@@ -146,7 +160,7 @@ answerChoices.forEach( choice => {
                 text: `Sorry the correct answer was number ${currentQuestion.answer}!`,
                 icon: 'error',
                 showConfirmButton: false,
-                timer: 1000
+                timer: 1500
            });
         };
 		
@@ -172,12 +186,7 @@ submitQuizOptions.addEventListener( 'click', () => {
 	getQuiz();
 } );
 
-/*When scoreboard btn is clicked hide the endGame page and show the scoreboard page */
-scoreBoardBtn.addEventListener( 'click', () => {
-    QuizEndPg.classList.add( "hide" );
-    scoreBoardPg.classList.remove( "hide" );
-	
-} );
+
 
 /* High Scores */
 highScoresList.innerHTML =
@@ -206,23 +215,14 @@ highScores.sort((a, b) => b.score - a.score)
 highScores.splice(5);
 
 localStorage.setItem('highScores', JSON.stringify(highScores));
-window.location.assign('/');
+/*window.location.assign('/'); */
 
 };
 
 
 
-/**
- * Shows/hides the loading wheel
- * @param {Boolean} loading - True shows loading wheel 
- */
-function loadingWheel(loading) {
-    if (loading) {
-        load.classList.remove("hide");
-    } else {
-        load.classList.add("hide");
-    }
-}
+
+
 /*
 //Questions array
 var counter = 60;             //Time counter
