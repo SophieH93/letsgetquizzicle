@@ -5,18 +5,7 @@ a fun way for players to test their knowledge and learn something new.
 
 # UX
 The goal of this project is to provide users with a fun, easy to use trivia game based on their favourite categories. 
-As the game is suitable for people of all ages, the webiste needs to be visually appealing to encourage user interaction and suitable for the different age groups.
-
-## Strategy
-
-Target Audience - The target ausience for this project can be anyone between the age of 10-40.
-
-Primary Audience-Peiple who want to see how much they know about a particular topic and share this information with their friends.
-
-The primary site goals are to offer a fun experience to users while teaching them some facts about different categories.
-
-
-## Scope
+As the game is suitable for people of all ages, the webiste needs to be visually appealing to encourage user interaction and suitability for all different age groups.
 
 ### User Goals:
 * For the game to be responsive on mobile, tablet & desktop.
@@ -28,21 +17,40 @@ The primary site goals are to offer a fun experience to users while teaching the
 * Scoreboard at the end of the game to show the top 5 players.
 
 ### User Story:
-* As a user, I would like to play a game with different difficulty levels.
-* As a user, I would like to play a game where I can chose th category.
+* As a user, I would like to see a game where I can pick my preferred Category and Level difficulty.
 * As a user. I would like a game that's easy to navigate through.
 * As a user, I would enjoy a game that is visually appealing.
 * As a user, I would like a game that does not take too long to complete.
 * As a suer, I would like a game that involves a challenge and a reward for completion.
-* As a user, I would like to be able to play the quizz again and be provided with different questions.
+* As a user, I would like to be able to re-play a game and be provided with different questions.
+
+## Strategy
+
+Target Audience - The target audience for this project can be anyone between the age of 15+.
+
+Primary Audience-Peiple who want to see how much they know about a particular topic and share this information with their friends.
+
+The primary site goals are to offer a fun experience to users while teaching them some facts about different categories.
+
+
+## Scope
+
+
 
 
 ## Structure
+The game consists of 4 pages.   
+ The **first Page** which is the landing pages consists of 3 selects options for the game *Category*, *Difficulty* and *Number of questions* and a button to 
+start the game.       
+When the button is clicked the player is brought to the next page which conaitns the **questions** along with a progress bar so the player knows how far along in the game they are, a Score system and a Countdown timer.   
+Once the game is over the user is brought to the **last Page** that consists of a form for the player to save their name to the system and two buttons, one to go to the Scoreboard page and the other to go home.  
+The **Scoreboard Page** contains a list of the top 5 players.
+
 
 ## Skeleton 
 I created my wireframes on [MockFlow](https://www.mockflow.com/) for Desktop, Tablet and Mobie. Please view my Wireframes [folder](https://github.com/SophieH93/quizgame/tree/master/wireframes) to see more.
-
-
+The wireframes were originally created for a Marvel Theme trivia game but upon further research I realised that this was not possible as there was not a API for Marvel trivial questions.
+The layout of the game has been slightly altered to compliment the Open Trivia API.
 
 ## Surface
 
@@ -51,7 +59,7 @@ I created my wireframes on [MockFlow](https://www.mockflow.com/) for Desktop, Ta
 # Design Choice: 
 
     
-**Font:** Anton 
+**Font:** Roboto for the body and Anton for H1
 
 **Colors:**    
 Background Color - #F0F0FB   
