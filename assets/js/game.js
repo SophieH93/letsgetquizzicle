@@ -12,8 +12,6 @@ const answerChoices = Array.from( document.getElementsByClassName("choice-text")
 const QuizEndPg = document.querySelector("#gameOver");
 const scoreBoardBtn = document.querySelector("#scoreBoardBtn");
 const scoreBoardPg  = document.querySelector("#scoreBoard");
-/*const welcome = document.querySelector( "#welcome" ); */
-
 const username = document.querySelector("#username");
 const saveScoreBtn = document.querySelector("#saveScoreBtn");
 const finalscore = document.querySelector("#finalscore");
@@ -21,16 +19,6 @@ const mostRecentScore = localStorage.getItem("mostRecentScore");
 const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 const highScoresList = document.querySelector("#highScoresList");
 const logoText = document.querySelector( "#logo" );
-
-
-/*When scoreboard btn is clicked hide the endGame page and show the scoreboard page */
-scoreBoardBtn.addEventListener( 'click', () => {
-    QuizEndPg.classList.add( "hide" );
-    scoreBoardPg.classList.remove( "hide" );
-	
-} );
-
-
 const correct_bonus = 10;
 const subtract_value = -2;
 const max_high_scores = 5;
@@ -182,6 +170,15 @@ submitQuizOptions.addEventListener( 'click', () => {
 	quant = questionAmountSelect.options[ questionAmountSelect.selectedIndex ].id;
 	start.classList.add( "hide" );
 	getQuiz();
+} );
+
+
+
+/*When scoreboard btn is clicked hide the endGame page and show the scoreboard page */
+scoreBoardBtn.addEventListener( 'click', () => {
+    QuizEndPg.classList.add( "hide" );
+    scoreBoardPg.classList.remove( "hide" );
+	
 } );
 
 
