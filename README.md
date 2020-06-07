@@ -119,6 +119,8 @@ The Fix: With the help of a fellow student, the bug was eventually resolved by a
 that I needed to remove.   
 The Fix: I replaced the 'innerText' with innerHTML whicih then retrieves and sets the content in HTML format. 
 
+3. My Scoreboard page was not showing when the user clicked on the button.   
+The Fix: After a couple days I realised that I had 'display:none' in my css. Once this was removed the bug was fixed.
 
 
 # Deployment
@@ -148,7 +150,7 @@ Cred
 # Credits
 * **Simen Daehlin** my mentor.
 * **Stack Overview**
-* [Youtube](PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx) video by James Quick called **Build a Quiz App**
+* 
 
 **This websit is for educational purposes only.**
 
