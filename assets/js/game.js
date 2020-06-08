@@ -122,7 +122,8 @@ getNewQuestion = () => {
 		//When game over will go to the end game html
 	} else {
 	questionCounter++;
-	progressText.innerHTML= `Question <br> ${questionCounter}/${quant}`;
+    progressText.innerHTML= `Question: ${questionCounter}/${quant}`;
+    playersScore.innerHTML= `Score: ${score}`;            
 	const questionIndex = Math.floor( Math.random() * availableQuestions.length );
 	currentQuestion = availableQuestions[ questionIndex ];
 	question.innerHTML = currentQuestion.question;
@@ -167,7 +168,7 @@ answerChoices.forEach( choice => {
 } );
 incrementScore = num => {
 	score += num;
-	playersScore.innerText = score;
+	
 };
 
 
@@ -199,14 +200,9 @@ scoreBoardBtn.addEventListener( 'click', () => {
 /**
  * return home
  * */
-
-
-homeButton.addEventListener( 'click', () => {
-  
+homeButton.addEventListener( 'click', () => {  
     gameOver.classList.add( "hide" );
-    start.classList.remove( "hide" );	
-
-    
+    start.classList.remove( "hide" );	    
 } );
 
 /* High Scores */
