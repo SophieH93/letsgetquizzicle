@@ -1,4 +1,4 @@
- # Let's Get Quizzicle  
+ # **Let's Get Quizzicle**  
 
 This project is an interactive frontend Trivia Game suitable for people of all ages from the Opan Trivia API. The game is
 a fun way for players to test their knowledge and learn something new.
@@ -7,7 +7,7 @@ a fun way for players to test their knowledge and learn something new.
 The goal of this project is to provide users with a fun, easy to use trivia game based on their favourite categories. 
 As the game is suitable for people of all ages, the webiste needs to be visually appealing to encourage user interaction and suitability for all different age groups.
 
-### User Goals:
+### **User Goals:**
 * For the game to be responsive on mobile, tablet & desktop.
 * Visual interaction to draw the player in.
 * Different choice of categories and difficulty levels to suit a wider ranger of players.
@@ -16,7 +16,7 @@ As the game is suitable for people of all ages, the webiste needs to be visually
 * Point system to reward the player with the correct answer to the question.
 * Scoreboard at the end of the game to show the top 5 players.
 
-### User Story:
+### **User Story:**
 * As a user, I would like to see a game where I can pick my preferred Category and Level difficulty.
 * As a user. I would like a game that's easy to navigate through.
 * As a user, I would enjoy a game that is visually appealing.
@@ -24,7 +24,7 @@ As the game is suitable for people of all ages, the webiste needs to be visually
 * As a suer, I would like a game that involves a challenge and a reward for completion.
 * As a user, I would like to be able to re-play a game and be provided with different questions.
 
-## Strategy
+## **Strategy**
 
 Target Audience - The target audience for this project can be anyone between the age of 15+.
 
@@ -38,7 +38,7 @@ The primary site goals are to offer a fun experience to users while teaching the
 
 
 
-## Structure
+## **Structure**
 The game consists of 4 pages.   
  The **first Page** which is the landing pages consists of 3 selects options for the game *Category*, *Difficulty* and *Number of questions* and a button to 
 start the game.       
@@ -47,19 +47,22 @@ Once the game is over the user is brought to the **last Page** that consists of 
 The **Scoreboard Page** contains a list of the top 5 players.
 
 
-## Skeleton 
-I created my wireframes on [MockFlow](https://www.mockflow.com/) for Desktop, Tablet and Mobie. Please view my Wireframes [folder](https://github.com/SophieH93/quizgame/tree/master/wireframes) to see more.
+## **Skeleton** 
+My Wireframes:   
+[Desktop](https://github.com/SophieH93/letsgetquizzicle/tree/master/wireframes/desktop)   
+[Tablet](https://github.com/SophieH93/letsgetquizzicle/tree/master/wireframes/tablet)  
+[Mobile](https://github.com/SophieH93/letsgetquizzicle/tree/master/wireframes/mobile)  
+I created my wireframes on [MockFlow](https://www.mockflow.com/) for Desktop, Tablet and Mobie.  
+ 
 The wireframes were originally created for a Marvel Theme trivia game but upon further research I realised that this was not possible as there was not a API for Marvel trivial questions.
 The layout of the game has been slightly altered to compliment the Open Trivia API.
 
-## Surface
+## **Surface**
 
-
-
-# Design Choice: 
-
+### **Design Choice:**
     
-**Font:** Roboto for the body and Anton for H1
+**Font:** Roboto for the body and Anton for H1 headings. These fonts where choosen from [Google Fonts](https://fonts.google.com/). 
+I initally chose Anton first for the heading and Google Fonts recommended Roboro as it's complimentary font.
 
 **Colors:**    
 Background Color - #F0F0FB   
@@ -67,15 +70,19 @@ Font Color - #2A2AA0
 Text shadow with color #FF0000 is used for the headings.   
 Border, Submit, Select color - #0A0A84   
 Submit hover has a box shadow with the colors - #2196f3,  #fa00d9, #7c21f3
+Select options, button border hover, username hover, - #02024C   
+Button & container background color - #B6B6FD
 
 
-# Features of the Website
+### **Features of the Website**
 
 **landing Page-** Consists of a breif introduction to the game with 3 different select options for the player to choose from such as *Categories*, *Difficulty Level* and *Number of Questions*.
+The page also has a *Play Game* button the user can click once they select the different options for the game.
 
-**Game Page-** This page consists of the questions along with a *progress bar* so the player knows how much longer in the game they have.   
+**Game Page-** This page consists of the questions along with a *progress bar* so the player knows how much longer they have left.   
 A *Countdown Timer*, if the player does not select an answer before the time runs out they will be brought to the next question and lose a point.   
-A *Point System*, when the player selects the correct answer they will win a point.   
+A *Point System*, when the player selects the correct answer they will win 10 points and if they select the wrong answer they will loose 2 points.
+A *Quit* button, if the player decided they do not want to play the game, they can click on the button and be brought back to the home page.   
 
 **Game Over**- This page will display the players total number of points.
 It will have a form where the player can add/save their username, and two buttons, one for the scoreboard the other to go back to the home page.   
