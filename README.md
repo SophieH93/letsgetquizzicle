@@ -1,5 +1,8 @@
  # **Let's Get Quizzicle**  
 
+![](assets/images/mockup.JPG)
+
+
 This project is an interactive frontend Trivia Game suitable for people of all ages from the Opan Trivia API. The game is
 a fun way for players to test their knowledge and learn something new.
 
@@ -80,15 +83,15 @@ Button & container background color - #B6B6FD
 The page also has a *Play Game* button the user can click once they select the different options for the game.
 
 **Game Page-** This page consists of the questions along with a *progress bar* so the player knows how much longer they have left.   
-A *Countdown Timer*, if the player does not select an answer before the time runs out they will be brought to the next question and lose a point.   
-A *Point System*, when the player selects the correct answer they will win 10 points and if they select the wrong answer they will loose 2 points.
-A *Quit* button, if the player decided they do not want to play the game, they can click on the button and be brought back to the home page.   
+A **Countdown Timer**, if the player does not select an answer before the time runs out they will be brought to the next question and lose a point.   
+A **Point System**, when the player selects the correct answer they will win 10 points and if they select the wrong answer they will loose 2 points.  
+A **Quit** button, if the player decided they do not want to play the game, they can click on the button and be brought back to the home page.   
 
-**Game Over**- This page will display the players total number of points.
+**Game Over Page**- This page will display the players total number of points.
 It will have a form where the player can add/save their username, and two buttons, one for the scoreboard the other to go back to the home page.   
 
 **Scoreboard**
-This page consists of the top 5 players
+This page consists of the top 5 players.
 
 # Technologies used
 ## Languages
@@ -97,7 +100,7 @@ This page consists of the top 5 players
 * [Javascript](https://www.javascript.com/)
 
 ## Frameworks
-* [jQuery](https://jquery.com/)
+* [JSON](https://www.json.org/json-en.html)
 * [Bootstrap](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
 * [Google Fonts](https://fonts.google.com/)
 * [Open Trivia DB](https://opentdb.com/)
@@ -114,9 +117,11 @@ This page consists of the top 5 players
 # Testing
 
 I used [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) to test the styling and layout and responsiveness of the website on the different devices-Mobile, Tablet and Desktop.
-I also used this to test my Javscript and fix any error that arised.
+I also used this to test my Javscript and fix any errors that arised.
 
 [WSC CSS Validaion](https://jigsaw.w3.org/css-validator/) was used to validate my HTML & CSS code.
+
+The console displays no errors during site testing
 
 Devices Landscape-
 Currently responsive on Moto G4, Galexy S5, Pixel 2, Pixel 2XL, iPhone, 5/SE, iPhone 6/7/8, iPhone 6/7/8 Plus, iPhone X,
@@ -128,14 +133,14 @@ Currently responsive on Moto G4, Galexy S5, Pixel 2, Pixel 2XL, iPhone, 5/SE, iP
 1. I wanted to create a score system that added points when the player selected the correct answer and minus a point if the players 
 selected the wrong answer. I was able to increment the score but encountered a issue when I tried to minus a point. DevTols console
 was showing that my function was correct.  
-The Fix: With the help of a fellow student, the bug was eventually resolved by adding a cosole.log into the else statement. 
+**The Fix:** With the help of a fellow student, the bug was eventually resolved by adding a cosole.log into the else statement. 
 
 2. When fetching the questions from the API there was a bug in the questions that had different symbols between the text e.g &%#
 that I needed to remove.   
-The Fix: I replaced the 'innerText' with innerHTML whicih then retrieves and sets the content in HTML format. 
+**The Fix:** I replaced the 'innerText' with innerHTML whicih then retrieves and sets the content in HTML format. 
 
 3. My Scoreboard page was not showing when the user clicked on the button.   
-The Fix: After a couple days I realised that I had 'display:none' in my css. Once this was removed the bug was fixed.
+**The Fix:** After a couple days I realised that I had 'display:none' in my css. Once this was removed the bug was fixed.
 
 
 # Deployment
@@ -144,7 +149,7 @@ I deployed the websit using GitHub's pages. The steps are as follows:
 1. Open GitHub in the browser.
 2. Sign into my account.
 3. Select my repositories.
-4. Navigate to quizgame.
+4. Navigate to letsgetquizzicle.
 5. On the top right select settings.
 6. Scroll down to the GitHub Pages area.
 7. From the Source dropdown menu click on Master Branch.
@@ -154,18 +159,19 @@ I deployed the websit using GitHub's pages. The steps are as follows:
 
 To clone the quizgame from GitHub:
 
-1. Navigate to SophieH93/quizgame.
+1. Navigate to SophieH93/letsgetquizzicle.
 2. Click the green Clone or Download button.
 3. Copy the url in the dropdown box.
 4. Using your favourite IDE open up your preferred terminal.
 5. Navigate to your desired file location.
-6. Copy the following code and input it into your terminal to clone quizz game.
-Cred
+6. Copy the following code and input it into your terminal to clone the game.
+
 
 # Credits
 * **Simen Daehlin** my mentor.
 * **Stack Overview**
-* 
+* **Slack Overview** for particularly helping me with my score count.
 
+# Disclaimer
 **This websit is for educational purposes only.**
 
