@@ -1,4 +1,4 @@
-const start = document.querySelector("#ReadyToPlay");
+ const start = document.querySelector("#ReadyToPlay");
 const quizCategorySelect = document.querySelector("#categorySelect");
 const difficultySelect = document.querySelector("#difficultySelect");
 const questionAmountSelect = document.querySelector("#quantChoice");
@@ -6,7 +6,6 @@ const submitQuizOptions = document.querySelector("#submitOptions");
 const gamePage = document.querySelector("#theGame");
 const quiteBtn = document.querySelector( "#quitGame");
 const progressText = document.querySelector("#progressText");
-const progressbarfull = document.querySelector("#progressbarfull");
 const playersScore = document.querySelector("#score");
 const triviaQuestions = document.querySelector("#question");
 const answerChoices = Array.from( document.getElementsByClassName("choice-text"));
@@ -124,8 +123,6 @@ getNewQuestion = () => {
 	} else {
 	questionCounter++;
 	progressText.innerHTML= `Question <br> ${questionCounter}/${quant}`;
-	//update progress bar
-	//progressbarfull.style.width = `${(questionCounter / quant) * 100}%`;
 	const questionIndex = Math.floor( Math.random() * availableQuestions.length );
 	currentQuestion = availableQuestions[ questionIndex ];
 	question.innerHTML = currentQuestion.question;
