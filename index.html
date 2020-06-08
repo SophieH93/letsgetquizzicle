@@ -4,8 +4,7 @@
 	<meta charset="UTF-8">
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 	<meta content="ie=edge" http-equiv="X-UA-Compatible">
-	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
 	<link href="assets/css/main.css" rel="stylesheet">
 	<title>Trivia Game</title>
 </head>
@@ -21,16 +20,16 @@
     <!--Get ready to play-->
 	<section class="container hide" id="ReadyToPlay">
 		<div class="row select-area">
-			<div class="col-12 intro">
+			<div class="col-sm-12 intro">
 				<p>Answer the questions before the time runs out.<br>
 				Choose the correct answer and win a point<br>
 				Don't forget to check the scoreboard at the end of the game to see if you made it into the top 5!</p>
 			</div>
-			<div class="col-xs-12 col-sm-12 col-md-4 choices">
+			<div class="col-sm-12 col-md-4 choices">
 				<h2>Select a topic</h2><select class="custom-select" id="categorySelect">
 				</select>
 			</div>
-			<div class="col-xs-12 col-sm-12 col-md-4 choices">
+			<div class="col-sm-12 col-md-4 choices">
 				<h2>Select Difficulty</h2><select class="custom-select" id="difficultySelect">
 					<option value="easy">
 						Easy
@@ -43,7 +42,7 @@
 					</option>
 				</select>
 			</div>
-			<div class="col-xs-12 col-sm-12 col-md-4 choices">
+			<div class="col-sm-12 col-md-4 choices">
 				<h2>How Many Questions?</h2><select class="custom-select" id="quantChoice">
 					<option id="10">
 						10
@@ -67,7 +66,7 @@
     <!--the game-->
 	<section class="container hide" id="theGame">
 		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-4 ">
+			<div class="col-sm-12 col-md-4 ">
 				<div class="hud-item">
 					<p class="hud-prefix" id="progressText"></p>
 					<div id="progressBar">
@@ -75,7 +74,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-xs-12 col-sm-12 col-md-4 ">
+			<div class="col-sm-12 col-md-4 ">
                 <div class="hud-item">
 				    <div id="count">
 				    </div>	
@@ -152,13 +151,14 @@
 	</section>
 	<footer>
 		<div class="copyright">
-			© Sophie Hickey 2020
+			Sophie Hickey 2020
 		</div>
 	</footer>
 	<script src="assets/js/game.js"></script> 	
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script> 
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> 
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
 </body>
 </html>
