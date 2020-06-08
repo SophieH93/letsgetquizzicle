@@ -3,17 +3,16 @@
 ![](assets/images/mockup.JPG)
 
 
-This project is an interactive frontend Trivia Game suitable for people of all ages from the Opan Trivia API. The game is
-a fun way for players to test their knowledge and learn something new.
+This project is a Trivia Game suitable for people of all ages from the Opan Trivia API. The game is a fun way for players to test their knowledge and learn something new.
 
 # UX
 The goal of this project is to provide users with a fun, easy to use trivia game based on their favourite categories. 
 As the game is suitable for people of all ages, the webiste needs to be visually appealing to encourage user interaction and suitability for all different age groups.
 
 ### **User Goals:**
-* For the game to be responsive on mobile, tablet & desktop.
+* For the game to be **responsive** on mobile, tablet & desktop.
 * Visual interaction to draw the player in.
-* Different choice of categories and difficulty levels to suit a wider ranger of players.
+* **Different** choice of **categories** and difficulty **levels** to suit a wider ranger of players.
 * Countdown timer to make the game more exciting as not only will the player have the
   challenge of answering the correct question but also be restricted in time.
 * Point system to reward the player with the correct answer to the question.
@@ -64,17 +63,18 @@ The layout of the game has been slightly altered to compliment the Open Trivia A
 
 ### **Design Choice:**
     
-**Font:** Roboto for the body and Anton for H1 headings. These fonts where choosen from [Google Fonts](https://fonts.google.com/). 
+**Font:** [Roboto](https://fonts.google.com/specimen/Roboto?query=ROBOTO&selection.family=Roboto#standard-styles) for the **body** and [Anton](https://fonts.google.com/specimen/Anton?query=ANTON) for **H1** headings. 
+These fonts where choosen from [Google Fonts](https://fonts.google.com/). 
 I initally chose Anton first for the heading and Google Fonts recommended Roboro as it's complimentary font.
 
 **Colors:**    
-Background Color - #F0F0FB   
-Font Color - #2A2AA0   
-Text shadow with color #FF0000 is used for the headings.   
-Border, Submit, Select color - #0A0A84   
-Submit hover has a box shadow with the colors - #2196f3,  #fa00d9, #7c21f3
-Select options, button border hover, username hover, - #02024C   
-Button & container background color - #B6B6FD
+Background Color - **F0F0FB**
+Font Color - **#2A2AA0**   
+Text shadow with color **#FF0000** is used for the headings.   
+Border, Submit, Select color - **#0A0A84**   
+Submit hover has a box shadow with the colors - **#2196f3,  #fa00d9, #7c21f3**   
+Select options, button border hover, username hover, - **#02024C**   
+Button & container background color - **#B6B6FD**
 
 
 ### **Features of the Website**
@@ -100,7 +100,6 @@ This page consists of the top 5 players.
 * [Javascript](https://www.javascript.com/)
 
 ## Frameworks
-* [JSON](https://www.json.org/json-en.html)
 * [Bootstrap](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
 * [Google Fonts](https://fonts.google.com/)
 * [Open Trivia DB](https://opentdb.com/)
@@ -171,6 +170,7 @@ To clone the quizgame from GitHub:
 * **Simen Daehlin** my mentor.
 * **Stack Overview**
 * **Slack Overview** for particularly helping me with my score count.
+* [Youtube](https://www.youtube.com/watch?v=u98ROZjBWy8) - Build a quiz
 
 # Disclaimer
 **This websit is for educational purposes only.**
