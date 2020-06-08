@@ -13,36 +13,33 @@ body {
 h1 {
 	font-size: 5rem;
 	font-family: 'Anton', sans-serif;
-	text-shadow: 0 0 1px #FF0000;
+	text-shadow: 1px 1px 3px #FF0000;
 }
 
 h2 {
 	margin: 2rem;
-	font-weight: 500;    
+	font-weight: 500;   
 }
 
 .hide {
 	display: none;
 }
 
+#ReadyToPlay {
+	margin-top: 3rem;
+	margin-bottom: 4rem;
+}
+
 .intro {
 	font-size: 1.5rem;
 	margin-bottom: 3.5rem;
-}
-
-#question {
-    	margin-top: 5rem;
-}
-
-/*page 2 */
-#ReadyToPlay {
-	margin-top: 3rem;
-	margin-bottom: 3.5rem;
+    letter-spacing: 1px;    
 }
 
 .choices {
 	padding-bottom: 3rem;
-	text-shadow: 0 0 2px #FF0000;
+	font-weight: 500;
+    text-shadow: 0 0 2px #FF0000;
 }
 
 .choices:hover {
@@ -52,12 +49,13 @@ h2 {
 
 .custom-select {
 	color: #0A0A84;
-	border-color: #0A0A84;
+	border-color: #0A0A84;    
 }
 
 .custom-select:hover {
 	border: 2px solid #02024C;
 	color: #02024C;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);   
 }
 
 .btn {
@@ -66,25 +64,23 @@ h2 {
 	color: #0A0A84;
 	width: 30%;
 	font-size: 1.5rem;
-	margin-top: 2rem;
+	margin-top: 3rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6) ;
 }
 
 .btn:hover {
 	box-shadow: 0 0 5px #2196f3, 0 0 8px #fa00d9, 0 0 9px #7c21f3;
 }
 
+
 /* the game */
 
 #theGame {
-	margin-bottom: 3rem;
+	margin-bottom: 4rem;
 }
 
-.hud-item{
-    font-size: 3rem;
-    font-weight: 400;
-}
  
-#progressBar {
+/* #progressBar {
 	width: 100%;
 	height: 4rem;
 	border: 0.3rem solid #0A0A84;
@@ -96,7 +92,7 @@ h2 {
 	width: 0%;
 	background-color: #0A0A84;
     margin-bottom: 2rem;
-}
+} */
 
 .hud-prefix {
 	font-size: 3rem;	  
@@ -104,6 +100,7 @@ h2 {
 
 #score {	
     font-size: 3rem;    
+    
 } 
 
 #count {
@@ -112,6 +109,11 @@ h2 {
     margin-top: 2rem;
     text-shadow: 0 0 2px #FF0000;
 }
+
+#question {
+    	margin: 4rem;
+}
+
 
 /*The Questions */
 .choice-container {
