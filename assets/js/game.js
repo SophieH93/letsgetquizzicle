@@ -4,6 +4,7 @@ const difficultySelect = document.querySelector("#difficultySelect");
 const questionAmountSelect = document.querySelector("#quantChoice");
 const submitQuizOptions = document.querySelector("#submitOptions");
 const gamePage = document.querySelector("#theGame");
+const quiteBtn = document.querySelector( "#quitGame");
 const progressText = document.querySelector("#progressText");
 const progressbarfull = document.querySelector("#progressbarfull");
 const playersScore = document.querySelector("#score");
@@ -34,12 +35,20 @@ let dataUrl;
 let quant;
 
 
+const homeButton = document.querySelector("#homeBtn");
+
+
+
 /**
  * 
- * @param {boolen}
+ * @param {boolen} gameTrigger
  */
 
-// Fetches API from Open Trivia 
+/**
+ * Custom URL
+ *  
+ */ 
+
 const getData = gameTrigger => {
 	if ( gameTrigger ) {
 		dataUrl = ( `${baseUrl}api.php?amount=${quant}&category=${id}&difficulty=${diff}&type=multiple` );
@@ -47,11 +56,13 @@ const getData = gameTrigger => {
 		dataUrl = ( `${baseUrl}api_category.php` );
 	}
 }
+
 //Gets the categories and pass to DOM
-const categories = () => {
-   
+const categories = () => {   
 	getData( false );
-	fetch( dataUrl ).then( response => response.json() ).then( category => {
+    fetch( dataUrl )
+    .then( response => response.json())
+    .then( category => {
 		let categorySelect = category.trivia_categories;
 		categorySelect.forEach( category => {
 			let categoryOption = document.createElement( "option" );
@@ -62,11 +73,9 @@ const categories = () => {
 			categoryOption.id = category.id;
 			categoryOption.classList.add( "category" );
 			document.getElementById( "categorySelect" ).appendChild( categoryOption );
-        } );
-        
+        } );        
         logoText.classList.remove("hide");
-        start.classList.remove( "hide" );
-        
+        start.classList.remove( "hide" );           
 	} ).catch( () => console.error() );
 }
 categories();
@@ -94,18 +103,19 @@ const getQuiz = () =>{
 	} );
 }
 
-
+/**
+ * Start Quiz
+ */
 startGame = () => {
 	questionCounter = 0;
-	score = 0;
-	availableQuestions = [...questions];
-	getNewQuestion();
-    gamePage.classList.remove( "hide" );
-    
+    score = 0;
+    availableQuestions = [...questions];
+    gamePage.classList.remove( "hide" );    
+    getNewQuestion();
 };
 
-getNewQuestion = () => {
-    
+
+getNewQuestion = () => {    
 	if ( availableQuestions.length === 0) { 
 		localStorage.setItem( "mostRecentScore", score );
 		gamePage.classList.add( "hide" );
@@ -113,9 +123,9 @@ getNewQuestion = () => {
 		//When game over will go to the end game html
 	} else {
 	questionCounter++;
-	progressText.innerHTML= `Question ${questionCounter}/${quant}`;
+	progressText.innerHTML= `Question <br> ${questionCounter}/${quant}`;
 	//update progress bar
-	progressbarfull.style.width = `${(questionCounter / quant) * 100}%`;
+	//progressbarfull.style.width = `${(questionCounter / quant) * 100}%`;
 	const questionIndex = Math.floor( Math.random() * availableQuestions.length );
 	currentQuestion = availableQuestions[ questionIndex ];
 	question.innerHTML = currentQuestion.question;
@@ -174,14 +184,33 @@ submitQuizOptions.addEventListener( 'click', () => {
 
 
 
+/**
+ * Quite game & return home
+ * */
+
+quiteBtn.addEventListener( 'click', () => {
+    gamePage.classList.add( "hide" );
+    start.classList.remove( "hide" );	
+} );
+
 /*When scoreboard btn is clicked hide the endGame page and show the scoreboard page */
 scoreBoardBtn.addEventListener( 'click', () => {
     QuizEndPg.classList.add( "hide" );
-    scoreBoardPg.classList.remove( "hide" );
-	
+    scoreBoardPg.classList.remove( "hide" );	
 } );
 
+/**
+ * return home
+ * */
 
+
+homeButton.addEventListener( 'click', () => {
+  
+    gameOver.classList.add( "hide" );
+    start.classList.remove( "hide" );	
+
+    
+} );
 
 /* High Scores */
 highScoresList.innerHTML =
@@ -214,7 +243,7 @@ localStorage.setItem('highScores', JSON.stringify(highScores));
 
 };
 
-
+/*
 let counter = 10;
 
 setInterval(function() {
@@ -231,3 +260,4 @@ setInterval(function() {
 
 }, 1000);
 
+*/
