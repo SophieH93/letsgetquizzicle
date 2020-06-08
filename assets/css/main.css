@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 body {
 	text-align: center;
 	background-color: #F0F0FB;
 	color: #2A2AA0;
 	margin-top: 5rem;
+    font-size: 16px;
 	font-family: 'Roboto', sans-serif;
 }
 
@@ -13,7 +16,7 @@ h1 {
 	text-shadow: 0 0 1px #FF0000;
 }
 
-.h2 {
+h2 {
 	margin: 2rem;
 	font-weight: 500;    
 }
