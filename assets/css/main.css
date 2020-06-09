@@ -151,19 +151,20 @@ h2 {
 }
 
 #endHeading{
-    nt-size: 6rem;      text-shadow: 1px 1px 3px #FF0000;
+    font-size: 6rem;  
+    text-shadow: 1px 1px 3px #FF0000;
     text-transform: uppercase;     
     position: relative;
     animation: text 3s 1;
 }
 
 #finalscore {
-  align-content: 4rem;
+  font-size: 4rem;
        color: #C50A0A;
     text-shadow: 1px 1px 3px #0A0A84;
 }
 
-margin: 4rem;    
+  
 @keyframes text {
     0% {
         color: #C50A0A;;
