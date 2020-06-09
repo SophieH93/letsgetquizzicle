@@ -2,12 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 body {
-	text-align: center;
-	background-color: #F0F0FB;
-	color: #2A2AA0;	
-    font-size: 16px;
-    margin-top: 8rem;
-        font-family: 'Roboto', sans-serif;
+    font-size: 62.5%;
+    color: #2A2AA0;	
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    background-color: #F0F0FB;
+    margin-top: 4rem;
 }
 
 h1 {
@@ -18,7 +18,6 @@ h1 {
 
 
 h2 {
-	/* margin: 2rem;*/
 	font-weight: 500;   
 }
 
@@ -27,18 +26,17 @@ h2 {
 } 
 
  #ReadyToPlay {
-	margin-top: 4rem;
-	margin-bottom: 5rem;
+	margin-top: 2rem;
 } 
 
 .intro {
 	font-size: 1.5rem;
-	margin-bottom: 3.5rem;
+	margin-bottom: 2rem;
     letter-spacing: 1px;    
 }
 
 .dropdownSelect {
-	padding-bottom: 3rem;
+	margin-bottom: 2rem;
 	font-weight: 500;
     text-shadow: 0 0 2px #FF0000;
     
@@ -66,14 +64,13 @@ h2 {
 	color: #0A0A84;
 	width: 30%;
 	font-size: 1.5rem;
-	margin-top: 3rem;
+	margin-top: 2rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
 }
 
 .btn:hover {
 	box-shadow: 0 0 5px #2196f3, 0 0 8px #fa00d9, 0 0 9px #7c21f3;
 }
-
 
 #theGame {
 	margin-top: 5rem;	
@@ -178,9 +175,6 @@ h2 {
 }
 
 
-
-
-
 /* Media Query for phones*/
 @media only screen and (max-width: 768px) {
 
@@ -234,7 +228,8 @@ h2 {
 
 /* IPad only */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    
+  
+
     h1 {
         font-size: 5.5rem;
     }
@@ -275,7 +270,12 @@ h2 {
 /* large devices */
 @media only screen and (max-width : 1024px) {
 
-    	  h2 {
+      
+    body {
+        margin-top: 10rem;
+    }
+
+    h2 {
         font-size: 2.5rem;
     }
 	
