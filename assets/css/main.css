@@ -185,15 +185,63 @@ h2 {
 
 
 
-/* Extra Small Devices, Phones */
 
-@media only screen and (max-width: 480px) {
-	.submit, .secondary {
+/* Media Query for phones*/
+@media only screen and (max-width: 768px) {
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .custom-select {
+        font-size: 1.3rem;
+    }
+	
+    .submit, .secondary {
 		width: 100%;
+        font-size: 1.2rem;
 	}
-   
+
+    #question {
+        font-size: 1.2rem;
+        margin: 2rem;
+    }
+    
+    .answerNumber,
+    .answerChoice,
+    .headsUp  
+      {
+        padding:  1rem;
+        font-size: 1.2rem;
+    }
+
+    #endHeading, #finalscore {
+    font-size: 3rem;
 }
 
-/* large devices */
+@keyframes text {
+    0% {
+        color: #C50A0A;;
+        margin-top: -50px;
+        
+    }  
+    40%  {
+        letter-spacing: 6px;
+        margin-top: -50px;
+        font-size: 3rem;
+    }   
+    } 
 
-@media only screen and (max-width: 1024px) {}
+}
+
+
+
+
+/* IPad only */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+}
