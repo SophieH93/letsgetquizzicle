@@ -6,12 +6,10 @@
 	<meta content="ie=edge" http-equiv="X-UA-Compatible">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
 	<link href="assets/css/main.css" rel="stylesheet">
-
-
 	<title>Trivia Game</title>
 </head>
 <body>
-	<!--Landing page-->
+	<!--Logo-->
 	<header class="container-fluid" id="logo">
 		<div class="row">
 			<div class="col-12">
@@ -20,7 +18,7 @@
 		</div>
 	</header>
 
-    <!--Select Game Options-->
+    <!--Select Quiz Options-->
 	<section class="container-fluid hide" id="ReadyToPlay">
 		<div class="row">
 			<div class="col-sm-12 intro">
@@ -28,11 +26,11 @@
 				Choose the correct answer and win a point<br>
 				Don't forget to check the scoreboard at the end of the game to see if you made it into the top 5!</p>
 			</div>
-			<div class="col-sm-12 col-md-4 choices">
+			<div class="col-sm-12 col-md-4 dropdownSelect">
 				<h2>Select Category</h2>
                     <select class="custom-select" id="categorySelect"></select>
 			</div>
-			<div class="col-sm-12 col-md-4 choices">
+			<div class="col-sm-12 col-md-4 dropdownSelect">
 				<h2>Select Difficulty</h2>
                     <select class="custom-select" id="difficultySelect">
                         <option value="easy">Easy</option>
@@ -40,7 +38,7 @@
                         <option value="hard">Hard</option>
 			    	</select>
 			</div>
-			<div class="col-sm-12 col-md-4 choices">
+			<div class="col-sm-12 col-md-4 dropdownSelect">
 				<h2>How Many Questions?</h2>
                     <select class="custom-select" id="quantChoice">
                         <option id="10">10</option>
@@ -53,29 +51,24 @@
 		<div class="col-sm-12">
 			<button class="btn submit" id="submitOptions">Play Game</button>
 		</div>
-	</section>
+	</section> 
 
-
-<section class="container hide"  id="theGame">
-
-    <div class="row">
-			<div class="col-md-12">	
+    <!--the game -->
+    <section class="container hide" id="theGame">
+        <div class="row">
+            <div class="col-md-12">	
                 <p class="headsUp" id="questionCount"></p>
-			</div>
-
-
-			<div class="col-md-12">				
-				<p class="headsUp" id="score"></p>               
-			</div>
-
-			<div class="col-md-12">
-				<p class="headsUp" id="count"></p>			
-			</div>
-
-	</div>
-		
-        <h2 id="question"></h2>
-		<div class="row">
+            </div>
+            <div class="col-md-12">				
+                <p class="headsUp" id="score"></p>               
+            </div>
+            <div class="col-md-12">
+                <p class="headsUp" id="count"></p>			
+            </div>
+        </div>     
+		<div class="row">    
+            <div class="col-sm-12" id="question">                
+             </div>
 			<div class="col-sm-12 col-md-6 answer-options">
 				<p class="answerNumber">1</p>
 				<p class="answerChoice" data-number="1"></p>
@@ -93,23 +86,24 @@
 				<p class="answerChoice" data-number="4"></p>
 			</div>
 		</div>
-		<div class="col-12">
+		<div class="col-sm-12">
 			<button class="btn secondary" id="quitGame">Quit</button>
-		</div>
-</section>
-
+		</div> 
+    </section> 
+        
     <!--End Game-->
-	<section class="container hide" id="gameOver">
-		<div class="row">
-			<div class="col-12">
-				<h1>Game Over</h1>
-               	<h1 id="finalscore"></h1>
-           
-			<div class="col-sm-12">
-				<a class="btn secondary" id="homeBtn">Go Home</a>
-			</div>
-		    </div>
-		</div>
+	<section class="container hide gameEnd" id="gameOver">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1 id="endHeading">Game Over</h1>
+                <div class="col-sm-12">
+                 <div id="finalscore"></div>
+                </div>
+                 <div class="col-sm-12">
+                     <button class="btn secondary" id="homeBtn">Go Home</button>
+                 </div>
+            </div>
+        </div> 
 	</section>
 
    
