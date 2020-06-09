@@ -19,18 +19,18 @@
 	</header>
 
     <!--Select Quiz Options-->
-	<section class="container-fluid hide" id="ReadyToPlay">
+	<section class="container hide" id="ReadyToPlay">
 		<div class="row">
-			<div class="col-sm-12 intro">
+			<div class="col-sm-12 col-md-12 intro">
 				<p>Answer the questions before the time runs out.<br>
 				Choose the correct answer and win a point<br>
 				Don't forget to check the scoreboard at the end of the game to see if you made it into the top 5!</p>
 			</div>
-			<div class="col-sm-12 col-md-4 dropdownSelect">
+			<div class="col-sm-12 col-md-4 col-lg-12 dropdownSelect">
 				<h2>Select Category</h2>
                     <select class="custom-select" id="categorySelect"></select>
 			</div>
-			<div class="col-sm-12 col-md-4 dropdownSelect">
+			<div class="col-sm-12 col-md-4 col-lg-12 dropdownSelect">
 				<h2>Select Difficulty</h2>
                     <select class="custom-select" id="difficultySelect">
                         <option value="easy">Easy</option>
@@ -38,7 +38,7 @@
                         <option value="hard">Hard</option>
 			    	</select>
 			</div>
-			<div class="col-sm-12 col-md-4 dropdownSelect">
+			<div class="col-sm-12 col-md-4 col-lg-12 dropdownSelect">
 				<h2>How Many Questions?</h2>
                     <select class="custom-select" id="quantChoice">
                         <option id="10">10</option>
@@ -64,8 +64,7 @@
             </div>
         </div>     
 		<div class="row">    
-            <div class="col-sm-12" id="question">                
-             </div>
+            <div id="question"></div>
 			<div class="col-sm-12 col-md-6 answer-options">
 				<p class="answerNumber">1</p>
 				<p class="answerChoice" data-number="1"></p>
@@ -84,7 +83,7 @@
 			</div>
 		</div>
 		<div class="col-sm-12">
-			<button class="btn secondary" id="quitGame">Quit</button>
+			<button class="btn" id="quitGame">Quit</button>
 		</div> 
     </section> 
         
@@ -97,7 +96,7 @@
                  <div id="finalscore"></div>
                 </div>
                  <div class="col-sm-12">
-                     <button class="btn secondary" id="homeBtn">Go Home</button>
+                     <button class="btn" id="homeBtn">Go Home</button>
                  </div>
             </div>
         </div> 
