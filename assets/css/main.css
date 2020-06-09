@@ -13,6 +13,7 @@ body {
 h1 {
 	font-size: 5rem;
 	font-family: 'Anton', sans-serif;
+    margin-bottom: 4rem;
 	text-shadow: 1px 1px 3px #FF0000;
   }
 
@@ -25,19 +26,12 @@ h2 {
 	display: none;
 } 
 
- #ReadyToPlay {
-	margin-top: 2rem;
-} 
-
-.intro {
-	font-size: 1.5rem;
-	margin-bottom: 2rem;
-    letter-spacing: 1px;    
+#ReadyToPlay {
+   margin-bottom: 3rem; 
 }
-
 .dropdownSelect {
-	margin-bottom: 2rem;
-	font-weight: 500;
+	margin-top: 2rem;
+	margin-bottom: 3rem;
     text-shadow: 0 0 2px #FF0000;
     
 }
@@ -234,10 +228,6 @@ h2 {
         font-size: 5.5rem;
     }
 
-    .intro {
-        font-weight: 500;
-    }
-
     #question {
         font-size: 2rem;
         margin-bottom: 4rem;        
@@ -278,12 +268,7 @@ h2 {
     h2 {
         font-size: 2.5rem;
     }
-	
-	 .intro {
-        font-weight: 500;
-        font-size: 2rem;
-    }
-    
+	   
      .custom-select {
     	font-size: 1.5rem;
   
