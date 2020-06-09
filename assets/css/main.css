@@ -101,7 +101,7 @@ h2 {
 
 
 /*The Questions */
-.choice-container {
+.answer-options {
 	display: flex;
 	width: 100%;
 	justify-content: center;
@@ -112,19 +112,19 @@ h2 {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
 }
 
-.choice-container:hover {
+.answer-options:hover {
 	transform: translate(-0.1rem);
 	transition: transform 150ms;
 	box-shadow: 0 0 3px #FF0000;
 }
 
-.choice-number {
+.answerNumber {
 	padding: 1.5rem 2.5rem;
 	text-shadow: 0 0 3px #FF0000;
 	font-size: 2rem;
 }
 
-.choice-text {
+.answerChoice{
 	padding: 2rem;
 	width: 100%;
 }
@@ -139,31 +139,6 @@ h2 {
 
 /*End Game */
 
-form {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-#username {
-	font-size: 1.5rem;
-	border: 1px solid #0A0A84;
-}
-
-#username:hover {
-	border: 2px solid #02024C;
-	color: #02024C;
-}
-
-input {
-	margin-bottom: 1.5rem;
-	color: #02024C;
-}
-
-#saveScoreBtn {
-	width: 100%;
-}
 
 .secondary {
 	margin-bottom: 1.5rem;
@@ -177,32 +152,7 @@ input {
 	transform: none;
 }
 
-/*High Score Page*/
 
-#scoreBoard {
-	padding-bottom: 3rem;
-}
-
-#highScoresList {
-	list-style: none;
-	padding-left: 0;
-	margin-bottom: 4rem;
-}
-
-.high-score {
-	font-size: 2.8rem;
-	margin-bottom: 0.5rem;
-}
-
-.high-score:hover {
-	transform: scale(1.025);
-}
-
-#footer {
-    margin-top: 4rem;
-    background-color: #000; 
- 
-}
 /* Extra Small Devices, Phones */
 
 @media only screen and (max-width: 480px) {
