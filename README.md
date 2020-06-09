@@ -3,7 +3,8 @@
 ![](assets/images/mockup.JPG)
 
 
-This project is a Trivia Game suitable for people of all ages from the Opan Trivia API. The game is a fun way for players to test their knowledge and learn something new.
+This project is a Trivia Game suitable for people of all ages from the Opan Trivia API.
+The game is a fun way for players to test their knowledge and learn something new.
 
 # UX
 The goal of this project is to provide users with a fun, easy to use trivia game based on their favourite categories. 
@@ -13,8 +14,6 @@ As the game is suitable for people of all ages, the webiste needs to be visually
 * For the game to be **responsive** on mobile, tablet & desktop.
 * Visual interaction to draw the player in.
 * **Different** choice of **categories** and difficulty **levels** to suit a wider ranger of players.
-* Countdown timer to make the game more exciting as not only will the player have the
-  challenge of answering the correct question but also be restricted in time.
 * Point system to reward the player with the correct answer to the question.
 * Scoreboard at the end of the game to show the top 5 players.
 
@@ -40,7 +39,7 @@ The primary site goals are to offer a fun experience to users while teaching the
 
 
 
-## **Structure**
+## **Structure:**
 The game consists of 4 pages.   
  The **first Page** which is the landing pages consists of 3 selects options for the game *Category*, *Difficulty* and *Number of questions* and a button to 
 start the game.       
@@ -49,7 +48,7 @@ Once the game is over the user is brought to the **last Page** that consists of 
 The **Scoreboard Page** contains a list of the top 5 players.
 
 
-## **Skeleton** 
+## **Skeleton:** 
 My Wireframes:   
 [Desktop](https://github.com/SophieH93/letsgetquizzicle/tree/master/wireframes/desktop)   
 [Tablet](https://github.com/SophieH93/letsgetquizzicle/tree/master/wireframes/tablet)  
@@ -59,7 +58,7 @@ I created my wireframes on [MockFlow](https://www.mockflow.com/) for Desktop, Ta
 The wireframes were originally created for a Marvel Theme trivia game but upon further research I realised that this was not possible as there was not a API for Marvel trivial questions.
 The layout of the game has been slightly altered to compliment the Open Trivia API.
 
-## **Surface**
+## **Surface:**
 
 ### **Design Choice:**
     
@@ -77,19 +76,22 @@ Select options, button border hover, username hover, - **#02024C**
 Button & container background color - **#B6B6FD**
 
 
-### **Features of the Website**
+### **Features of the Website:**
 
 **landing Page-** Consists of a breif introduction to the game with 3 different select options for the player to choose from such as *Categories*, *Difficulty Level* and *Number of Questions*.
 The page also has a *Play Game* button the user can click once they select the different options for the game.
 
-**Game Page-** This page consists of the questions along with a *progress bar* so the player knows how much longer they have left.   
-A **Countdown Timer**, if the player does not select an answer before the time runs out they will be brought to the next question and lose a point.   
-A **Point System**, when the player selects the correct answer they will win 10 points and if they select the wrong answer they will loose 2 points.  
+**Game Page-**    
+A **Point System**, when the player selects the correct answer they will win 10 points and if they select the wrong answer they will loose 1 point.  
 A **Quit** button, if the player decided they do not want to play the game, they can click on the button and be brought back to the home page.   
 
 **Game Over Page**- This page will display the players total number of points and a button to return to the home page.   
 
 
+### **Future Features:**   
+To include a **username form** so the player can save their name and score to the system and attept to beat their own score.   
+A **scoreboard** that displayes the top 5 players depending on the Category the chose.
+A Countdown **timer** to added more of a challenge.
 
 # Technologies used
 ## Languages
@@ -127,19 +129,24 @@ Currently responsive on Moto G4, Galexy S5, Pixel 2, Pixel 2XL, iPhone, 5/SE, iP
 
 
 
-# Bugs
-1. I wanted to create a score system that added points when the player selected the correct answer and minus a point if the players 
-selected the wrong answer. I was able to increment the score but encountered a issue when I tried to minus a point. DevTols console
-was showing that my function was correct.  
-**The Fix:** With the help of a fellow student, the bug was eventually resolved by adding a cosole.log into the else statement. 
+# Bugs:
+* **Bug:**    I wanted to create a **score system** that added points when the player selected the correct answer and **minus** a **point** if the players 
+selected the **wrong** answer. I was able to increment the score but encountered a issue when I tried to minus a point. DevTools console
+was showing that my function was correct but not what the issue was.  
+**The Fix:** With the help of a fellow student, the bug was eventually resolved by adding a console.log into the else statement. 
 
-2. When fetching the questions from the API there was a bug in the questions that had different symbols between the text e.g &%#
+* **Bug:** When fetching the **questions** from the **API** there was a bug in the questions that had different symbols between the text e.g **&%#**
 that I needed to remove.   
-**The Fix:** I replaced the 'innerText' with innerHTML whicih then retrieves and sets the content in HTML format. 
+**The Fix:** I replaced the 'innerText' with **innerHTML** whicih then retrieves and sets the content in HTML format. 
 
-3. My Scoreboard page was not showing when the user clicked on the button.   
-**The Fix:** After a couple days I realised that I had 'display:none' in my css. Once this was removed the bug was fixed.
+* **Bug:** My **Scoreboard page** was not showing when the user clicked on the button.   
+**The Fix:** After a couple days I realised that I had **'display:none'** in my css. Once this was removed the bug was fixed.
 
+* **Bug:** The **Countdown timer** had a few bugs in it such as when the time ran out and the player was brought to the end page, if the player then clicked on the button to return
+home, they home page would show but the **end page would not hide**.    
+Another issue I was having with the timer was **resetting** the timer if the player clicked on the answer choice before the time ran out. The timer did not reset but
+kept counting down.   
+**The Fix:** Due to time, I decided to **remove** the timer completly.
 
 # Deployment
 I deployed the websit using GitHub's pages. The steps are as follows:
