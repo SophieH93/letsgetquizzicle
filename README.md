@@ -87,11 +87,9 @@ A **Countdown Timer**, if the player does not select an answer before the time r
 A **Point System**, when the player selects the correct answer they will win 10 points and if they select the wrong answer they will loose 2 points.  
 A **Quit** button, if the player decided they do not want to play the game, they can click on the button and be brought back to the home page.   
 
-**Game Over Page**- This page will display the players total number of points.
-It will have a form where the player can add/save their username, and two buttons, one for the scoreboard the other to go back to the home page.   
+**Game Over Page**- This page will display the players total number of points and a button to return to the home page.   
 
-**Scoreboard**
-This page consists of the top 5 players.
+
 
 # Technologies used
 ## Languages
@@ -112,6 +110,7 @@ This page consists of the top 5 players.
 * [WSC CSS Validaion](https://jigsaw.w3.org/css-validator/)
 * [Dirty Markup Formatter](https://www.10bestdesign.com/dirtymarkup/)
 * [W3School](https://www.w3schools.com/)
+* [Color Picker](https://htmlcolorcodes.com/color-picker/)
 
 # Testing
 
@@ -170,7 +169,8 @@ To clone the quizgame from GitHub:
 * **Simen Daehlin** my mentor.
 * **Stack Overview**
 * **Slack Overview** for particularly helping me with my score count.
-* [Youtube](https://www.youtube.com/watch?v=u98ROZjBWy8) - Build a quiz
+* [Youtube](https://www.youtube.com/watch?v=u98ROZjBWy8) - Build a quiz 
+* [Youtube](https://www.youtube.com/watch?v=Syg_9iB1vco) - Animation
 
 # Disclaimer
 **This websit is for educational purposes only.**
