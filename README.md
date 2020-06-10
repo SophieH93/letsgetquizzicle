@@ -81,12 +81,12 @@ Button & container background color - **#B6B6FD**
 * Bootstrap [buttons](https://getbootstrap.com/docs/4.3/components/buttons/) & [select menu](https://getbootstrap.com/docs/4.3/components/forms/#select-menu)
 * Score system
 * [Sweetalert](https://www.javascripting.com/view/sweetalert) - Used to display an alert for the incorrect answers.
-* Animation use on the End page
+* Animation used on the End page
 
 ### **Future Features:**   
-To include a **username form** so the player can save their name and score to the system and attept to beat their own score.   
-A **scoreboard** that displayes the top 5 players depending on the Category the chose.
-A Countdown **timer** to added more of a challenge.
+* **Username Form** so the player can save their name 
+* **Scoreboard** that displayes the **top 5** players depending on the Category they chose.
+* **Countdown timer** to added more of a challenge.
 
 # Technologies used
 ## Languages
