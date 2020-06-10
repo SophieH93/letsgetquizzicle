@@ -1,3 +1,4 @@
+const logoText = document.querySelector( "#logo" );
 const quizSelectOptions = document.querySelector("#ReadyToPlay");
 const quizCategorySelect = document.querySelector("#categorySelect");
 const difficultySelect = document.querySelector("#difficultySelect");
@@ -14,24 +15,19 @@ const finalscore = document.querySelector("#finalscore");
 const mostRecentScore = localStorage.getItem("mostRecentScore");
 //const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 //const highScoresList = document.querySelector("#highScoresList");
-const logoText = document.querySelector( "#logo" );
+const homeButton = document.querySelector("#homeBtn");
 const scoreBonus = 10;
 const subtractPoint = -1;
-
-
-let currentQuestion = {};
 let score = 0;
 let questionCounter = 0; //what q are you on
+let baseUrl = "https://opentdb.com/";
 let availableQuestions = []; //take Q out to gice unique q's
 let questions = [];
-let baseUrl = "https://opentdb.com/";
+let currentQuestion = {};
 let dataUrl;
 let quantity;
-
-
-const homeButton = document.querySelector("#homeBtn");
-
-
+let categoryList;
+let levelDifficulty;
 
 /**
  * 
