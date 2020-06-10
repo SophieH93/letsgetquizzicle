@@ -7,7 +7,6 @@ const gamePage = document.querySelector("#theGame");
 const quiteBtn = document.querySelector( "#quitGame");
 const questionCount = document.querySelector("#questionCount");
 const playersScore = document.querySelector("#score");
-const triviaQuestions = document.querySelector("#question");
 const answerChoices = Array.from( document.getElementsByClassName("answerChoice"));
 const QuizEndPage = document.querySelector("#gameOver");
 const username = document.querySelector("#username");
@@ -17,11 +16,10 @@ const mostRecentScore = localStorage.getItem("mostRecentScore");
 //const highScoresList = document.querySelector("#highScoresList");
 const logoText = document.querySelector( "#logo" );
 const scoreBonus = 10;
-const subtractPoint = 1;
+const subtractPoint = -1;
 
 
 let currentQuestion = {};
-//let acceptingAnswers = false; //delay user answering until everything is loaded
 let score = 0;
 let questionCounter = 0; //what q are you on
 let availableQuestions = []; //take Q out to gice unique q's
@@ -171,7 +169,7 @@ answerChoices.forEach(choice => {
 const incrementScore = num => {
 	score += num;	
 };
-
+finalscore.innerText = mostRecentScore;
 
 submitQuizOptions.addEventListener( 'click', () => {
 	categoryList = quizCategorySelect.options[ quizCategorySelect.selectedIndex ].id;
@@ -194,7 +192,7 @@ homeButton.addEventListener('click', () => {
 } );
 
 
-finalscore.innerText = mostRecentScore;
+
 
 
 
