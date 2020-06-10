@@ -93,7 +93,6 @@ h2 {
     text-align: center;
 }
 
-
 /*The Questions */
 .answer-options {
 	display: flex;
@@ -124,7 +123,7 @@ h2 {
 }
 
 .correct {
-	background-color: #B5E78C;
+	background-color:#B5E78C;
 }
 
 .incorrect {
@@ -141,22 +140,23 @@ h2 {
     width: 100%
 }
 
-#endHeading{
+#endHeading {
     font-size: 6rem;  
     text-shadow: 1px 1px 3px #FF0000;
     text-transform: uppercase;     
     position: relative;
-    animation: text 3s 1;
+    animation: heading 3s 1;
 }
 
 #finalscore {
-  font-size: 4rem;
-       color: #C50A0A;
+    font-size: 4rem;
+    color: #C50A0A;
+    margin-bottom: 3rem;
     text-shadow: 1px 1px 3px #0A0A84;
 }
 
   
-@keyframes text {
+@keyframes heading {
     0% {
         color: #C50A0A;;
         margin-top: -50px;
@@ -177,7 +177,6 @@ h2 {
         font-size: 3rem;
         background-color: #dcdfe3;
         padding: 1rem;
-        
     }
 
     h2 {
@@ -209,7 +208,7 @@ h2 {
     font-size: 3rem;
 }
 
-@keyframes text {
+@keyframes heading {
     0% {
         color: #C50A0A;;
         margin-top: -50px;
