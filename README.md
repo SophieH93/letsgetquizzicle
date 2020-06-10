@@ -54,7 +54,7 @@ My Wireframes:
 I created my wireframes on [MockFlow](https://www.mockflow.com/) for Desktop, Tablet and Mobie.  
  
 The wireframes were originally created for a Marvel Theme trivia game but upon further research I realised that this was not possible as there was not a API for Marvel trivial questions.
-The layout of the game has been slightly altered to compliment the Open Trivia API.
+The new wireframes were created for a general Trivia Games based on the [Open Trivia API](https://opentdb.com/).
 
 ## **Surface:**
 
@@ -62,9 +62,11 @@ The layout of the game has been slightly altered to compliment the Open Trivia A
     
 **Font:** [Roboto](https://fonts.google.com/specimen/Roboto?query=ROBOTO&selection.family=Roboto#standard-styles) for the **body** and [Anton](https://fonts.google.com/specimen/Anton?query=ANTON) for **H1** headings. 
 These fonts where choosen from [Google Fonts](https://fonts.google.com/). 
-I initally chose Anton first for the heading and Google Fonts recommended Roboro as it's complimentary font.
+I initally chose Anton first for the heading and Google Fonts recommended Roboto as it's complimentary font.
 
-**Colors:**    
+**Colors:**   
+As I wanted to create a game suitable for both gender's, I need to decide on nutual colors for the game. 
+[Color Picker](https://htmlcolorcodes.com/color-picker/) allowed me to choose shades of **blue, purple and pink**.       
 Background Color - **F0F0FB**
 Font Color - **#2A2AA0**   
 Text shadow with color **#FF0000** is used for the headings.   
@@ -75,16 +77,11 @@ Button & container background color - **#B6B6FD**
 
 
 ### **Features of the Website:**
-
-**landing Page-** Consists of a breif introduction to the game with 3 different select options for the player to choose from such as *Categories*, *Difficulty Level* and *Number of Questions*.
-The page also has a *Play Game* button the user can click once they select the different options for the game.
-
-**Game Page-**    
-A **Point System**, when the player selects the correct answer they will win 10 points and if they select the wrong answer they will loose 1 point.  
-A **Quit** button, if the player decided they do not want to play the game, they can click on the button and be brought back to the home page.   
-
-**Game Over Page**- This page will display the players total number of points and a button to return to the home page.   
-
+* [Open triia API](https://opentdb.com/)
+* Bootstrap [buttons](https://getbootstrap.com/docs/4.3/components/buttons/) & [select menu](https://getbootstrap.com/docs/4.3/components/forms/#select-menu)
+* Score system
+* [Sweetalert](https://www.javascripting.com/view/sweetalert) - Used to display an alert for the incorrect answers.
+* Animation use on the End page
 
 ### **Future Features:**   
 To include a **username form** so the player can save their name and score to the system and attept to beat their own score.   
