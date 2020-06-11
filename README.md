@@ -6,7 +6,7 @@
 This project is a Trivia Game suitable for people of all ages from the Opan Trivia API.
 The game is a fun way for users to test their knowledge and learn something new.
 
-# UX
+# UX:
 The goal of this project is to provide users with a fun, easy to use trivia game based on their favourite categories. 
 As the game is suitable for people of all ages, the webiste needs to be visually appealing to encourage user interaction and suitability for all different age groups.
 
@@ -91,7 +91,7 @@ Button & container background color - **#B6B6FD**
 * **Scoreboard** that displayes the **top 5** players depending on the Category they chose.
 * **Countdown timer** to added more of a challenge.
 
-# Technologies used
+# Technologies used:
 ## Languages
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
@@ -114,7 +114,7 @@ Button & container background color - **#B6B6FD**
 * [W3School](https://www.w3schools.com/)
 * [Color Picker](https://htmlcolorcodes.com/color-picker/)
 
-# Testing
+# Testing:
 
 I used [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) to test the **styling, layout and responsiveness** of the website on the different devices-Mobile, Tablet and Desktop.
 
@@ -160,7 +160,7 @@ See below example.
 
 ![](assets/images/bug.JPG)
 
-# Deployment
+# Deployment:
 I deployed the websit using GitHub's pages. The steps are as follows:
 
 1. Open GitHub in the browser.
@@ -183,13 +183,24 @@ To clone the quizgame from GitHub:
 5. Navigate to your desired file location.
 6. Copy the following code and input it into your terminal to clone the game.
 
+# Closing Notes:
+As challenging as this project was, I have learnd a lot about the benefit of using **API's** and got a better understanding 
+on using the following:  
+[JSON Objects](https://www.w3schools.com/js/js_json_intro.asp),   
+[Fetch API's](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API),   
+[Template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals),  
+[Spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax),  
+[Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise),  
+[Ternary Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator),
 
-# Credits
+
+
+# Credits:
 * **Simen Daehlin** my mentor.
 * **Slack Overview** for helping me with my score count and creating a unique URL for the API.
 * [Youtube](https://www.youtube.com/watch?v=u98ROZjBWy8) - Build a quiz 
 * [Youtube](https://www.youtube.com/watch?v=Syg_9iB1vco) - Animation
 
-# Disclaimer
+# Disclaimer:
 **This websit is for educational purposes only.**
 
