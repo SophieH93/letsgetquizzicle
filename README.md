@@ -102,6 +102,7 @@ Button & container background color - **#B6B6FD**
 * [Bootstrap](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
 * [Google Fonts](https://fonts.google.com/)
 * [MockFlow](https://www.mockflow.com/)
+* [Responsinator](https://www.responsinator.com/)
 
 ## Tools
 * [GitHub](https://github.com/)
@@ -115,16 +116,16 @@ Button & container background color - **#B6B6FD**
 
 # Testing
 
-I used [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) to test the styling and layout and responsiveness of the website on the different devices-Mobile, Tablet and Desktop.
+I used [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) to test the **styling, layout and responsiveness** of the website on the different devices-Mobile, Tablet and Desktop.
+
 I also used this to test my Javscript and fix any errors that arised.
+Tested the responsiveness on various devices using [Responsinator](https://www.responsinator.com/?url=https://sophieh93.github.io/letsgetquizzicle/)
 
-[WSC CSS Validaion](https://jigsaw.w3.org/css-validator/) was used to validate my HTML & CSS code.
+ [W3C Markup Validation](https://validator.w3.org/) & [WSC CSS Validaion](https://jigsaw.w3.org/css-validator/) was used to **validate** my **HTML & CSS** code.
 
+**Lighthouse Test Result:**
 
-Devices Landscape-
-Currently responsive on Moto G4, Galexy S5, Pixel 2, Pixel 2XL, iPhone, 5/SE, iPhone 6/7/8, iPhone 6/7/8 Plus, iPhone X,
-
-
+![](assets/images/lighthousetest.JPG)
 
 
 # Bugs:
