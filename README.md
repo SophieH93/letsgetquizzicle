@@ -42,8 +42,6 @@ Due to time restrictions I decided to remove the timer for the game and a scoreb
 The timer was displaying a bug (see Bugs below). I had created th scoreboard section but felt the scorebord should be based on the particular 
 category chosen.
 
-
-
 ## **Structure:**
 The game consists of 3 sections.   
 The **First Section-** Contains the logo, 3 dropdown options **Category**, **Difficulty** and **Number of questions** and a **button** to start the game.   
@@ -85,8 +83,8 @@ Button & container background color - **#B6B6FD**
 * [Open triia API](https://opentdb.com/)
 * Bootstrap [buttons](https://getbootstrap.com/docs/4.3/components/buttons/) & [select menu](https://getbootstrap.com/docs/4.3/components/forms/#select-menu)
 * Score system
-* [Sweetalert](https://www.javascripting.com/view/sweetalert) - Used to display an alert for the incorrect answers.
-* Animation used on the End page
+* [Sweetalert](https://lipis.github.io/bootstrap-sweetalert/) - Used to display an alert for the incorrect answers.
+* **Animation** used on the End page
 
 ### **Future Features:**   
 * **Username Form** so the player can save their name 
@@ -100,9 +98,10 @@ Button & container background color - **#B6B6FD**
 * [Javascript](https://www.javascript.com/)
 
 ## Frameworks
+* [Open Trivia DB](https://opentdb.com/)
 * [Bootstrap](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
 * [Google Fonts](https://fonts.google.com/)
-* [Open Trivia DB](https://opentdb.com/)
+* [MockFlow](https://www.mockflow.com/)
 
 ## Tools
 * [GitHub](https://github.com/)
@@ -121,7 +120,6 @@ I also used this to test my Javscript and fix any errors that arised.
 
 [WSC CSS Validaion](https://jigsaw.w3.org/css-validator/) was used to validate my HTML & CSS code.
 
-The console displays no errors during site testing
 
 Devices Landscape-
 Currently responsive on Moto G4, Galexy S5, Pixel 2, Pixel 2XL, iPhone, 5/SE, iPhone 6/7/8, iPhone 6/7/8 Plus, iPhone X,
@@ -130,7 +128,7 @@ Currently responsive on Moto G4, Galexy S5, Pixel 2, Pixel 2XL, iPhone, 5/SE, iP
 
 
 # Bugs:
-* **Bug:**    I wanted to create a **score system** that added points when the player selected the correct answer and **minus** a **point** if the players 
+* **Bug:** I wanted to create a **score system** that added points when the player selected the correct answer and **minus** a **point** if the players 
 selected the **wrong** answer. I was able to increment the score but encountered a issue when I tried to minus a point. DevTools console
 was showing that my function was correct but not what the issue was.  
 **The Fix:** With the help of a fellow student, the bug was eventually resolved by adding a console.log into the else statement. 
@@ -147,6 +145,10 @@ home, they home page would show but the **end page would not hide**.
 Another issue I was having with the timer was **resetting** the timer if the player clicked on the answer choice before the time ran out. The timer did not reset but
 kept counting down.   
 **The Fix:** Due to time, I decided to **remove** the timer completly.
+
+**Bug:** This was mentioned by a fellow student that I had not noticed. When **clicking** to go to the **next question** the user can accidentally
+press the next question.  
+**The fix:** I amended the seconds of the timer to fetch the next question to 1 second.
 
 # Deployment
 I deployed the websit using GitHub's pages. The steps are as follows:
@@ -174,8 +176,7 @@ To clone the quizgame from GitHub:
 
 # Credits
 * **Simen Daehlin** my mentor.
-* **Stack Overview**
-* **Slack Overview** for particularly helping me with my score count.
+* **Slack Overview** for helping me with my score count and creating a unique URL for the API.
 * [Youtube](https://www.youtube.com/watch?v=u98ROZjBWy8) - Build a quiz 
 * [Youtube](https://www.youtube.com/watch?v=Syg_9iB1vco) - Animation
 
