@@ -163,25 +163,25 @@ See below example.
 # Deployment:
 I deployed the websit using GitHub's pages. The steps are as follows:
 
-1. Open GitHub in the browser.
+1. Open **GitHub** in the browser.
 2. Sign into my account.
-3. Select my repositories.
-4. Navigate to letsgetquizzicle.
-5. On the top right select settings.
-6. Scroll down to the GitHub Pages area.
-7. From the Source dropdown menu click on Master Branch.
-8. Refresh the page and scroll back down to the GitHub Pages area to view the link to your live website.
+3. Select my **repositories**.
+4. Navigate to **letsgetquizzicle**.
+5. On the top right select **settings**.
+6. Scroll down to the **GitHub Pages** area.
+7. From the **Source** dropdown menu click on **Master Branch**.
+8. **Refresh** the page and scroll back down to the **GitHub Pages** area to view the link to your **live** website.
  
  ### Running the website Locally:
 
-To clone the quizgame from GitHub:
+To clone the Let's Get Quizzicle from GitHub:
 
-1. Navigate to SophieH93/letsgetquizzicle.
-2. Click the green Clone or Download button.
-3. Copy the url in the dropdown box.
-4. Using your favourite IDE open up your preferred terminal.
+1. Navigate to **SophieH93/letsgetquizzicle**.
+2. Click the green **Clone or Download button**.
+3. **Copy** the **url** in the dropdown box.
+4. Using your favourite IDE **open** up your preferred **terminal**.
 5. Navigate to your desired file location.
-6. Copy the following code and input it into your terminal to clone the game.
+6. **Copy** the following **code** and input it **into** your **terminal** to clone the game.
 
 # Closing Notes:
 As challenging as this project was, I have learnd a lot about the benefit of using **API's** and got a better understanding 
