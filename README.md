@@ -123,6 +123,9 @@ Tested the responsiveness on various devices using [Responsinator](https://www.r
 
  [W3C Markup Validation](https://validator.w3.org/) & [WSC CSS Validaion](https://jigsaw.w3.org/css-validator/) was used to **validate** my **HTML & CSS** code.
 
+**User Testing** was carried out throught the process, having friends and family test the game to see if it was responsive on their devices &
+gathering back feedback for style or bugs.
+
 **Lighthouse Test Result:**
 
 ![](assets/images/lighthousetest.JPG)
@@ -147,9 +150,15 @@ Another issue I was having with the timer was **resetting** the timer if the pla
 kept counting down.   
 **The Fix:** Due to time, I decided to **remove** the timer completly.
 
-**Bug:** This was mentioned by a fellow student that I had not noticed. When **clicking** to go to the **next question** the user can accidentally
+* **Bug:** This was mentioned by a fellow student that I had not noticed. When **clicking** to go to the **next question** the user can accidentally
 press the next question.  
 **The fix:** I amended the seconds of the timer to fetch the next question to 1 second.
+
+**Known Bug:**
+There is currently a bug on large devices where some times the question container layout is out of place. 
+See below example.
+
+![](assets/images/bug.JPG)
 
 # Deployment
 I deployed the websit using GitHub's pages. The steps are as follows:
