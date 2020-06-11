@@ -115,9 +115,16 @@ startGame = () => {
  */
 fetchNewQuestion = () => {    
 	if (availableQuestions.length === 0) { 
-		gamePage.classList.add( "hide" );
-		QuizEndPage.classList.remove( "hide" );
-		
+		gamePage.classList.add( "hide" );        
+        swal.fire({
+                title: `Total Score ${score}`,                
+                showConfirmButton: false,
+                timer: 1000
+           }); 
+           setTimeout( () => {
+			QuizEndPage.classList.remove( "hide" );
+		}, 1200 );
+		 
 	} else {
 	questionCounter++; 
     questionCount.innerHTML= `Question: ${questionCounter}/${quantity}`;
@@ -145,8 +152,7 @@ answerChoices.forEach(choice => {
                 timer: 1200
            });       
 		} else {
-			incrementScore(subtractPoint);
-			console.log(subtractPoint);
+			incrementScore(subtractPoint);			
            swal.fire({
                 title: "Wrong Answer!",
                 text: `Sorry the correct answer was number ${currentQuestion.answer}!`,
