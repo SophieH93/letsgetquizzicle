@@ -198,7 +198,7 @@ on using the following:
 # Credits:
 * **Simen Daehlin** my mentor.
 * **Slack Overview** for helping me with my score count and creating a unique URL for the API.
-* [Youtube](https://www.youtube.com/watch?v=u98ROZjBWy8) - Build a quiz 
+* [Youtube](https://www.youtube.com/watch?v=u98ROZjBWy8) - Build a quiz - Really helped with how to fetch & format the questions ad answers from the API
 * [Youtube](https://www.youtube.com/watch?v=Syg_9iB1vco) - Animation
 
 # Disclaimer:
