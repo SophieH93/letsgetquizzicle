@@ -1,45 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-
 body {
-    font-size: 62.5%;
-    color: #2A2AA0;	
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    background-color: #F0F0FB;
-    margin-top: 3rem;
+	font-size: 62.5%;
+	color: #2A2AA0;
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	background-color: #F0F0FB;
+	margin-top: 3rem;
 }
 
 .hide {
 	display: none;
-} 
+}
 
 h1 {
 	font-size: 5rem;
 	font-family: 'Anton', sans-serif;
-    margin-bottom: 4rem;
+	margin-bottom: 4rem;
 	text-shadow: 1px 1px 3px #FF0000;
-  }
+}
 
 h2 {
-	font-weight: 500;   
+	font-weight: 500;
 }
 
-h3{
- padding: 2rem;
- margin-bottom: 2rem;
+h3 {
+	padding: 2rem;
+	margin-bottom: 2rem;
 }
-  
 
-#ReadyToPlay {
-   margin-bottom: 3rem; 
+#selectGameOptions {
+	margin-bottom: 3rem;
 }
+
 .dropdownSelect {
 	margin-top: 2rem;
 	margin-bottom: 3rem;
-    text-shadow: 0 0 2px #FF0000;
-    
+	text-shadow: 0 0 2px #FF0000;
 }
 
 .dropdownSelect:hover {
@@ -48,14 +45,14 @@ h3{
 }
 
 .custom-select {
-    color: #0A0A84;
+	color: #0A0A84;
 	border-color: #0A0A84;
 }
 
 .custom-select:hover {
 	border: 2px solid #02024C;
 	color: rgb(146, 146, 156);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);   
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
 }
 
 .btn {
@@ -65,7 +62,7 @@ h3{
 	width: 30%;
 	font-size: 1.5rem;
 	margin-top: 2rem;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
 }
 
 .btn:hover {
@@ -73,33 +70,33 @@ h3{
 }
 
 #theGame {
-	margin-top: 5rem;	
-    margin-bottom: 5rem;
+	margin-top: 5rem;
+	margin-bottom: 5rem;
 }
 
-
 .headsUp {
-	font-size: 2rem;	
-    font-weight: 500;
-    background: #E8E6F7 ;
-    border-radius: 15px;
-    border: 1px solid #02024C;   
+	font-size: 2rem;
+	font-weight: 500;
+	background: #E8E6F7;
+	border-radius: 15px;
+	border: 1px solid #02024C;
 }
 
 #count {
-    font-size: 4rem;
-    font-weight: 400;
-    margin-top: 2rem;
-    text-shadow: 0 0 2px #FF0000;
+	font-size: 4rem;
+	font-weight: 400;
+	margin-top: 2rem;
+	text-shadow: 0 0 2px #FF0000;
 }
 
 #question {
-    font-size: 2rem;
-    margin: 4rem;
-    text-align: center;
+	font-size: 2rem;
+	margin: 4rem;
+	text-align: center;
 }
 
 /*The Questions */
+
 .answer-options {
 	display: flex;
 	width: 100%;
@@ -108,7 +105,7 @@ h3{
 	font-size: 2rem;
 	background-color: #B6B6FD;
 	border: 1px solid #0A0A84;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
 }
 
 .answer-options:hover {
@@ -123,13 +120,13 @@ h3{
 	font-size: 2rem;
 }
 
-.answerChoice{
+.answerChoice {
 	padding: 2rem;
 	width: 100%;
 }
 
 .correct {
-	background-color:#B5E78C;
+	background-color: #B5E78C;
 }
 
 .incorrect {
@@ -137,154 +134,127 @@ h3{
 }
 
 /*End Game */
-.gameEnd {
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%
+
+#gameOver {
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%
 }
 
-#endHeading {
-    font-size: 6rem;  
-    font-family: 'Anton', sans-serif;
-    text-shadow: 1px 1px 3px #FF0000;
-
-    padding: 3rem;
-    text-transform: uppercase;     
-    position: relative;
-    animation: heading 3s 1;
+#finishGame {
+	font-size: 6rem;
+	font-family: 'Anton', sans-serif;
+	text-shadow: 1px 1px 3px #FF0000;
+	padding: 3rem;
+	text-transform: uppercase;
+	position: relative;
+	animation: heading 3s 1;
 }
-
 
 @keyframes heading {
-    0% {
-        color: #C50A0A;;
-        margin-top: -50px;
-    }
-    50%  {
-        letter-spacing: 25px;
-        margin-bottom: -50px;
-    }
-    
+	0% {
+		color: #C50A0A;
+		;
+		margin-top: -50px;
+	}
+	50% {
+		letter-spacing: 25px;
+		margin-bottom: -50px;
+	}
 }
-
 
 /* Media Query for phones*/
+
 @media only screen and (max-width: 768px) {
-
-    h1 {
-        text-transform: uppercase;
-        font-size: 3rem;
-        background-color: #dcdfe3;
-        padding: 1rem;
-    }
-
-    h2, h3 {
-        font-size: 2rem;
-    }
-
-    .custom-select {
-        font-size: 1.3rem;
-    }
-	
-    .btn {
-		width: 100%;
-        font-size: 1.2rem;
+	h1 {
+		text-transform: uppercase;
+		font-size: 3rem;
+		background-color: #dcdfe3;
+		padding: 1rem;
 	}
-
-    #question {
-        font-size: 1.2rem;
-        margin: 2rem;
-    }
-    
-    .answerNumber,
-    .answerChoice,
-    .headsUp {
-        padding:  1rem;
-        font-size: 1.2rem;
-    }
-
-    #endHeading {
-    font-size: 4rem;
-}
-
-@keyframes heading {
-    0% {
-        color: #C50A0A;;
-        margin-top: -50px;
-        
-    }  
-    40%  {
-        letter-spacing: 6px;
-        margin-bottom: 10px;
-        font-size: 3rem;
-    }   
-    } 
-
+	h2, h3 {
+		font-size: 2rem;
+	}
+	.custom-select {
+		font-size: 1.3rem;
+	}
+	.btn {
+		width: 100%;
+		font-size: 1.2rem;
+	}
+	#question {
+		font-size: 1.2rem;
+		margin: 2rem;
+	}
+	.answerNumber, .answerChoice, .headsUp {
+		padding: 1rem;
+		font-size: 1.2rem;
+	}
+	#endHeading {
+		font-size: 4rem;
+	}
+	@keyframes heading {
+		0% {
+			color: #C50A0A;
+			;
+			margin-top: -50px;
+		}
+		40% {
+			letter-spacing: 6px;
+			margin-bottom: 10px;
+			font-size: 3rem;
+		}
+	}
 }
 
 /* IPad only */
+
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  
-
-    h1 {
-        font-size: 5.5rem;
-         margin-top: 3rem;
-    }
-
-    h2, h3 {
-   	 font-size: 3rem;
-   }
-
-    #question {
-        font-size: 2rem;
-        margin-bottom: 4rem;        
-    }
-    
-    .answerNumber,
-    .answerChoice,
-    .headsUp {
-        margin-bottom: 2rem;
-        font-size: 1.5rem;       
-    }
-
-    .btn {
-        width: 50%;
-         font-size: 1.5rem;
-         margin-top: 5rem;
-    }
-
-    #endHeading {
-        font-size: 7rem;
-        margin-bottom: 3rem;
-    }
-
-    }
+	h1 {
+		font-size: 5.5rem;
+		margin-top: 3rem;
+	}
+	h2, h3 {
+		font-size: 3rem;
+	}
+	#question {
+		font-size: 2rem;
+		margin-bottom: 4rem;
+	}
+	.answerNumber, .answerChoice, .headsUp {
+		margin-bottom: 2rem;
+		font-size: 1.5rem;
+	}
+	.btn {
+		width: 50%;
+		font-size: 1.5rem;
+		margin-top: 5rem;
+	}
+	#endHeading {
+		font-size: 7rem;
+		margin-bottom: 3rem;
+	}
+}
 
 /* large devices */
-@media only screen and (max-width : 1024px) {
 
-     .custom-select {
-    	font-size: 2rem;  
-    }
-	
-	 #question {
-        font-size: 2.5rem;
-         margin-bottom: 7rem;  
-    }
-    
-	.answerNumber,
-    .answerChoice,
-	   .headsUp {
-        padding:  1rem;       
-        font-size: 2.5rem;
-    }
-    
-     .btn {
-        width: 100%;
-        font-size: 2.5rem;         
-    }
-
+@media only screen and (max-width: 1024px) {
+	.custom-select {
+		font-size: 2rem;
+	}
+	#question {
+		font-size: 2.5rem;
+		margin-bottom: 7rem;
+	}
+	.answerNumber, .answerChoice, .headsUp {
+		padding: 1rem;
+		font-size: 2.5rem;
+	}
+	.btn {
+		width: 100%;
+		font-size: 2.5rem;
+	}
 }
