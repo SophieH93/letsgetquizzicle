@@ -165,7 +165,7 @@ answerChoices.forEach(choice => {
 		setTimeout( () => {
 			selectedAnswerChoice.parentElement.classList.remove(classToApply);
 			fetchNewQuestion();
-		}, 1500 );
+		}, 1000 );
 	} );
 } );
 const incrementScore = num => {
