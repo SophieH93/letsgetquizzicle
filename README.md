@@ -26,6 +26,8 @@ As the game is suitable for people of all ages, the webiste needs to be visually
 * As a user, I would like to see a game that will provide different questions.
 
 ## **Strategy**
+The value of the game is that it is suitable for people of all ages and contains a wide variety of categories to satisy every user.
+It also contains a variety of difficulty levels so suite those who are more expierenced and who wants to challenge themselves.
 
 Target Audience - The target audience for this project can be anyone between the age of 15+.
 
@@ -35,7 +37,10 @@ The primary site goals are to offer a fun experience to users while teaching the
 
 
 ## Scope
-
+The game is easy to use and pulls all the information from [Open Trivia DB](https://opentdb.com/).
+Due to time restrictions I decided to remove the timer for the game and a scoreboard section that would have displayed the top 5 players.
+The timer was displaying a bug (see Bugs below). I had created th scoreboard section but felt the scorebord should be based on the particular 
+category chosen.
 
 
 
