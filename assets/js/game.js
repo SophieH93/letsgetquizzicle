@@ -7,14 +7,9 @@ const submitQuizOptions = document.querySelector("#submitOptions");
 const gamePage = document.querySelector("#theGame");
 const quiteBtn = document.querySelector( "#quitGame");
 const questionCount = document.querySelector("#questionCount");
-const playersScore = document.querySelector("#score");
+const playersScore = document.getElementById("score");
 const answerChoices = Array.from( document.getElementsByClassName("answerChoice"));
 const QuizEndPage = document.querySelector("#gameOver");
-const username = document.querySelector("#username");
-const finalscore = document.querySelector("#finalscore");
-const mostRecentScore = localStorage.getItem("mostRecentScore");
-//const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
-//const highScoresList = document.querySelector("#highScoresList");
 const homeButton = document.querySelector("#homeBtn");
 const scoreBonus = 10;
 const subtractPoint = -1;
@@ -120,7 +115,6 @@ startGame = () => {
  */
 fetchNewQuestion = () => {    
 	if (availableQuestions.length === 0) { 
-		localStorage.setItem( "mostRecentScore", score );
 		gamePage.classList.add( "hide" );
 		QuizEndPage.classList.remove( "hide" );
 		
@@ -171,12 +165,11 @@ answerChoices.forEach(choice => {
 const incrementScore = num => {
 	score += num;	
 };
-finalscore.innerText = mostRecentScore;
 
 submitQuizOptions.addEventListener( 'click', () => {
 	categoryList = quizCategorySelect.options[ quizCategorySelect.selectedIndex ].id;
 	levelDifficulty = difficultySelect.options[ difficultySelect.selectedIndex ].id;
-	quantity = questionAmountSelect.options[ questionAmountSelect.selectedIndex ].id;
+	quantity = questionAmountSelect.options[ questionAmountSelect.selectedIndex ].value;
 	quizSelectOptions.classList.add( "hide" );
 	getQuiz();
 } );
