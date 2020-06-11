@@ -143,7 +143,13 @@ answerChoices.forEach(choice => {
 		const selectedAnswer = selectedAnswerChoice.dataset["number"];
 		const classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
 		if ( classToApply === "correct" ) {
-			incrementScore(scoreBonus);            
+            incrementScore(scoreBonus);   
+             swal.fire({
+                title: "Correct!",
+                icon: 'success',
+                showConfirmButton: false,
+                timer: 1200
+           });       
 		} else {
 			incrementScore(subtractPoint);
 			console.log(subtractPoint);
@@ -152,7 +158,7 @@ answerChoices.forEach(choice => {
                 text: `Sorry the correct answer was number ${currentQuestion.answer}!`,
                 icon: 'error',
                 showConfirmButton: false,
-                timer: 1500
+                timer: 1200
            });
         };		
 		selectedAnswerChoice.parentElement.classList.add(classToApply);
