@@ -1,22 +1,22 @@
 const logoText = document.querySelector( "#logo" );
-const quizSelectOptions = document.querySelector("#ReadyToPlay");
+const quizSelectOptions = document.querySelector("#selectGameOptions");
 const quizCategorySelect = document.querySelector("#categorySelect");
 const difficultySelect = document.querySelector("#difficultySelect");
 const questionAmountSelect = document.querySelector("#quantChoice");
 const submitQuizOptions = document.querySelector("#submitOptions");
 const gamePage = document.querySelector("#theGame");
-const quiteBtn = document.querySelector( "#quitGame");
 const questionCount = document.querySelector("#questionCount");
 const playersScore = document.getElementById("score");
 const answerChoices = Array.from( document.getElementsByClassName("answerChoice"));
+const quiteBtn = document.querySelector( "#quitGame");
 const QuizEndPage = document.querySelector("#gameOver");
 const homeButton = document.querySelector("#homeBtn");
 const scoreBonus = 10;
 const subtractPoint = -1;
 let score = 0;
-let questionCounter = 0; //what q are you on
+let questionCounter = 0;
 let baseUrl = "https://opentdb.com/";
-let availableQuestions = []; //take Q out to gice unique q's
+let availableQuestions = []; 
 let questions = [];
 let currentQuestion = {};
 let dataUrl;
@@ -40,7 +40,6 @@ const getData = triviaAPI =>  {
 		dataUrl = (`${baseUrl}api_category.php`);
 	}
 }
-
 
 /**
  * Fetches the categories from the API and passes to the DOM
@@ -103,7 +102,7 @@ getData(true);
 startGame = () => {
 	questionCounter = 0;
     score = 0;
-    availableQuestions = [...questions]; //spread operator gathers the full questions from the questions array
+    availableQuestions = [...questions]; 
     gamePage.classList.remove( "hide" );  
     fetchNewQuestion();
 };
